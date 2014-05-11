@@ -1,0 +1,131 @@
+\hypertarget{classwierzcholek}{\section{wierzcholek \-Class \-Reference}
+\label{classwierzcholek}\index{wierzcholek@{wierzcholek}}
+}
+
+
+clasa modeluje pojecie pojecie poedynczego wierzcholka grafu  
+
+
+
+
+{\ttfamily \#include $<$wierzcholek.\-hh$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwierzcholek_a0e72695b032e7f750c51041e1a59673b}{wierzcholek} ()
+\begin{DoxyCompactList}\small\item\em konstruktor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classwierzcholek_ad67644b5f408397f28d7150d3bac76d2}{zajety}
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classwierzcholek_a66aaea6b1187250f7100542adc1617d2}{numer}
+\item 
+string \hyperlink{classwierzcholek_a19aa16bf7e01a987fcc360e5da902209}{wartosc}
+\begin{DoxyCompactList}\small\item\em identyfikator wierzcholka \end{DoxyCompactList}\item 
+vector$<$ int $>$ \hyperlink{classwierzcholek_a30b8190b35ec29e5cc13910ce56e59e9}{polaczenia}
+\begin{DoxyCompactList}\small\item\em wartosc przechowywana w wierzcholku \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classwierzcholek_a1726ca1919686bdccbca505bacf6de2f}{graf}
+\begin{DoxyCompactList}\small\item\em zmienna okresla czy wierzcholek zostal zdefiniowany \end{DoxyCompactList}\item 
+ostream \& \hyperlink{classwierzcholek_ab0941004cc1a9bb9339cf2092b1819a1}{operator$<$$<$} (ostream \&wyjscie, \hyperlink{classwierzcholek}{wierzcholek} \&wej)
+\begin{DoxyCompactList}\small\item\em lista polaczen wierzcholka \end{DoxyCompactList}\item 
+istream \& \hyperlink{classwierzcholek_a221c2b565a9506a8eaed69e42e374f4e}{operator$>$$>$} (istream \&wejscie, \hyperlink{classwierzcholek}{wierzcholek} \&wyj)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 20 of file wierzcholek.\-hh.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classwierzcholek_a0e72695b032e7f750c51041e1a59673b}{\index{wierzcholek@{wierzcholek}!wierzcholek@{wierzcholek}}
+\index{wierzcholek@{wierzcholek}!wierzcholek@{wierzcholek}}
+\subsubsection[{wierzcholek}]{\setlength{\rightskip}{0pt plus 5cm}{\bf wierzcholek\-::wierzcholek} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{classwierzcholek_a0e72695b032e7f750c51041e1a59673b}
+
+
+\-Definition at line 32 of file wierzcholek.\-hh.
+
+
+
+\subsection{\-Friends \-And \-Related \-Function \-Documentation}
+\hypertarget{classwierzcholek_a1726ca1919686bdccbca505bacf6de2f}{\index{wierzcholek@{wierzcholek}!graf@{graf}}
+\index{graf@{graf}!wierzcholek@{wierzcholek}}
+\subsubsection[{graf}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf graf}\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}\label{classwierzcholek_a1726ca1919686bdccbca505bacf6de2f}
+
+
+\-Definition at line 30 of file wierzcholek.\-hh.
+
+\hypertarget{classwierzcholek_ab0941004cc1a9bb9339cf2092b1819a1}{\index{wierzcholek@{wierzcholek}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!wierzcholek@{wierzcholek}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{wyjscie, }
+\item[{{\bf wierzcholek} \&}]{wej}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}\label{classwierzcholek_ab0941004cc1a9bb9339cf2092b1819a1}
+
+
+\-Definition at line 10 of file wierzcholek.\-cpp.
+
+\hypertarget{classwierzcholek_a221c2b565a9506a8eaed69e42e374f4e}{\index{wierzcholek@{wierzcholek}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!wierzcholek@{wierzcholek}}
+\subsubsection[{operator$>$$>$}]{\setlength{\rightskip}{0pt plus 5cm}istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{istream \&}]{wejscie, }
+\item[{{\bf wierzcholek} \&}]{wyj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}\label{classwierzcholek_a221c2b565a9506a8eaed69e42e374f4e}
+
+
+\-Definition at line 21 of file wierzcholek.\-cpp.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classwierzcholek_a66aaea6b1187250f7100542adc1617d2}{\index{wierzcholek@{wierzcholek}!numer@{numer}}
+\index{numer@{numer}!wierzcholek@{wierzcholek}}
+\subsubsection[{numer}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf wierzcholek\-::numer}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classwierzcholek_a66aaea6b1187250f7100542adc1617d2}
+
+
+\-Definition at line 23 of file wierzcholek.\-hh.
+
+\hypertarget{classwierzcholek_a30b8190b35ec29e5cc13910ce56e59e9}{\index{wierzcholek@{wierzcholek}!polaczenia@{polaczenia}}
+\index{polaczenia@{polaczenia}!wierzcholek@{wierzcholek}}
+\subsubsection[{polaczenia}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$int$>$ {\bf wierzcholek\-::polaczenia}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classwierzcholek_a30b8190b35ec29e5cc13910ce56e59e9}
+
+
+\-Definition at line 25 of file wierzcholek.\-hh.
+
+\hypertarget{classwierzcholek_a19aa16bf7e01a987fcc360e5da902209}{\index{wierzcholek@{wierzcholek}!wartosc@{wartosc}}
+\index{wartosc@{wartosc}!wierzcholek@{wierzcholek}}
+\subsubsection[{wartosc}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf wierzcholek\-::wartosc}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classwierzcholek_a19aa16bf7e01a987fcc360e5da902209}
+
+
+\-Definition at line 24 of file wierzcholek.\-hh.
+
+\hypertarget{classwierzcholek_ad67644b5f408397f28d7150d3bac76d2}{\index{wierzcholek@{wierzcholek}!zajety@{zajety}}
+\index{zajety@{zajety}!wierzcholek@{wierzcholek}}
+\subsubsection[{zajety}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf wierzcholek\-::zajety}}}\label{classwierzcholek_ad67644b5f408397f28d7150d3bac76d2}
+
+
+\-Definition at line 29 of file wierzcholek.\-hh.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+prj/\hyperlink{wierzcholek_8hh}{wierzcholek.\-hh}\end{DoxyCompactItemize}

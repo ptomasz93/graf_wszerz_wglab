@@ -1,0 +1,100 @@
+\indexentry{prj/ Directory Reference@{prj/ Directory Reference}|hyperpage}{7}
+\indexentry{element\discretionary {-}{}{}\_\discretionary {-}{}{}bfs@{element\discretionary {-}{}{}\_\discretionary {-}{}{}bfs}|hyperpage}{9}
+\indexentry{element\discretionary {-}{}{}\_\discretionary {-}{}{}bfs@{element\discretionary {-}{}{}\_\discretionary {-}{}{}bfs}!element\discretionary {-}{}{}\_\discretionary {-}{}{}bfs@{element\discretionary {-}{}{}\_\discretionary {-}{}{}bfs}|hyperpage}{9}
+\indexentry{element\discretionary {-}{}{}\_\discretionary {-}{}{}bfs@{element\discretionary {-}{}{}\_\discretionary {-}{}{}bfs}!element_bfs@{element\discretionary {-}{}{}\_\discretionary {-}{}{}bfs}|hyperpage}{9}
+\indexentry{element\discretionary {-}{}{}\_\discretionary {-}{}{}bfs@{element\discretionary {-}{}{}\_\discretionary {-}{}{}bfs}!operator$<$$<$@{operator$<$$<$}|hyperpage}{10}
+\indexentry{operator$<$$<$@{operator$<$$<$}!element_bfs@{element\discretionary {-}{}{}\_\discretionary {-}{}{}bfs}|hyperpage}{10}
+\indexentry{element\discretionary {-}{}{}\_\discretionary {-}{}{}bfs@{element\discretionary {-}{}{}\_\discretionary {-}{}{}bfs}!odleglosc@{odleglosc}|hyperpage}{10}
+\indexentry{odleglosc@{odleglosc}!element_bfs@{element\discretionary {-}{}{}\_\discretionary {-}{}{}bfs}|hyperpage}{10}
+\indexentry{element\discretionary {-}{}{}\_\discretionary {-}{}{}bfs@{element\discretionary {-}{}{}\_\discretionary {-}{}{}bfs}!poprzedni@{poprzedni}|hyperpage}{10}
+\indexentry{poprzedni@{poprzedni}!element_bfs@{element\discretionary {-}{}{}\_\discretionary {-}{}{}bfs}|hyperpage}{10}
+\indexentry{element\discretionary {-}{}{}\_\discretionary {-}{}{}bfs@{element\discretionary {-}{}{}\_\discretionary {-}{}{}bfs}!stan@{stan}|hyperpage}{10}
+\indexentry{stan@{stan}!element_bfs@{element\discretionary {-}{}{}\_\discretionary {-}{}{}bfs}|hyperpage}{10}
+\indexentry{element\discretionary {-}{}{}\_\discretionary {-}{}{}dfs@{element\discretionary {-}{}{}\_\discretionary {-}{}{}dfs}|hyperpage}{10}
+\indexentry{element\discretionary {-}{}{}\_\discretionary {-}{}{}dfs@{element\discretionary {-}{}{}\_\discretionary {-}{}{}dfs}!element\discretionary {-}{}{}\_\discretionary {-}{}{}dfs@{element\discretionary {-}{}{}\_\discretionary {-}{}{}dfs}|hyperpage}{11}
+\indexentry{element\discretionary {-}{}{}\_\discretionary {-}{}{}dfs@{element\discretionary {-}{}{}\_\discretionary {-}{}{}dfs}!element_dfs@{element\discretionary {-}{}{}\_\discretionary {-}{}{}dfs}|hyperpage}{11}
+\indexentry{element\discretionary {-}{}{}\_\discretionary {-}{}{}dfs@{element\discretionary {-}{}{}\_\discretionary {-}{}{}dfs}!operator$<$$<$@{operator$<$$<$}|hyperpage}{11}
+\indexentry{operator$<$$<$@{operator$<$$<$}!element_dfs@{element\discretionary {-}{}{}\_\discretionary {-}{}{}dfs}|hyperpage}{11}
+\indexentry{element\discretionary {-}{}{}\_\discretionary {-}{}{}dfs@{element\discretionary {-}{}{}\_\discretionary {-}{}{}dfs}!poprzedni@{poprzedni}|hyperpage}{11}
+\indexentry{poprzedni@{poprzedni}!element_dfs@{element\discretionary {-}{}{}\_\discretionary {-}{}{}dfs}|hyperpage}{11}
+\indexentry{element\discretionary {-}{}{}\_\discretionary {-}{}{}dfs@{element\discretionary {-}{}{}\_\discretionary {-}{}{}dfs}!stan@{stan}|hyperpage}{11}
+\indexentry{stan@{stan}!element_dfs@{element\discretionary {-}{}{}\_\discretionary {-}{}{}dfs}|hyperpage}{11}
+\indexentry{graf@{graf}|hyperpage}{11}
+\indexentry{graf@{graf}!graf@{graf}|hyperpage}{13}
+\indexentry{graf@{graf}!graf@{graf}|hyperpage}{13}
+\indexentry{graf@{graf}!$\sim $graf@{$\sim $graf}|hyperpage}{13}
+\indexentry{$\sim $graf@{$\sim $graf}!graf@{graf}|hyperpage}{13}
+\indexentry{graf@{graf}!dodaj\discretionary {-}{}{}\_\discretionary {-}{}{}polaczenie@{dodaj\discretionary {-}{}{}\_\discretionary {-}{}{}polaczenie}|hyperpage}{13}
+\indexentry{dodaj\discretionary {-}{}{}\_\discretionary {-}{}{}polaczenie@{dodaj\discretionary {-}{}{}\_\discretionary {-}{}{}polaczenie}!graf@{graf}|hyperpage}{13}
+\indexentry{graf@{graf}!dodaj\discretionary {-}{}{}\_\discretionary {-}{}{}wierzcholek@{dodaj\discretionary {-}{}{}\_\discretionary {-}{}{}wierzcholek}|hyperpage}{14}
+\indexentry{dodaj\discretionary {-}{}{}\_\discretionary {-}{}{}wierzcholek@{dodaj\discretionary {-}{}{}\_\discretionary {-}{}{}wierzcholek}!graf@{graf}|hyperpage}{14}
+\indexentry{graf@{graf}!dodaj\discretionary {-}{}{}\_\discretionary {-}{}{}wierzcholek@{dodaj\discretionary {-}{}{}\_\discretionary {-}{}{}wierzcholek}|hyperpage}{14}
+\indexentry{dodaj\discretionary {-}{}{}\_\discretionary {-}{}{}wierzcholek@{dodaj\discretionary {-}{}{}\_\discretionary {-}{}{}wierzcholek}!graf@{graf}|hyperpage}{14}
+\indexentry{graf@{graf}!przejdz\discretionary {-}{}{}\_\discretionary {-}{}{}bfs@{przejdz\discretionary {-}{}{}\_\discretionary {-}{}{}bfs}|hyperpage}{15}
+\indexentry{przejdz\discretionary {-}{}{}\_\discretionary {-}{}{}bfs@{przejdz\discretionary {-}{}{}\_\discretionary {-}{}{}bfs}!graf@{graf}|hyperpage}{15}
+\indexentry{graf@{graf}!przejdz\discretionary {-}{}{}\_\discretionary {-}{}{}dfs@{przejdz\discretionary {-}{}{}\_\discretionary {-}{}{}dfs}|hyperpage}{15}
+\indexentry{przejdz\discretionary {-}{}{}\_\discretionary {-}{}{}dfs@{przejdz\discretionary {-}{}{}\_\discretionary {-}{}{}dfs}!graf@{graf}|hyperpage}{15}
+\indexentry{graf@{graf}!sprawdz\discretionary {-}{}{}\_\discretionary {-}{}{}polaczenie@{sprawdz\discretionary {-}{}{}\_\discretionary {-}{}{}polaczenie}|hyperpage}{15}
+\indexentry{sprawdz\discretionary {-}{}{}\_\discretionary {-}{}{}polaczenie@{sprawdz\discretionary {-}{}{}\_\discretionary {-}{}{}polaczenie}!graf@{graf}|hyperpage}{15}
+\indexentry{graf@{graf}!usun\discretionary {-}{}{}\_\discretionary {-}{}{}polaczenie@{usun\discretionary {-}{}{}\_\discretionary {-}{}{}polaczenie}|hyperpage}{16}
+\indexentry{usun\discretionary {-}{}{}\_\discretionary {-}{}{}polaczenie@{usun\discretionary {-}{}{}\_\discretionary {-}{}{}polaczenie}!graf@{graf}|hyperpage}{16}
+\indexentry{graf@{graf}!usun\discretionary {-}{}{}\_\discretionary {-}{}{}wierzcholek@{usun\discretionary {-}{}{}\_\discretionary {-}{}{}wierzcholek}|hyperpage}{16}
+\indexentry{usun\discretionary {-}{}{}\_\discretionary {-}{}{}wierzcholek@{usun\discretionary {-}{}{}\_\discretionary {-}{}{}wierzcholek}!graf@{graf}|hyperpage}{16}
+\indexentry{graf@{graf}!wrozmiar@{wrozmiar}|hyperpage}{17}
+\indexentry{wrozmiar@{wrozmiar}!graf@{graf}|hyperpage}{17}
+\indexentry{graf@{graf}!wyswietl\discretionary {-}{}{}\_\discretionary {-}{}{}sasiadow@{wyswietl\discretionary {-}{}{}\_\discretionary {-}{}{}sasiadow}|hyperpage}{17}
+\indexentry{wyswietl\discretionary {-}{}{}\_\discretionary {-}{}{}sasiadow@{wyswietl\discretionary {-}{}{}\_\discretionary {-}{}{}sasiadow}!graf@{graf}|hyperpage}{17}
+\indexentry{graf@{graf}!bfs@{bfs}|hyperpage}{18}
+\indexentry{bfs@{bfs}!graf@{graf}|hyperpage}{18}
+\indexentry{graf@{graf}!operator$<$$<$@{operator$<$$<$}|hyperpage}{18}
+\indexentry{operator$<$$<$@{operator$<$$<$}!graf@{graf}|hyperpage}{18}
+\indexentry{graf@{graf}!ilosc@{ilosc}|hyperpage}{18}
+\indexentry{ilosc@{ilosc}!graf@{graf}|hyperpage}{18}
+\indexentry{graf@{graf}!rozmiar@{rozmiar}|hyperpage}{18}
+\indexentry{rozmiar@{rozmiar}!graf@{graf}|hyperpage}{18}
+\indexentry{graf@{graf}!tablica@{tablica}|hyperpage}{18}
+\indexentry{tablica@{tablica}!graf@{graf}|hyperpage}{18}
+\indexentry{wierzcholek@{wierzcholek}|hyperpage}{19}
+\indexentry{wierzcholek@{wierzcholek}!wierzcholek@{wierzcholek}|hyperpage}{19}
+\indexentry{wierzcholek@{wierzcholek}!wierzcholek@{wierzcholek}|hyperpage}{19}
+\indexentry{wierzcholek@{wierzcholek}!graf@{graf}|hyperpage}{20}
+\indexentry{graf@{graf}!wierzcholek@{wierzcholek}|hyperpage}{20}
+\indexentry{wierzcholek@{wierzcholek}!operator$<$$<$@{operator$<$$<$}|hyperpage}{20}
+\indexentry{operator$<$$<$@{operator$<$$<$}!wierzcholek@{wierzcholek}|hyperpage}{20}
+\indexentry{wierzcholek@{wierzcholek}!operator$>$$>$@{operator$>$$>$}|hyperpage}{20}
+\indexentry{operator$>$$>$@{operator$>$$>$}!wierzcholek@{wierzcholek}|hyperpage}{20}
+\indexentry{wierzcholek@{wierzcholek}!numer@{numer}|hyperpage}{20}
+\indexentry{numer@{numer}!wierzcholek@{wierzcholek}|hyperpage}{20}
+\indexentry{wierzcholek@{wierzcholek}!polaczenia@{polaczenia}|hyperpage}{20}
+\indexentry{polaczenia@{polaczenia}!wierzcholek@{wierzcholek}|hyperpage}{20}
+\indexentry{wierzcholek@{wierzcholek}!wartosc@{wartosc}|hyperpage}{20}
+\indexentry{wartosc@{wartosc}!wierzcholek@{wierzcholek}|hyperpage}{20}
+\indexentry{wierzcholek@{wierzcholek}!zajety@{zajety}|hyperpage}{20}
+\indexentry{zajety@{zajety}!wierzcholek@{wierzcholek}|hyperpage}{20}
+\indexentry{prj/generator.\discretionary {-}{}{}cpp@{prj/generator.\discretionary {-}{}{}cpp}|hyperpage}{21}
+\indexentry{generator.\discretionary {-}{}{}cpp@{generator.\discretionary {-}{}{}cpp}!generuj\discretionary {-}{}{}\_\discretionary {-}{}{}polaczenia@{generuj\discretionary {-}{}{}\_\discretionary {-}{}{}polaczenia}|hyperpage}{22}
+\indexentry{generuj\discretionary {-}{}{}\_\discretionary {-}{}{}polaczenia@{generuj\discretionary {-}{}{}\_\discretionary {-}{}{}polaczenia}!generator.cpp@{generator.\discretionary {-}{}{}cpp}|hyperpage}{22}
+\indexentry{generator.\discretionary {-}{}{}cpp@{generator.\discretionary {-}{}{}cpp}!generuj\discretionary {-}{}{}\_\discretionary {-}{}{}wierzcholki@{generuj\discretionary {-}{}{}\_\discretionary {-}{}{}wierzcholki}|hyperpage}{22}
+\indexentry{generuj\discretionary {-}{}{}\_\discretionary {-}{}{}wierzcholki@{generuj\discretionary {-}{}{}\_\discretionary {-}{}{}wierzcholki}!generator.cpp@{generator.\discretionary {-}{}{}cpp}|hyperpage}{22}
+\indexentry{prj/generator.\discretionary {-}{}{}hh@{prj/generator.\discretionary {-}{}{}hh}|hyperpage}{22}
+\indexentry{generator.\discretionary {-}{}{}hh@{generator.\discretionary {-}{}{}hh}!generuj\discretionary {-}{}{}\_\discretionary {-}{}{}polaczenia@{generuj\discretionary {-}{}{}\_\discretionary {-}{}{}polaczenia}|hyperpage}{23}
+\indexentry{generuj\discretionary {-}{}{}\_\discretionary {-}{}{}polaczenia@{generuj\discretionary {-}{}{}\_\discretionary {-}{}{}polaczenia}!generator.hh@{generator.\discretionary {-}{}{}hh}|hyperpage}{23}
+\indexentry{generator.\discretionary {-}{}{}hh@{generator.\discretionary {-}{}{}hh}!generuj\discretionary {-}{}{}\_\discretionary {-}{}{}wierzcholki@{generuj\discretionary {-}{}{}\_\discretionary {-}{}{}wierzcholki}|hyperpage}{24}
+\indexentry{generuj\discretionary {-}{}{}\_\discretionary {-}{}{}wierzcholki@{generuj\discretionary {-}{}{}\_\discretionary {-}{}{}wierzcholki}!generator.hh@{generator.\discretionary {-}{}{}hh}|hyperpage}{24}
+\indexentry{prj/graf.\discretionary {-}{}{}cpp@{prj/graf.\discretionary {-}{}{}cpp}|hyperpage}{25}
+\indexentry{graf.\discretionary {-}{}{}cpp@{graf.\discretionary {-}{}{}cpp}!operator$<$$<$@{operator$<$$<$}|hyperpage}{25}
+\indexentry{operator$<$$<$@{operator$<$$<$}!graf.cpp@{graf.\discretionary {-}{}{}cpp}|hyperpage}{25}
+\indexentry{prj/graf.\discretionary {-}{}{}hh@{prj/graf.\discretionary {-}{}{}hh}|hyperpage}{25}
+\indexentry{prj/main.\discretionary {-}{}{}cpp@{prj/main.\discretionary {-}{}{}cpp}|hyperpage}{26}
+\indexentry{main.\discretionary {-}{}{}cpp@{main.\discretionary {-}{}{}cpp}!\discretionary {-}{}{}R\discretionary {-}{}{}O\discretionary {-}{}{}Z\discretionary {-}{}{}M\discretionary {-}{}{}I\discretionary {-}{}{}A\discretionary {-}{}{}R@{\discretionary {-}{}{}R\discretionary {-}{}{}O\discretionary {-}{}{}Z\discretionary {-}{}{}M\discretionary {-}{}{}I\discretionary {-}{}{}A\discretionary {-}{}{}R}|hyperpage}{27}
+\indexentry{\discretionary {-}{}{}R\discretionary {-}{}{}O\discretionary {-}{}{}Z\discretionary {-}{}{}M\discretionary {-}{}{}I\discretionary {-}{}{}A\discretionary {-}{}{}R@{\discretionary {-}{}{}R\discretionary {-}{}{}O\discretionary {-}{}{}Z\discretionary {-}{}{}M\discretionary {-}{}{}I\discretionary {-}{}{}A\discretionary {-}{}{}R}!main.cpp@{main.\discretionary {-}{}{}cpp}|hyperpage}{27}
+\indexentry{main.\discretionary {-}{}{}cpp@{main.\discretionary {-}{}{}cpp}!main@{main}|hyperpage}{27}
+\indexentry{main@{main}!main.cpp@{main.\discretionary {-}{}{}cpp}|hyperpage}{27}
+\indexentry{main.\discretionary {-}{}{}cpp@{main.\discretionary {-}{}{}cpp}!menu@{menu}|hyperpage}{28}
+\indexentry{menu@{menu}!main.cpp@{main.\discretionary {-}{}{}cpp}|hyperpage}{28}
+\indexentry{prj/wierzcholek.\discretionary {-}{}{}cpp@{prj/wierzcholek.\discretionary {-}{}{}cpp}|hyperpage}{30}
+\indexentry{wierzcholek.\discretionary {-}{}{}cpp@{wierzcholek.\discretionary {-}{}{}cpp}!operator$<$$<$@{operator$<$$<$}|hyperpage}{30}
+\indexentry{operator$<$$<$@{operator$<$$<$}!wierzcholek.cpp@{wierzcholek.\discretionary {-}{}{}cpp}|hyperpage}{30}
+\indexentry{wierzcholek.\discretionary {-}{}{}cpp@{wierzcholek.\discretionary {-}{}{}cpp}!operator$>$$>$@{operator$>$$>$}|hyperpage}{30}
+\indexentry{operator$>$$>$@{operator$>$$>$}!wierzcholek.cpp@{wierzcholek.\discretionary {-}{}{}cpp}|hyperpage}{30}
+\indexentry{prj/wierzcholek.\discretionary {-}{}{}hh@{prj/wierzcholek.\discretionary {-}{}{}hh}|hyperpage}{31}

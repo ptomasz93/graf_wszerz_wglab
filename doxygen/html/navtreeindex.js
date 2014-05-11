@@ -1,0 +1,27 @@
+var NAVTREEINDEX =
+{
+"index.html":[],
+"annotated.html":[0,0],
+"structelement__bfs.html":[0,0,0],
+"structelement__dfs.html":[0,0,1],
+"classgraf.html":[0,0,2],
+"classwierzcholek.html":[0,0,3],
+"classes.html":[0,1],
+"functions.html":[0,2,0],
+"functions_func.html":[0,2,1],
+"functions_vars.html":[0,2,2],
+"functions_rela.html":[0,2,3],
+"files.html":[1,0],
+"generator_8cpp.html":[1,0,0],
+"generator_8hh.html":[1,0,1],
+"graf_8cpp.html":[1,0,2],
+"graf_8hh.html":[1,0,3],
+"main_8cpp.html":[1,0,4],
+"wierzcholek_8cpp.html":[1,0,5],
+"wierzcholek_8hh.html":[1,0,6],
+"globals.html":[1,1,0],
+"globals_func.html":[1,1,1],
+"globals_defs.html":[1,1,2],
+"dirs.html":[2],
+"dir_00a2aeab00302c7b96c1830724320259.html":[2,0]
+};
