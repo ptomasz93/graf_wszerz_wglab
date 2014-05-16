@@ -1,5 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node7" href="$graf_8hh.html" title="graf.hh" alt="" coords="163,83,224,112"/>
-<area shape="rect" id="node14" href="$wierzcholek_8hh.html" title="wierzcholek.hh" alt="" coords="231,160,340,189"/>
-<area shape="rect" id="node24" href="$generator_8hh.html" title="generator.hh" alt="" coords="499,83,592,112"/>
+<area shape="rect" id="node7" href="$graf_8hh.html" title="graf.hh" alt="" coords="64,160,126,189"/>
+<area shape="rect" id="node14" href="$wierzcholek_8hh.html" title="wierzcholek.hh" alt="" coords="274,237,383,267"/>
+<area shape="rect" id="node24" href="$generator_8hh.html" title="generator.hh" alt="" coords="350,83,443,112"/>
+<area shape="rect" id="node33" href="$menu_8hh.html" title="menu.hh" alt="" coords="203,83,275,112"/>
 </map>

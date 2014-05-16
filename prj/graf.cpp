@@ -31,7 +31,6 @@ graf::graf(int il)
 {
 rozmiar=il;
 tablica = new wierzcholek[rozmiar];
-tablica_dfs=new element_dfs[rozmiar];
 ilosc=0;
 time=0;
 }
@@ -42,7 +41,7 @@ time=0;
 graf::~graf()
 {
 	delete tablica;
-	delete tablica_dfs;
+
 }
 
 /**
@@ -89,7 +88,7 @@ ilosc++;
 void graf::usun_wierzcholek(int numer)
 {
 	while(tablica[numer].polaczenia.size())
-		usun_polaczenie(numer,tablica[numer].polaczenia[0]);
+		usun_polaczenie(numer,tablica[numer].polaczenia[0].wierzcholek);
 
 	tablica[numer].zajety=NULL;
 	ilosc--;
@@ -114,11 +113,11 @@ void graf::usun_polaczenie(int v1, int v2)
 {
 	for(int i=0;i<tablica[v2].polaczenia.size();i++)
 	{
-		if(tablica[v2].polaczenia[i]==v1)tablica[v2].polaczenia.erase(tablica[v2].polaczenia.begin()+i);
+		if(tablica[v2].polaczenia[i].wierzcholek==v1)tablica[v2].polaczenia.erase(tablica[v2].polaczenia.begin()+i);
 	}
 	for(int i=0;i<tablica[v1].polaczenia.size();i++)
 	{
-		if(tablica[v1].polaczenia[i]==v2)tablica[v1].polaczenia.erase(tablica[v1].polaczenia.begin()+i);
+		if(tablica[v1].polaczenia[i].wierzcholek==v2)tablica[v1].polaczenia.erase(tablica[v1].polaczenia.begin()+i);
 	}
 }
 
@@ -129,13 +128,17 @@ void graf::usun_polaczenie(int v1, int v2)
  * @param v2
  */
 
-void graf::dodaj_polaczenie(int v1, int v2)
+void graf::dodaj_polaczenie(int v1, int v2,int waga)
 {
+	poloczenie nowev1, nowev2;
+	nowev1.waga=nowev2.waga=waga;
+	nowev1.wierzcholek=v2;
+	nowev2.wierzcholek=v1;
 	if(tablica[v1].zajety==NULL)cout<<"wierzcholek :"<<v1<<" nie istnieje \n";
 	if(tablica[v2].zajety==NULL)cout<<"wierzcholek :"<<v2<<" nie istnieje \n";
 	if(tablica[v1].zajety==NULL|tablica[v2].zajety==NULL|sprawdz_polaczenie(v1,v2))return;
-	tablica[v1].polaczenia.push_back(v2);
-	tablica[v2].polaczenia.push_back(v1);
+	tablica[v1].polaczenia.push_back(nowev1);
+	tablica[v2].polaczenia.push_back(nowev2);
 }
 
 /**
@@ -162,12 +165,12 @@ bool graf::sprawdz_polaczenie(int v1, int v2)
 	bool v1_2=false, v2_1=false;
 	for(int i=0;i<tablica[v1].polaczenia.size();i++)
 	{
-		if(tablica[v1].polaczenia[i]==v2)v1_2=true;
+		if(tablica[v1].polaczenia[i].wierzcholek==v2)v1_2=true;
 		else v1_2=false;
 	}
 	for(int i=0;i<tablica[v2].polaczenia.size();i++)
 	{
-		if(tablica[v2].polaczenia[i]==v1)v2_1=true;
+		if(tablica[v2].polaczenia[i].wierzcholek==v1)v2_1=true;
 		else v2_1=false;
 	}
 		if(v2_1&v1_2)
@@ -186,28 +189,28 @@ bool graf::sprawdz_polaczenie(int v1, int v2)
  * @param v1 korzen przechodzenia
  * @return
  */
-element_bfs *graf::przejdz_bfs(int v1)
+element_bfs *graf::przejdz_bfs(int v)
 {
-if(tablica[v1].zajety==NULL)
+if(tablica[v].zajety==NULL)
 {
 	cout<<"wierzcholek nie istnieje"<<endl;
+	return NULL;
 }
 element_bfs *tablica_bfs;
 tablica_bfs=new element_bfs[rozmiar];
 queue <int> kolejka; //kolejka z stl
-int v=v1;
 ///kolorujemy korzen
 tablica_bfs[v].stan=2;
 tablica_bfs[v].poprzedni=NULL;
 tablica_bfs[v].odleglosc=0;
 bool pelny=true;
-///petla wykonuje sie dopuki jest cis w kolejca
+///petla wykonuje sie dopuki jest cos w kolejca
 while(pelny)
 {
 		for (int i = 0; i < tablica[v].polaczenia.size(); i++)
 		{
 			int a;
-			a = tablica[v].polaczenia[i];
+			a = tablica[v].polaczenia[i].wierzcholek;
 			if (tablica_bfs[a].stan == 0)
 			{
 				kolejka.push(a);
@@ -225,97 +228,193 @@ while(pelny)
 return tablica_bfs;
 }
 
-//element_dfs *graf::przejdz_dfs(int v1)
-//{
-//if(tablica[v1].zajety==NULL)
-//{
-//	cout<<"wierzcholek nie istnieje"<<endl;
-//}
-//element_dfs *tablica_dfs;
-//tablica_dfs=new element_dfs[rozmiar];
-//stack <int> kolejka;
-//int v=v1;
-//int time;
-//tablica_dfs[v].stan=2;
-//tablica_dfs[v].poprzedni=NULL;
-//bool pelny=true;
-//while(pelny)
-//{
-//		for (int i = 0; i < tablica[v].polaczenia.size(); i++)
-//		{
-//			int a;
-//			a = tablica[v].polaczenia[i];
-//			if (tablica_dfs[a].stan == 0)
-//			{
-//				kolejka.push(a);
-//				tablica_dfs[a].stan = 1;
-//				tablica_dfs[a].poprzedni=v;
-//			}
-//		}
-//		tablica_dfs[v].stan=2;
-//	if(kolejka.empty())pelny=NULL;
-//	v=kolejka.top();
-//	kolejka.pop();
-//}
-//return tablica_dfs;
-//}
+/**
+ * \brief funkjcja znajduje najkrutsza droge miedzy zadanymi wierzcholkami
+ * \details zaimplementowana na kolejce
+ * @param korzen
+ * @param v
+ * @return
+ */
+element_bfs* graf::znajdz_droge_bfs(int korzen, int v)
+{
+if(tablica[korzen].zajety==NULL)
+{
+	cout<<"wierzcholek nie istnieje"<<endl;
+	return NULL;
+}
+element_bfs *tablica_bfs;
+tablica_bfs=new element_bfs[rozmiar];
+queue <int> kolejka; //kolejka z stl
+///kolorujemy korzen
+tablica_bfs[korzen].stan=2;
+tablica_bfs[korzen].poprzedni=-1;//poniewaz wierzcholki indeksujeemy od 0 dla czytania sciezki potrzebujemy wyjatkowy indeks dla korzenia
+tablica_bfs[korzen].odleglosc=0;
+bool pelny=true;
+///petla wykonuje sie dopuki jest cos w kolejca
+while(pelny)
+{
+		for (int i = 0; i < tablica[korzen].polaczenia.size(); i++)
+		{
+			int a;
+			a = tablica[korzen].polaczenia[i].wierzcholek;
+			if (tablica_bfs[a].stan == 0)
+			{
+				kolejka.push(a);
+				tablica_bfs[a].stan = 1;
+				tablica_bfs[a].odleglosc=tablica_bfs[korzen].odleglosc+1;
+				tablica_bfs[a].poprzedni=korzen;
+				if(a==v)return tablica_bfs;
+			}
+		}
+		tablica_bfs[korzen].stan=2;
+	if(kolejka.empty())pelny=NULL;
+	korzen=kolejka.front();
+	kolejka.pop();
+}
+return tablica_bfs;
+}
+
+/**
+ * \brief funkcja wyswietla zanleziona droge miedzy wierzcholkami
+ * @param tablica_bfs
+ * @param v1
+ */
+
+void graf::czytaj_droge_bfs(element_bfs* tablica_bfs, int v1)
+{
+while(v1>=0)
+{
+	cout<<v1<<endl;
+	v1=tablica_bfs[v1].poprzedni;
+}
+}
+
 
 /**
  * \brief funkcja wywyołuje przejscie wglab drzewa dla kazdego nie odwiedzonego wierzcholka
  * \powoduje to stworzenie paru drzew przejscia
  * \details na ten moment wszystkie drzewa przechowywyane sa w jednej tablicy
  */
-void *graf::przejdz_dfs()
+
+element_dfs* graf::przejdz_dfs()
 {
 time=0;
+element_dfs *tablica_dfs;
+tablica_dfs=new element_dfs[rozmiar];
 for(int i=0;i<rozmiar;i++)
 {
 	if(tablica[i].zajety==true && tablica_dfs[i].stan==0)
-		dfs_visit(i);
-
+		dfs_visit(tablica_dfs,i);
+}
+return tablica_dfs;
 }
 
-}
 /**
- * \brief funkcja przechodzi w głąb graf tworzac drzewo przejscia
- * \details funkcja zaisuje czas odwiedzin oraz czas wyjscia z wierzcholka
+ * \brief funkcja przechodzi w głąb graf tworzac drzewo przejscia oparta na wywolaniu rekurencyjnym
+ * \details funkcja zapisuje czas odwiedzin oraz czas wyjscia z wierzcholka
  * @param v1
  */
 
-void graf::dfs_visit(int v1)
+bool graf::dfs_visit(element_dfs * tablica_dfs,int v1)
 {
+
 	if(tablica[v1].zajety==NULL)
 		{
 		cout<<"wierzcholek nie istnieje"<<endl;
-		return;
+		return false;
 		}
 	tablica_dfs[v1].stan=1;
 	time+=1;
 	tablica_dfs[v1].d=time;
 	for (int i = 0; i < tablica[v1].polaczenia.size(); i++)
 	{
-		int a=tablica[v1].polaczenia[i];
+		int a=tablica[v1].polaczenia[i].wierzcholek;
 		if(tablica_dfs[a].stan==0)
 		{
 			tablica_dfs[a].poprzedni=v1;
-			dfs_visit(a);
+			dfs_visit(tablica_dfs, a);
+
 		}
 	}
 	tablica_dfs[v1].stan=2;
 	tablica_dfs[v1].f=time;
 	time+=1;
+	return NULL;
+}
+
+
+/**
+* \brief funkcja wyswietla "las drzew przejsc"
+*/
+void graf::wyswietl_dfs(element_dfs *tablica_dfs)
+{
+for(int i=0;i<rozmiar;i++)
+{
+if(tablica_dfs[i].stan==2)
+{
+cout<<"wierzcholek: "<<i<<endl;
+cout<<tablica_dfs[i]<<endl;
+}
+}
 }
 /**
- * \brief funkcja wyswietla "las drzew przejsc"
+ * \brief funkcja znajduje droge miedzy wierzcholkami. W tym przypadku oparta na stosie. A mozna by i na rekurencji
+ * \details funkcja jest implementacja algorytmu dfs
+ * @param korzen
+ * @param v1
+ * @return
  */
-void graf::wyswietl_dfs()
+element_dfs* graf::znajdz_droge_dfs(int korzen, int v1)
 {
-	for(int i=0;i<rozmiar;i++)
-		{
-			if(tablica_dfs[i].stan==2)
+	{
+	if(tablica[korzen].zajety==NULL)
+	{
+		cout<<"wierzcholek nie istnieje"<<endl;
+		return NULL;
+	}
+	element_dfs *tablica_dfs;
+	tablica_dfs=new element_dfs[rozmiar];
+	stack <int> stos; //kolejka z stl
+	///kolorujemy korzen
+	tablica_dfs[korzen].stan=2;
+	tablica_dfs[korzen].poprzedni=-1;//poniewaz wierzcholki indeksujeemy od 0 dla czytania sciezki potrzebujemy wyjatkowy indeks dla korzenia
+	bool pelny=true;
+	///petla wykonuje sie dopuki jest cos w kolejca
+	while(pelny)
+	{
+			for (int i = 0; i < tablica[korzen].polaczenia.size(); i++)
 			{
-			cout<<"wierzcholek: "<<i<<endl;
-			cout<<tablica_dfs[i]<<endl;
+				int a;
+				a = tablica[korzen].polaczenia[i].wierzcholek;
+				if (tablica_dfs[a].stan == 0)
+				{
+					stos.push(a);
+					tablica_dfs[a].stan = 1;
+					tablica_dfs[a].poprzedni=korzen;
+					if(a==v1) return tablica_dfs;
+				}
 			}
-		}
+			tablica_dfs[korzen].stan=2;
+		if(stos.empty())pelny=NULL;
+		korzen=stos.top();
+		stos.pop();
+
+	}
+	return tablica_dfs;
+	}
+}
+
+/**
+ * \brief funkcja wyswietla zanleziona droge miedzy wierzcholkami
+ * @param tablica_bfs
+ * @param v1
+ */
+
+void graf::czytaj_droge_dfs(element_dfs* tablica_dfs, int v1)
+{
+while(v1>=0)
+{
+	cout<<v1<<endl;
+	v1=tablica_dfs[v1].poprzedni;
+}
 }

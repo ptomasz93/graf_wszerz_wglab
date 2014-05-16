@@ -73,6 +73,9 @@ Program przezemnie napisany pozwala na tworzenie grafu za pomocą dostarczonego 
 \item odnalezienie najkrótszej drogi między dwoma wierzchołkami.
 \item sprawdzenie czy graf jest dwudzielny
 \end{itemize}
+
+\section {wyszukiwanie drogi za pomoca bfs}
+W programie została zaimplementowana funkcja pozwalająca na odnalezienie dorgi za pomoca przeszukiwania w szerz. Droga znaleziona ta metoda jest najkrtosza z mozliwych drog. Algorytm nie uwzglednia jednak wag polaczen co powoduje jego niedoskonalosc.
 \newpage
 \section {Przeszukiwanie w głąb}
 Przeszukiwanie w głąb (ang. Depth-first search, w skrócie DFS) – jeden z algorytmów przeszukiwania grafu. Przeszukiwanie w głąb polega na badaniu wszystkich krawędzi wychodzących z podanego wierzchołka. Po zbadaniu wszystkich krawędzi wychodzących z danego wierzchołka algorytm powraca do wierzchołka, z którego dany wierzchołek został odwiedzony[1].\\
@@ -83,6 +86,8 @@ Przeszukiwanie w głąb (ang. Depth-first search, w skrócie DFS) – jeden z al
 \item do wyznaczania silnych spójnych składowych grafu skierowanego
 \item w algorytmie sortowania topologicznego skierowanego grafu acyklicznego
 \end{itemize}
+\section {wyszukiwanie drogi za pomoca dfs}
+W programie została zaimplementowana rowniez funkcja wyszukiwania drogi za pomoca algorytmu dfs. Funkcja ta znajduje drogę, jednak w przeciwieństwie do wyszukiwania za pomoca algorytmu bfs nie jest to droga najkrutsza. Funkcja rowniez nie uwzglednia wag polaczen.
 \section{Bibliografia}
 \begin{itemize}
 \item Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein: Wprowadzenie do algorytmów.

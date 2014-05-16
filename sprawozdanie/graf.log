@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.5.11)  11 MAY 2014 19:59
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.5.11)  16 MAY 2014 14:53
 entering extended mode
  %&-line parsing enabled.
 **graf.tex
@@ -278,8 +278,7 @@ File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
 )
 (/usr/share/texmf-texlive/tex/latex/psnfss/times.sty
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
-)
-No file graf.aux.
+) (./graf.aux)
 \openout1 = `graf.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
@@ -295,6 +294,7 @@ LaTeX Font Info:    ... okay on input line 50.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
 LaTeX Font Info:    ... okay on input line 50.
 LaTeX Font Info:    Try loading font information for T1+ptm on input line 50.
+
 (/usr/share/texmf-texlive/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
@@ -356,34 +356,34 @@ m/m/n/10 . Pro-gram prze-zem-nie na-pi-sa-ny po-zwa-la na two-rze-nie gra-fu za
  []
 
 [1]
-Underfull \hbox (badness 2165) in paragraph at lines 78--82
+Underfull \hbox (badness 2165) in paragraph at lines 81--85
 []\T1/ptm/m/n/10 Przeszukiwanie w gª¡b (ang. Depth-first se-arch, w skró-cie DF
 S) ^^U je-den
  []
 
 
-Underfull \hbox (badness 1028) in paragraph at lines 78--82
+Underfull \hbox (badness 1028) in paragraph at lines 81--85
 \T1/ptm/m/n/10 z al-go-ryt-mów prze-szu-ki-wa-nia gra-fu. Prze-szu-ki-wa-nie w 
 gª¡b po-le-ga na ba-da-niu
  []
 
 
-Underfull \hbox (badness 1661) in paragraph at lines 78--82
+Underfull \hbox (badness 1661) in paragraph at lines 81--85
 []\T1/ptm/m/n/10 Zªo»ono±¢ pa-mi¦-cio-wa prze-szu-ki-wa-nia w gª¡b w przy-pad-k
 u drze-wa jest o
  []
 
 
-Underfull \hbox (badness 1810) in paragraph at lines 78--82
+Underfull \hbox (badness 1810) in paragraph at lines 81--85
 \T1/ptm/m/n/10 wy-ma-ga za-pa-mi¦-ta-nia tyl-ko ±cie»-ki od ko-rze-nia do bie-»
 ¡-ce-go w¦-zªa, pod-czas
  []
 
 [2] (./graf.aux) ) 
 Here is how much of TeX's memory you used:
- 1404 strings out of 495026
- 17033 string characters out of 1181802
- 67036 words of memory out of 3000000
+ 1406 strings out of 495026
+ 17051 string characters out of 1181802
+ 68036 words of memory out of 3000000
  4608 multiletter control sequences out of 15000+50000
  21811 words of font info for 27 fonts, out of 3000000 for 9000
  48 hyphenation exceptions out of 8191
@@ -395,7 +395,7 @@ s/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type1/publi
 c/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a
 .pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/tex
 mf-texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on graf.pdf (3 pages, 78748 bytes).
+Output written on graf.pdf (3 pages, 80150 bytes).
 PDF statistics:
  41 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

@@ -1,4 +1,6 @@
 <map id="G" name="G">
 <area shape="rect" id="node3" href="$graf_8cpp.html" title="prj/graf.cpp" alt="" coords="5,83,91,112"/>
-<area shape="rect" id="node5" href="$main_8cpp.html" title="prj/main.cpp" alt="" coords="115,83,208,112"/>
+<area shape="rect" id="node5" href="$main_8cpp.html" title="prj/main.cpp" alt="" coords="81,160,175,189"/>
+<area shape="rect" id="node7" href="$menu_8hh.html" title="prj/menu.hh" alt="" coords="165,83,256,112"/>
+<area shape="rect" id="node10" href="$menu_8cpp.html" title="prj/menu.cpp" alt="" coords="199,160,295,189"/>
 </map>

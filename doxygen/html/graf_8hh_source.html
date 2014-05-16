@@ -98,39 +98,42 @@
 <a name="l00021"></a>00021 <span class="keyword">using namespace </span>std;
 <a name="l00027"></a><a class="code" href="classgraf.html">00027</a> <span class="keyword">class </span><a class="code" href="classgraf.html" title="klasa modeluje graf.">graf</a>
 <a name="l00028"></a>00028 {
-<a name="l00029"></a><a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">00029</a> <a class="code" href="classwierzcholek.html" title="clasa modeluje pojecie pojecie poedynczego wierzcholka grafu">wierzcholek</a> *<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>;
+<a name="l00029"></a><a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">00029</a> <a class="code" href="classwierzcholek.html">wierzcholek</a> *<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>;
 <a name="l00030"></a><a class="code" href="classgraf.html#a596da8a77b680d7ec408b1253c2c43c3">00030</a> <span class="keywordtype">int</span> <a class="code" href="classgraf.html#a596da8a77b680d7ec408b1253c2c43c3">rozmiar</a>;
 <a name="l00031"></a><a class="code" href="classgraf.html#ad9204c0bbc75a2bef4a43200672f9694">00031</a> <span class="keywordtype">int</span> <a class="code" href="classgraf.html#ad9204c0bbc75a2bef4a43200672f9694">ilosc</a>;
 <a name="l00032"></a><a class="code" href="classgraf.html#a9202cb6ab351f5bbdbb79de440ab1fb5">00032</a> <span class="keywordtype">int</span> <a class="code" href="classgraf.html#a9202cb6ab351f5bbdbb79de440ab1fb5">time</a>;
-<a name="l00033"></a><a class="code" href="classgraf.html#a325616745236599f83bffb58d61b0fa9">00033</a> <a class="code" href="structelement__dfs.html" title="element drzewa przejscia dla przeszukiwania w głąb;">element_dfs</a> *<a class="code" href="classgraf.html#a325616745236599f83bffb58d61b0fa9">tablica_dfs</a>;
-<a name="l00034"></a>00034 <span class="keyword">public</span>:
-<a name="l00035"></a>00035 <a class="code" href="classgraf.html" title="klasa modeluje graf.">graf</a>(<span class="keywordtype">int</span> il);
-<a name="l00036"></a>00036 ~<a class="code" href="classgraf.html" title="klasa modeluje graf.">graf</a>();
-<a name="l00037"></a>00037 <span class="keywordtype">int</span> wrozmiar();
-<a name="l00038"></a>00038 <span class="keywordtype">void</span> wyswietl_dfs();
-<a name="l00039"></a>00039 <span class="keywordtype">void</span> dodaj_wierzcholek(<a class="code" href="classwierzcholek.html" title="clasa modeluje pojecie pojecie poedynczego wierzcholka grafu">wierzcholek</a> nowy);
-<a name="l00040"></a>00040 <span class="keywordtype">void</span> dodaj_wierzcholek();
-<a name="l00041"></a>00041 <span class="keywordtype">void</span> dodaj_polaczenie(<span class="keywordtype">int</span> v1, <span class="keywordtype">int</span> v2);
-<a name="l00042"></a>00042 <span class="keywordtype">void</span> usun_polaczenie(<span class="keywordtype">int</span> v1, <span class="keywordtype">int</span> v2);
-<a name="l00043"></a>00043 <span class="keywordtype">void</span> usun_wierzcholek(<span class="keywordtype">int</span> numer);
-<a name="l00044"></a>00044 <span class="keywordtype">void</span> wyswietl_sasiadow(<span class="keywordtype">int</span> numer);
-<a name="l00045"></a>00045 <span class="keywordtype">bool</span> sprawdz_polaczenie(<span class="keywordtype">int</span> v1, <span class="keywordtype">int</span> v2);
-<a name="l00046"></a>00046 <a class="code" href="structelement__bfs.html" title="struktura definiuje element drzewa przechodzenie w szerz">element_bfs</a>* przejdz_bfs(<span class="keywordtype">int</span> v1);
-<a name="l00047"></a>00047 <span class="keywordtype">void</span> *przejdz_dfs();
-<a name="l00048"></a>00048 <span class="keyword">friend</span> ostream &amp; <a class="code" href="graf_8cpp.html#aaf525f8cdadbe40d9ad7c39f79fd8a2c" title="przeladowanie operatora wyjscia">operator &lt;&lt;</a>(ostream &amp; wyjscie, <a class="code" href="classgraf.html" title="klasa modeluje graf.">graf</a> &amp; dane);
-<a name="l00049"></a><a class="code" href="classgraf.html#af2b2242aa53a3230ae67c7b57d7d9d11">00049</a> <span class="keyword">friend</span> <span class="keyword">class </span>bfs;
-<a name="l00050"></a>00050 <span class="keywordtype">void</span>  dfs_visit(<span class="keywordtype">int</span> v1);
-<a name="l00051"></a>00051 };
-<a name="l00052"></a>00052 
-<a name="l00053"></a>00053 <span class="preprocessor">#endif </span><span class="comment">/* GRAF_HH_ */</span>{
-<a name="l00054"></a>00054 
+<a name="l00033"></a>00033 <span class="keyword">public</span>:
+<a name="l00034"></a>00034 <a class="code" href="classgraf.html" title="klasa modeluje graf.">graf</a>(<span class="keywordtype">int</span> il);
+<a name="l00035"></a>00035 ~<a class="code" href="classgraf.html" title="klasa modeluje graf.">graf</a>();
+<a name="l00036"></a>00036 <span class="keywordtype">int</span> wrozmiar();
+<a name="l00037"></a>00037 <span class="keywordtype">void</span> dodaj_wierzcholek(<a class="code" href="classwierzcholek.html">wierzcholek</a> nowy);
+<a name="l00038"></a>00038 <span class="keywordtype">void</span> dodaj_wierzcholek();
+<a name="l00039"></a>00039 <span class="keywordtype">void</span> dodaj_polaczenie(<span class="keywordtype">int</span> v1, <span class="keywordtype">int</span> v2, <span class="keywordtype">int</span> waga);
+<a name="l00040"></a>00040 <span class="keywordtype">void</span> usun_polaczenie(<span class="keywordtype">int</span> v1, <span class="keywordtype">int</span> v2);
+<a name="l00041"></a>00041 <span class="keywordtype">void</span> usun_wierzcholek(<span class="keywordtype">int</span> numer);
+<a name="l00042"></a>00042 <span class="keywordtype">void</span> wyswietl_sasiadow(<span class="keywordtype">int</span> numer);
+<a name="l00043"></a>00043 <span class="keywordtype">bool</span> sprawdz_polaczenie(<span class="keywordtype">int</span> v1, <span class="keywordtype">int</span> v2);
+<a name="l00044"></a>00044 <a class="code" href="structelement__bfs.html" title="struktura definiuje element drzewa przechodzenie w szerz">element_bfs</a>* przejdz_bfs(<span class="keywordtype">int</span> v);
+<a name="l00045"></a>00045 <a class="code" href="structelement__bfs.html" title="struktura definiuje element drzewa przechodzenie w szerz">element_bfs</a>* znajdz_droge_bfs(<span class="keywordtype">int</span> korzen, <span class="keywordtype">int</span> v);
+<a name="l00046"></a>00046 <span class="keywordtype">void</span> czytaj_droge_bfs(<a class="code" href="structelement__bfs.html" title="struktura definiuje element drzewa przechodzenie w szerz">element_bfs</a> *tablica_bfs, <span class="keywordtype">int</span> v1);
+<a name="l00047"></a>00047 <a class="code" href="structelement__dfs.html" title="element drzewa przejscia dla przeszukiwania w głąb;">element_dfs</a>* znajdz_droge_dfs(<span class="keywordtype">int</span> korzen, <span class="keywordtype">int</span> v1);
+<a name="l00048"></a>00048 <span class="keywordtype">void</span> czytaj_droge_dfs(<a class="code" href="structelement__dfs.html" title="element drzewa przejscia dla przeszukiwania w głąb;">element_dfs</a>* tablica_bfs, <span class="keywordtype">int</span> v1);
+<a name="l00049"></a>00049 <a class="code" href="structelement__dfs.html" title="element drzewa przejscia dla przeszukiwania w głąb;">element_dfs</a>* przejdz_dfs();
+<a name="l00050"></a>00050 <span class="keyword">friend</span> ostream &amp; <a class="code" href="graf_8cpp.html#aaf525f8cdadbe40d9ad7c39f79fd8a2c" title="przeladowanie operatora wyjscia">operator &lt;&lt;</a>(ostream &amp; wyjscie, <a class="code" href="classgraf.html" title="klasa modeluje graf.">graf</a> &amp; dane);
+<a name="l00051"></a><a class="code" href="classgraf.html#af2b2242aa53a3230ae67c7b57d7d9d11">00051</a> <span class="keyword">friend</span> <span class="keyword">class </span>bfs;
+<a name="l00052"></a>00052 <span class="keywordtype">bool</span> dfs_visit(<a class="code" href="structelement__dfs.html" title="element drzewa przejscia dla przeszukiwania w głąb;">element_dfs</a> * tablica_dfs, <span class="keywordtype">int</span> v1);
+<a name="l00053"></a>00053 <span class="keywordtype">void</span> wyswietl_dfs(<a class="code" href="structelement__dfs.html" title="element drzewa przejscia dla przeszukiwania w głąb;">element_dfs</a> *tablica_dfs);
+<a name="l00054"></a>00054 };
+<a name="l00055"></a>00055 
+<a name="l00056"></a>00056 <span class="preprocessor">#endif </span><span class="comment">/* GRAF_HH_ */</span>{
+<a name="l00057"></a>00057 
 </pre></div></div><!-- contents -->
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="graf_8hh.html">graf.hh</a>      </li>
 
-    <li class="footer">Generated on Sun May 11 2014 19:33:49 for Graf by
+    <li class="footer">Generated on Fri May 16 2014 14:46:03 for Graf by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

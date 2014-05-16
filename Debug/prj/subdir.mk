@@ -7,18 +7,21 @@ CPP_SRCS += \
 ../prj/generator.cpp \
 ../prj/graf.cpp \
 ../prj/main.cpp \
+../prj/menu.cpp \
 ../prj/wierzcholek.cpp 
 
 OBJS += \
 ./prj/generator.o \
 ./prj/graf.o \
 ./prj/main.o \
+./prj/menu.o \
 ./prj/wierzcholek.o 
 
 CPP_DEPS += \
 ./prj/generator.d \
 ./prj/graf.d \
 ./prj/main.d \
+./prj/menu.d \
 ./prj/wierzcholek.d 
 
 

@@ -17,7 +17,7 @@ klasa modeluje graf.
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=236pt]{classgraf__coll__graph}
+\includegraphics[width=148pt]{classgraf__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{\-Public \-Member \-Functions}
@@ -29,13 +29,11 @@ klasa modeluje graf.
 \begin{DoxyCompactList}\small\item\em destruktor grafu \end{DoxyCompactList}\item 
 int \hyperlink{classgraf_aa045d28e07e38ca32adf1b353077f877}{wrozmiar} ()
 \begin{DoxyCompactList}\small\item\em funkcja zwraca rozmiar grafu \end{DoxyCompactList}\item 
-void \hyperlink{classgraf_a97c2722a11d3a7f90c82bc9b1cd56ef6}{wyswietl\-\_\-dfs} ()
-\begin{DoxyCompactList}\small\item\em funkcja wyswietla \char`\"{}las drzew przejsc\char`\"{} \end{DoxyCompactList}\item 
 void \hyperlink{classgraf_a6a50b0bfb5fc3cfc7a443014170b9565}{dodaj\-\_\-wierzcholek} (\hyperlink{classwierzcholek}{wierzcholek} nowy)
 \begin{DoxyCompactList}\small\item\em funkcja sluzy do dodawania wierzcholkow \end{DoxyCompactList}\item 
 void \hyperlink{classgraf_afaa55f5a9aef1f30a2b3be97b59a476b}{dodaj\-\_\-wierzcholek} ()
 \begin{DoxyCompactList}\small\item\em funkcja dodaje wierzcholek \end{DoxyCompactList}\item 
-void \hyperlink{classgraf_aa70de90b152f2cf47dac635793bcc5c4}{dodaj\-\_\-polaczenie} (int v1, int v2)
+void \hyperlink{classgraf_a4db0ebc4302facfc027dd7790542fb94}{dodaj\-\_\-polaczenie} (int v1, int v2, int waga)
 \begin{DoxyCompactList}\small\item\em funkcja dodaje polaczenie miedzy zadanymi wierzcholkami \end{DoxyCompactList}\item 
 void \hyperlink{classgraf_ac7e01e940f136f4020e4da816c2fb1b4}{usun\-\_\-polaczenie} (int v1, int v2)
 \begin{DoxyCompactList}\small\item\em funkcja usuwa polaczenie miedzy zadanymi wierzcholkami \end{DoxyCompactList}\item 
@@ -45,12 +43,22 @@ void \hyperlink{classgraf_a8dd83fa1722d917a143b2da9245b5db9}{wyswietl\-\_\-sasia
 \begin{DoxyCompactList}\small\item\em funkcja wyswietla sasiadow wierzcholka \end{DoxyCompactList}\item 
 bool \hyperlink{classgraf_ae1ebd85c7cb288174a5dccc5fd90634e}{sprawdz\-\_\-polaczenie} (int v1, int v2)
 \begin{DoxyCompactList}\small\item\em funkcja sprawdza czy mieszy podanymi wierzchokami istnieje polaczenie \end{DoxyCompactList}\item 
-\hyperlink{structelement__bfs}{element\-\_\-bfs} $\ast$ \hyperlink{classgraf_a5b67e5e829440e984782b232188a5f57}{przejdz\-\_\-bfs} (int v1)
+\hyperlink{structelement__bfs}{element\-\_\-bfs} $\ast$ \hyperlink{classgraf_a83fde8c542586d92421c9870f07a0cc2}{przejdz\-\_\-bfs} (int v)
 \begin{DoxyCompactList}\small\item\em implementacja algorytmu przechodzenie wszerz grafu \end{DoxyCompactList}\item 
-void $\ast$ \hyperlink{classgraf_a4947702a6d93feb805b1e11e14ec1e13}{przejdz\-\_\-dfs} ()
+\hyperlink{structelement__bfs}{element\-\_\-bfs} $\ast$ \hyperlink{classgraf_a420367f5ce066bd467c2621e3c69bdc3}{znajdz\-\_\-droge\-\_\-bfs} (int korzen, int v)
+\begin{DoxyCompactList}\small\item\em funkjcja znajduje najkrutsza droge miedzy zadanymi wierzcholkami \end{DoxyCompactList}\item 
+void \hyperlink{classgraf_a50eb021e0338d01d1f2a915f50add7c2}{czytaj\-\_\-droge\-\_\-bfs} (\hyperlink{structelement__bfs}{element\-\_\-bfs} $\ast$tablica\-\_\-bfs, int v1)
+\begin{DoxyCompactList}\small\item\em funkcja wyswietla zanleziona droge miedzy wierzcholkami \end{DoxyCompactList}\item 
+\hyperlink{structelement__dfs}{element\-\_\-dfs} $\ast$ \hyperlink{classgraf_a687140bdc84e60aa5f8342496bc2c06f}{znajdz\-\_\-droge\-\_\-dfs} (int korzen, int v1)
+\begin{DoxyCompactList}\small\item\em funkcja znajduje droge miedzy wierzcholkami. \-W tym przypadku oparta na stosie. \-A mozna by i na rekurencji \end{DoxyCompactList}\item 
+void \hyperlink{classgraf_ac5e916e9b4f36cd6949ee8132e044e9c}{czytaj\-\_\-droge\-\_\-dfs} (\hyperlink{structelement__dfs}{element\-\_\-dfs} $\ast$tablica\-\_\-bfs, int v1)
+\begin{DoxyCompactList}\small\item\em funkcja wyswietla zanleziona droge miedzy wierzcholkami \end{DoxyCompactList}\item 
+\hyperlink{structelement__dfs}{element\-\_\-dfs} $\ast$ \hyperlink{classgraf_a1a4c08e7c698459b7ceb172fd687dc78}{przejdz\-\_\-dfs} ()
 \begin{DoxyCompactList}\small\item\em funkcja wywyołuje przejscie wglab drzewa dla kazdego nie odwiedzonego wierzcholka  to stworzenie paru drzew przejscia \end{DoxyCompactList}\item 
-void \hyperlink{classgraf_a84527840c48cc131f9ef2ca493550ea0}{dfs\-\_\-visit} (int v1)
-\begin{DoxyCompactList}\small\item\em funkcja przechodzi w głąb graf tworzac drzewo przejscia \end{DoxyCompactList}\end{DoxyCompactItemize}
+bool \hyperlink{classgraf_a16090538c8c5c1414f3eb45d754ec2cc}{dfs\-\_\-visit} (\hyperlink{structelement__dfs}{element\-\_\-dfs} $\ast$tablica\-\_\-dfs, int v1)
+\begin{DoxyCompactList}\small\item\em funkcja przechodzi w głąb graf tworzac drzewo przejscia oparta na wywolaniu rekurencyjnym \end{DoxyCompactList}\item 
+void \hyperlink{classgraf_a5b26730ff96f99be35adef3c706a1d72}{wyswietl\-\_\-dfs} (\hyperlink{structelement__dfs}{element\-\_\-dfs} $\ast$tablica\-\_\-dfs)
+\begin{DoxyCompactList}\small\item\em funkcja wyswietla \char`\"{}las drzew przejsc\char`\"{} \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{\-Private \-Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -61,8 +69,6 @@ int \hyperlink{classgraf_a596da8a77b680d7ec408b1253c2c43c3}{rozmiar}
 int \hyperlink{classgraf_ad9204c0bbc75a2bef4a43200672f9694}{ilosc}
 \item 
 int \hyperlink{classgraf_a9202cb6ab351f5bbdbb79de440ab1fb5}{time}
-\item 
-\hyperlink{structelement__dfs}{element\-\_\-dfs} $\ast$ \hyperlink{classgraf_a325616745236599f83bffb58d61b0fa9}{tablica\-\_\-dfs}
 \end{DoxyCompactItemize}
 \subsection*{\-Friends}
 \begin{DoxyCompactItemize}
@@ -106,26 +112,65 @@ w klasie przechowywana jest tablica wierzcholkow oraz informacje mozliwej ilosci
 )}}\label{classgraf_a9aefd40799975c316a17bd67021e05f2}
 
 
-\-Definition at line 42 of file graf.\-cpp.
+\-Definition at line 41 of file graf.\-cpp.
 
 
 
 \subsection{\-Member \-Function \-Documentation}
-\hypertarget{classgraf_a84527840c48cc131f9ef2ca493550ea0}{\index{graf@{graf}!dfs\-\_\-visit@{dfs\-\_\-visit}}
-\index{dfs\-\_\-visit@{dfs\-\_\-visit}!graf@{graf}}
-\subsubsection[{dfs\-\_\-visit}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf graf\-::dfs\-\_\-visit} (
+\hypertarget{classgraf_a50eb021e0338d01d1f2a915f50add7c2}{\index{graf@{graf}!czytaj\-\_\-droge\-\_\-bfs@{czytaj\-\_\-droge\-\_\-bfs}}
+\index{czytaj\-\_\-droge\-\_\-bfs@{czytaj\-\_\-droge\-\_\-bfs}!graf@{graf}}
+\subsubsection[{czytaj\-\_\-droge\-\_\-bfs}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf graf\-::czytaj\-\_\-droge\-\_\-bfs} (
 \begin{DoxyParamCaption}
+\item[{{\bf element\-\_\-bfs} $\ast$}]{tablica\-\_\-bfs, }
 \item[{int}]{v1}
 \end{DoxyParamCaption}
-)}}\label{classgraf_a84527840c48cc131f9ef2ca493550ea0}
-funkcja zaisuje czas odwiedzin oraz czas wyjscia z wierzcholka 
+)}}\label{classgraf_a50eb021e0338d01d1f2a915f50add7c2}
+
+\begin{DoxyParams}{\-Parameters}
+{\em tablica\-\_\-bfs} & \\
+\hline
+{\em v1} & \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 283 of file graf.\-cpp.
+
+\hypertarget{classgraf_ac5e916e9b4f36cd6949ee8132e044e9c}{\index{graf@{graf}!czytaj\-\_\-droge\-\_\-dfs@{czytaj\-\_\-droge\-\_\-dfs}}
+\index{czytaj\-\_\-droge\-\_\-dfs@{czytaj\-\_\-droge\-\_\-dfs}!graf@{graf}}
+\subsubsection[{czytaj\-\_\-droge\-\_\-dfs}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf graf\-::czytaj\-\_\-droge\-\_\-dfs} (
+\begin{DoxyParamCaption}
+\item[{{\bf element\-\_\-dfs} $\ast$}]{tablica\-\_\-dfs, }
+\item[{int}]{v1}
+\end{DoxyParamCaption}
+)}}\label{classgraf_ac5e916e9b4f36cd6949ee8132e044e9c}
+
+\begin{DoxyParams}{\-Parameters}
+{\em tablica\-\_\-bfs} & \\
+\hline
+{\em v1} & \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 413 of file graf.\-cpp.
+
+\hypertarget{classgraf_a16090538c8c5c1414f3eb45d754ec2cc}{\index{graf@{graf}!dfs\-\_\-visit@{dfs\-\_\-visit}}
+\index{dfs\-\_\-visit@{dfs\-\_\-visit}!graf@{graf}}
+\subsubsection[{dfs\-\_\-visit}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf graf\-::dfs\-\_\-visit} (
+\begin{DoxyParamCaption}
+\item[{{\bf element\-\_\-dfs} $\ast$}]{tablica\-\_\-dfs, }
+\item[{int}]{v1}
+\end{DoxyParamCaption}
+)}}\label{classgraf_a16090538c8c5c1414f3eb45d754ec2cc}
+funkcja zapisuje czas odwiedzin oraz czas wyjscia z wierzcholka 
 \begin{DoxyParams}{\-Parameters}
 {\em v1} & \\
 \hline
 \end{DoxyParams}
 
 
-\-Definition at line 285 of file graf.\-cpp.
+\-Definition at line 318 of file graf.\-cpp.
 
 
 
@@ -134,19 +179,20 @@ funkcja zaisuje czas odwiedzin oraz czas wyjscia z wierzcholka
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=282pt]{classgraf_a84527840c48cc131f9ef2ca493550ea0_icgraph}
+\includegraphics[width=282pt]{classgraf_a16090538c8c5c1414f3eb45d754ec2cc_icgraph}
 \end{center}
 \end{figure}
 
 
-\hypertarget{classgraf_aa70de90b152f2cf47dac635793bcc5c4}{\index{graf@{graf}!dodaj\-\_\-polaczenie@{dodaj\-\_\-polaczenie}}
+\hypertarget{classgraf_a4db0ebc4302facfc027dd7790542fb94}{\index{graf@{graf}!dodaj\-\_\-polaczenie@{dodaj\-\_\-polaczenie}}
 \index{dodaj\-\_\-polaczenie@{dodaj\-\_\-polaczenie}!graf@{graf}}
 \subsubsection[{dodaj\-\_\-polaczenie}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf graf\-::dodaj\-\_\-polaczenie} (
 \begin{DoxyParamCaption}
 \item[{int}]{v1, }
-\item[{int}]{v2}
+\item[{int}]{v2, }
+\item[{int}]{waga}
 \end{DoxyParamCaption}
-)}}\label{classgraf_aa70de90b152f2cf47dac635793bcc5c4}
+)}}\label{classgraf_a4db0ebc4302facfc027dd7790542fb94}
 funckcja sprawdza czy zadane wierzcholki zostaly utworzone jesli tak laczy je. 
 \begin{DoxyParams}{\-Parameters}
 {\em v1} & wierzcholki ktore maja zostac polaczone \\
@@ -156,26 +202,28 @@ funckcja sprawdza czy zadane wierzcholki zostaly utworzone jesli tak laczy je.
 \end{DoxyParams}
 
 
-\-Definition at line 132 of file graf.\-cpp.
+\-Definition at line 131 of file graf.\-cpp.
 
 
 
-\-Here is the call graph for this function\-:\nopagebreak
+\-Here is the call graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classgraf_aa70de90b152f2cf47dac635793bcc5c4_cgraph}
+\includegraphics[width=350pt]{classgraf_a4db0ebc4302facfc027dd7790542fb94_cgraph}
 \end{center}
 \end{figure}
 
 
 
 
-\-Here is the caller graph for this function\-:\nopagebreak
+\-Here is the caller graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=346pt]{classgraf_aa70de90b152f2cf47dac635793bcc5c4_icgraph}
+\includegraphics[width=346pt]{classgraf_a4db0ebc4302facfc027dd7790542fb94_icgraph}
 \end{center}
 \end{figure}
 
@@ -194,11 +242,12 @@ funckcja sprawdza czy zadane wierzcholki zostaly utworzone jesli tak laczy je.
 \end{DoxyParams}
 
 
-\-Definition at line 52 of file graf.\-cpp.
+\-Definition at line 51 of file graf.\-cpp.
 
 
 
-\-Here is the caller graph for this function\-:\nopagebreak
+\-Here is the caller graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -216,15 +265,15 @@ funckcja sprawdza czy zadane wierzcholki zostaly utworzone jesli tak laczy je.
 )}}\label{classgraf_afaa55f5a9aef1f30a2b3be97b59a476b}
 funkcja wymaga wprowadzania danych przez uzytkownika 
 
-\-Definition at line 68 of file graf.\-cpp.
+\-Definition at line 67 of file graf.\-cpp.
 
-\hypertarget{classgraf_a5b67e5e829440e984782b232188a5f57}{\index{graf@{graf}!przejdz\-\_\-bfs@{przejdz\-\_\-bfs}}
+\hypertarget{classgraf_a83fde8c542586d92421c9870f07a0cc2}{\index{graf@{graf}!przejdz\-\_\-bfs@{przejdz\-\_\-bfs}}
 \index{przejdz\-\_\-bfs@{przejdz\-\_\-bfs}!graf@{graf}}
 \subsubsection[{przejdz\-\_\-bfs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf element\-\_\-bfs} $\ast$ {\bf graf\-::przejdz\-\_\-bfs} (
 \begin{DoxyParamCaption}
-\item[{int}]{v1}
+\item[{int}]{v}
 \end{DoxyParamCaption}
-)}}\label{classgraf_a5b67e5e829440e984782b232188a5f57}
+)}}\label{classgraf_a83fde8c542586d92421c9870f07a0cc2}
 funkcja uzywa kolejki dostarczonej w \-S\-T\-L. wynikiem dzialania jest drzewo przejscia grafu zawierajace informacje o najkrutszych odleglosciach od korzenia 
 \begin{DoxyParams}{\-Parameters}
 {\em v1} & korzen przechodzenia \\
@@ -235,20 +284,20 @@ funkcja uzywa kolejki dostarczonej w \-S\-T\-L. wynikiem dzialania jest drzewo p
 \end{DoxyReturn}
 kolorujemy korzen
 
-petla wykonuje sie dopuki jest cis w kolejca 
+petla wykonuje sie dopuki jest cos w kolejca 
 
-\-Definition at line 189 of file graf.\-cpp.
+\-Definition at line 192 of file graf.\-cpp.
 
-\hypertarget{classgraf_a4947702a6d93feb805b1e11e14ec1e13}{\index{graf@{graf}!przejdz\-\_\-dfs@{przejdz\-\_\-dfs}}
+\hypertarget{classgraf_a1a4c08e7c698459b7ceb172fd687dc78}{\index{graf@{graf}!przejdz\-\_\-dfs@{przejdz\-\_\-dfs}}
 \index{przejdz\-\_\-dfs@{przejdz\-\_\-dfs}!graf@{graf}}
-\subsubsection[{przejdz\-\_\-dfs}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ {\bf graf\-::przejdz\-\_\-dfs} (
+\subsubsection[{przejdz\-\_\-dfs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf element\-\_\-dfs} $\ast$ {\bf graf\-::przejdz\-\_\-dfs} (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classgraf_a4947702a6d93feb805b1e11e14ec1e13}
+)}}\label{classgraf_a1a4c08e7c698459b7ceb172fd687dc78}
 na ten moment wszystkie drzewa przechowywyane sa w jednej tablicy 
 
-\-Definition at line 268 of file graf.\-cpp.
+\-Definition at line 299 of file graf.\-cpp.
 
 
 
@@ -257,7 +306,7 @@ na ten moment wszystkie drzewa przechowywyane sa w jednej tablicy
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=282pt]{classgraf_a4947702a6d93feb805b1e11e14ec1e13_cgraph}
+\includegraphics[width=282pt]{classgraf_a1a4c08e7c698459b7ceb172fd687dc78_cgraph}
 \end{center}
 \end{figure}
 
@@ -282,11 +331,12 @@ zwraca informacja logiczna
 \end{DoxyReturn}
 
 
-\-Definition at line 158 of file graf.\-cpp.
+\-Definition at line 161 of file graf.\-cpp.
 
 
 
-\-Here is the caller graph for this function\-:\nopagebreak
+\-Here is the caller graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -312,11 +362,12 @@ zwraca informacja logiczna
 \end{DoxyParams}
 
 
-\-Definition at line 113 of file graf.\-cpp.
+\-Definition at line 112 of file graf.\-cpp.
 
 
 
-\-Here is the caller graph for this function\-:\nopagebreak
+\-Here is the caller graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -339,7 +390,7 @@ zwraca informacja logiczna
 \end{DoxyParams}
 
 
-\-Definition at line 89 of file graf.\-cpp.
+\-Definition at line 88 of file graf.\-cpp.
 
 
 
@@ -354,7 +405,8 @@ zwraca informacja logiczna
 
 
 
-\-Here is the caller graph for this function\-:\nopagebreak
+\-Here is the caller graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -375,18 +427,18 @@ zwraca informacja logiczna
 \end{DoxyReturn}
 
 
-\-Definition at line 103 of file graf.\-cpp.
+\-Definition at line 102 of file graf.\-cpp.
 
-\hypertarget{classgraf_a97c2722a11d3a7f90c82bc9b1cd56ef6}{\index{graf@{graf}!wyswietl\-\_\-dfs@{wyswietl\-\_\-dfs}}
+\hypertarget{classgraf_a5b26730ff96f99be35adef3c706a1d72}{\index{graf@{graf}!wyswietl\-\_\-dfs@{wyswietl\-\_\-dfs}}
 \index{wyswietl\-\_\-dfs@{wyswietl\-\_\-dfs}!graf@{graf}}
 \subsubsection[{wyswietl\-\_\-dfs}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf graf\-::wyswietl\-\_\-dfs} (
 \begin{DoxyParamCaption}
-{}
+\item[{{\bf element\-\_\-dfs} $\ast$}]{tablica\-\_\-dfs}
 \end{DoxyParamCaption}
-)}}\label{classgraf_a97c2722a11d3a7f90c82bc9b1cd56ef6}
+)}}\label{classgraf_a5b26730ff96f99be35adef3c706a1d72}
 
 
-\-Definition at line 311 of file graf.\-cpp.
+\-Definition at line 349 of file graf.\-cpp.
 
 \hypertarget{classgraf_a8dd83fa1722d917a143b2da9245b5db9}{\index{graf@{graf}!wyswietl\-\_\-sasiadow@{wyswietl\-\_\-sasiadow}}
 \index{wyswietl\-\_\-sasiadow@{wyswietl\-\_\-sasiadow}!graf@{graf}}
@@ -402,11 +454,12 @@ zostaje wyswietlona lista sasiedztwa
 \end{DoxyParams}
 
 
-\-Definition at line 146 of file graf.\-cpp.
+\-Definition at line 149 of file graf.\-cpp.
 
 
 
-\-Here is the caller graph for this function\-:\nopagebreak
+\-Here is the caller graph for this function\-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -414,6 +467,54 @@ zostaje wyswietlona lista sasiedztwa
 \end{center}
 \end{figure}
 
+
+\hypertarget{classgraf_a420367f5ce066bd467c2621e3c69bdc3}{\index{graf@{graf}!znajdz\-\_\-droge\-\_\-bfs@{znajdz\-\_\-droge\-\_\-bfs}}
+\index{znajdz\-\_\-droge\-\_\-bfs@{znajdz\-\_\-droge\-\_\-bfs}!graf@{graf}}
+\subsubsection[{znajdz\-\_\-droge\-\_\-bfs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf element\-\_\-bfs} $\ast$ {\bf graf\-::znajdz\-\_\-droge\-\_\-bfs} (
+\begin{DoxyParamCaption}
+\item[{int}]{korzen, }
+\item[{int}]{v}
+\end{DoxyParamCaption}
+)}}\label{classgraf_a420367f5ce066bd467c2621e3c69bdc3}
+zaimplementowana na kolejce 
+\begin{DoxyParams}{\-Parameters}
+{\em korzen} & \\
+\hline
+{\em v} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+
+\end{DoxyReturn}
+kolorujemy korzen
+
+petla wykonuje sie dopuki jest cos w kolejca 
+
+\-Definition at line 238 of file graf.\-cpp.
+
+\hypertarget{classgraf_a687140bdc84e60aa5f8342496bc2c06f}{\index{graf@{graf}!znajdz\-\_\-droge\-\_\-dfs@{znajdz\-\_\-droge\-\_\-dfs}}
+\index{znajdz\-\_\-droge\-\_\-dfs@{znajdz\-\_\-droge\-\_\-dfs}!graf@{graf}}
+\subsubsection[{znajdz\-\_\-droge\-\_\-dfs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf element\-\_\-dfs} $\ast$ {\bf graf\-::znajdz\-\_\-droge\-\_\-dfs} (
+\begin{DoxyParamCaption}
+\item[{int}]{korzen, }
+\item[{int}]{v1}
+\end{DoxyParamCaption}
+)}}\label{classgraf_a687140bdc84e60aa5f8342496bc2c06f}
+funkcja jest implementacja algorytmu dfs 
+\begin{DoxyParams}{\-Parameters}
+{\em korzen} & \\
+\hline
+{\em v1} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+
+\end{DoxyReturn}
+kolorujemy korzen
+
+petla wykonuje sie dopuki jest cos w kolejca 
+
+\-Definition at line 367 of file graf.\-cpp.
 
 
 
@@ -423,7 +524,7 @@ zostaje wyswietlona lista sasiedztwa
 \subsubsection[{bfs}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf bfs}\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}\label{classgraf_af2b2242aa53a3230ae67c7b57d7d9d11}
 
 
-\-Definition at line 49 of file graf.\-hh.
+\-Definition at line 51 of file graf.\-hh.
 
 \hypertarget{classgraf_aaf525f8cdadbe40d9ad7c39f79fd8a2c}{\index{graf@{graf}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!graf@{graf}}
@@ -467,13 +568,6 @@ zostaje wyswietlona lista sasiedztwa
 
 
 \-Definition at line 29 of file graf.\-hh.
-
-\hypertarget{classgraf_a325616745236599f83bffb58d61b0fa9}{\index{graf@{graf}!tablica\-\_\-dfs@{tablica\-\_\-dfs}}
-\index{tablica\-\_\-dfs@{tablica\-\_\-dfs}!graf@{graf}}
-\subsubsection[{tablica\-\_\-dfs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf element\-\_\-dfs}$\ast$ {\bf graf\-::tablica\-\_\-dfs}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classgraf_a325616745236599f83bffb58d61b0fa9}
-
-
-\-Definition at line 33 of file graf.\-hh.
 
 \hypertarget{classgraf_a9202cb6ab351f5bbdbb79de440ab1fb5}{\index{graf@{graf}!time@{time}}
 \index{time@{time}!graf@{graf}}

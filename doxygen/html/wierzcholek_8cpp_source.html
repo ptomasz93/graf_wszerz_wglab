@@ -84,30 +84,34 @@
 <a name="l00007"></a>00007 
 <a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="wierzcholek_8hh.html">wierzcholek.hh</a>&quot;</span>
 <a name="l00009"></a>00009 
-<a name="l00010"></a><a class="code" href="wierzcholek_8cpp.html#ab0941004cc1a9bb9339cf2092b1819a1">00010</a> ostream &amp; <a class="code" href="graf_8cpp.html#aaf525f8cdadbe40d9ad7c39f79fd8a2c" title="przeladowanie operatora wyjscia">operator &lt;&lt; </a>(ostream &amp;wyjscie, <a class="code" href="classwierzcholek.html" title="clasa modeluje pojecie pojecie poedynczego wierzcholka grafu">wierzcholek</a>  &amp;wej)
+<a name="l00010"></a><a class="code" href="wierzcholek_8cpp.html#ab0941004cc1a9bb9339cf2092b1819a1">00010</a> ostream &amp; <a class="code" href="graf_8cpp.html#aaf525f8cdadbe40d9ad7c39f79fd8a2c" title="przeladowanie operatora wyjscia">operator &lt;&lt; </a>(ostream &amp;wyjscie, <a class="code" href="classwierzcholek.html">wierzcholek</a>  &amp;wej)
 <a name="l00011"></a>00011         {
 <a name="l00012"></a>00012                 cout&lt;&lt;<span class="stringliteral">&quot;wierzcholek numer: &quot;</span>&lt;&lt;wej.<a class="code" href="classwierzcholek.html#a66aaea6b1187250f7100542adc1617d2">numer</a>&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span>;
 <a name="l00013"></a>00013                 cout&lt;&lt;<span class="stringliteral">&quot;wartosc: &quot;</span>&lt;&lt;wej.<a class="code" href="classwierzcholek.html#a19aa16bf7e01a987fcc360e5da902209" title="identyfikator wierzcholka">wartosc</a>&lt;&lt;endl;
 <a name="l00014"></a>00014                 cout&lt;&lt;<span class="stringliteral">&quot;polaczenia z: &quot;</span>;
-<a name="l00015"></a>00015                 <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;wej.<a class="code" href="classwierzcholek.html#a30b8190b35ec29e5cc13910ce56e59e9" title="wartosc przechowywana w wierzcholku">polaczenia</a>.size();i++)cout&lt;&lt;wej.<a class="code" href="classwierzcholek.html#a30b8190b35ec29e5cc13910ce56e59e9" title="wartosc przechowywana w wierzcholku">polaczenia</a>[i]&lt;&lt;<span class="stringliteral">&quot; , &quot;</span>;
-<a name="l00016"></a>00016                 cout&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span>;
-<a name="l00017"></a>00017                 <span class="keywordflow">return</span> wyjscie;
-<a name="l00018"></a>00018         }
-<a name="l00019"></a>00019 
-<a name="l00020"></a>00020 
-<a name="l00021"></a><a class="code" href="wierzcholek_8cpp.html#a221c2b565a9506a8eaed69e42e374f4e">00021</a> istream &amp; <a class="code" href="wierzcholek_8cpp.html#a221c2b565a9506a8eaed69e42e374f4e">operator &gt;&gt; </a>(istream &amp;wejscie, <a class="code" href="classwierzcholek.html" title="clasa modeluje pojecie pojecie poedynczego wierzcholka grafu">wierzcholek</a>  &amp;wyj)
-<a name="l00022"></a>00022         {
-<a name="l00023"></a>00023                 wejscie&gt;&gt;wyj.<a class="code" href="classwierzcholek.html#a66aaea6b1187250f7100542adc1617d2">numer</a>;
-<a name="l00024"></a>00024                 wejscie&gt;&gt;wyj.<a class="code" href="classwierzcholek.html#a19aa16bf7e01a987fcc360e5da902209" title="identyfikator wierzcholka">wartosc</a>;
-<a name="l00025"></a>00025 
-<a name="l00026"></a>00026         }
+<a name="l00015"></a>00015                 <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;wej.<a class="code" href="classwierzcholek.html#a34145a2de26c5e95c1ec72b0773005f4" title="wartosc przechowywana w wierzcholku">polaczenia</a>.size();i++)
+<a name="l00016"></a>00016                 {
+<a name="l00017"></a>00017                         cout&lt;&lt;wej.<a class="code" href="classwierzcholek.html#a34145a2de26c5e95c1ec72b0773005f4" title="wartosc przechowywana w wierzcholku">polaczenia</a>[i].wierzcholek&lt;&lt;<span class="stringliteral">&quot; &quot;</span>;
+<a name="l00018"></a>00018                         cout&lt;&lt;<span class="stringliteral">&quot;waga: &quot;</span>&lt;&lt;wej.<a class="code" href="classwierzcholek.html#a34145a2de26c5e95c1ec72b0773005f4" title="wartosc przechowywana w wierzcholku">polaczenia</a>[i].waga&lt;&lt;<span class="stringliteral">&quot;, &quot;</span>;
+<a name="l00019"></a>00019                 }
+<a name="l00020"></a>00020                 cout&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span>;
+<a name="l00021"></a>00021                 <span class="keywordflow">return</span> wyjscie;
+<a name="l00022"></a>00022         }
+<a name="l00023"></a>00023 
+<a name="l00024"></a>00024 
+<a name="l00025"></a><a class="code" href="wierzcholek_8cpp.html#a221c2b565a9506a8eaed69e42e374f4e">00025</a> istream &amp; <a class="code" href="wierzcholek_8cpp.html#a221c2b565a9506a8eaed69e42e374f4e">operator &gt;&gt; </a>(istream &amp;wejscie, <a class="code" href="classwierzcholek.html">wierzcholek</a>  &amp;wyj)
+<a name="l00026"></a>00026         {
+<a name="l00027"></a>00027                 wejscie&gt;&gt;wyj.<a class="code" href="classwierzcholek.html#a66aaea6b1187250f7100542adc1617d2">numer</a>;
+<a name="l00028"></a>00028                 wejscie&gt;&gt;wyj.<a class="code" href="classwierzcholek.html#a19aa16bf7e01a987fcc360e5da902209" title="identyfikator wierzcholka">wartosc</a>;
+<a name="l00029"></a>00029 
+<a name="l00030"></a>00030         }
 </pre></div></div><!-- contents -->
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="wierzcholek_8cpp.html">wierzcholek.cpp</a>      </li>
 
-    <li class="footer">Generated on Sun May 11 2014 19:33:49 for Graf by
+    <li class="footer">Generated on Fri May 16 2014 14:46:03 for Graf by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

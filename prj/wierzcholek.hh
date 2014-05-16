@@ -17,12 +17,19 @@ using namespace std;
  * \brief clasa modeluje pojecie pojecie poedynczego wierzcholka grafu
  */
 
+struct poloczenie
+{
+	int wierzcholek;
+	int waga;
+
+};
+
 class wierzcholek
 {
 
 	int numer;///identyfikator wierzcholka
-	string wartosc;///wartosc przechowywana w wierzcholku
-	vector <int> polaczenia;///lista polaczen wierzcholka
+	string  wartosc;///wartosc przechowywana w wierzcholku
+	vector <poloczenie> polaczenia;///lista polaczen wierzcholka
 public:
 	friend ostream & operator << (ostream &wyjscie, wierzcholek  &wej);
 	friend istream & operator >> (istream &wejscie, wierzcholek  &wyj);

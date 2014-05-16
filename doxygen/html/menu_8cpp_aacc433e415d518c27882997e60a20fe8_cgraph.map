@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$classgraf.html#a6a50b0bfb5fc3cfc7a443014170b9565" title="funkcja sluzy do dodawania wierzcholkow" alt="" coords="113,5,271,35"/>
+<area shape="rect" id="node5" href="$classgraf.html#a369202eb63332e9faad779591c862ece" title="funkcja usuwa wierzcholek o zadanym kluczu" alt="" coords="115,59,269,88"/>
+<area shape="rect" id="node7" href="$classgraf.html#ac7e01e940f136f4020e4da816c2fb1b4" title="funkcja usuwa polaczenie miedzy zadanymi wierzcholkami" alt="" coords="333,97,483,127"/>
+<area shape="rect" id="node9" href="$classgraf.html#a4db0ebc4302facfc027dd7790542fb94" title="funkcja dodaje polaczenie miedzy zadanymi wierzcholkami" alt="" coords="116,163,268,192"/>
+<area shape="rect" id="node11" href="$classgraf.html#ae1ebd85c7cb288174a5dccc5fd90634e" title="funkcja sprawdza czy mieszy podanymi wierzchokami istnieje polaczenie" alt="" coords="323,176,493,205"/>
+<area shape="rect" id="node15" href="$classgraf.html#a8dd83fa1722d917a143b2da9245b5db9" title="funkcja wyswietla sasiadow wierzcholka" alt="" coords="109,267,275,296"/>
+</map>

@@ -97,236 +97,304 @@
 <a name="l00030"></a><a class="code" href="classgraf.html#a66fe29b772c7e3085b161a31682ef093">00030</a> <a class="code" href="classgraf.html#a66fe29b772c7e3085b161a31682ef093" title="konstruktor klasy graf">graf::graf</a>(<span class="keywordtype">int</span> il)
 <a name="l00031"></a>00031 {
 <a name="l00032"></a>00032 <a class="code" href="classgraf.html#a596da8a77b680d7ec408b1253c2c43c3">rozmiar</a>=il;
-<a name="l00033"></a>00033 <a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a> = <span class="keyword">new</span> <a class="code" href="classwierzcholek.html" title="clasa modeluje pojecie pojecie poedynczego wierzcholka grafu">wierzcholek</a>[<a class="code" href="classgraf.html#a596da8a77b680d7ec408b1253c2c43c3">rozmiar</a>];
-<a name="l00034"></a>00034 <a class="code" href="classgraf.html#a325616745236599f83bffb58d61b0fa9">tablica_dfs</a>=<span class="keyword">new</span> <a class="code" href="structelement__dfs.html" title="element drzewa przejscia dla przeszukiwania w głąb;">element_dfs</a>[<a class="code" href="classgraf.html#a596da8a77b680d7ec408b1253c2c43c3">rozmiar</a>];
-<a name="l00035"></a>00035 <a class="code" href="classgraf.html#ad9204c0bbc75a2bef4a43200672f9694">ilosc</a>=0;
-<a name="l00036"></a>00036 <a class="code" href="classgraf.html#a9202cb6ab351f5bbdbb79de440ab1fb5">time</a>=0;
-<a name="l00037"></a>00037 }
-<a name="l00038"></a>00038 
-<a name="l00042"></a><a class="code" href="classgraf.html#a9aefd40799975c316a17bd67021e05f2">00042</a> <a class="code" href="classgraf.html#a9aefd40799975c316a17bd67021e05f2" title="destruktor grafu">graf::~graf</a>()
-<a name="l00043"></a>00043 {
-<a name="l00044"></a>00044         <span class="keyword">delete</span> <a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>;
-<a name="l00045"></a>00045         <span class="keyword">delete</span> <a class="code" href="classgraf.html#a325616745236599f83bffb58d61b0fa9">tablica_dfs</a>;
-<a name="l00046"></a>00046 }
-<a name="l00047"></a>00047 
-<a name="l00052"></a><a class="code" href="classgraf.html#a6a50b0bfb5fc3cfc7a443014170b9565">00052</a> <span class="keywordtype">void</span> <a class="code" href="classgraf.html#afaa55f5a9aef1f30a2b3be97b59a476b" title="funkcja dodaje wierzcholek">graf::dodaj_wierzcholek</a>(<a class="code" href="classwierzcholek.html" title="clasa modeluje pojecie pojecie poedynczego wierzcholka grafu">wierzcholek</a> nowy)
-<a name="l00053"></a>00053 {
-<a name="l00054"></a>00054 <span class="keywordflow">if</span>(nowy.<a class="code" href="classwierzcholek.html#a66aaea6b1187250f7100542adc1617d2">numer</a>&gt;<a class="code" href="classgraf.html#a596da8a77b680d7ec408b1253c2c43c3">rozmiar</a>-1)
-<a name="l00055"></a>00055 {
-<a name="l00056"></a>00056         cout&lt;&lt;<span class="stringliteral">&quot;numer wierzcholka za duzy&quot;</span>;
-<a name="l00057"></a>00057         <span class="keywordflow">return</span>;
-<a name="l00058"></a>00058 }
-<a name="l00059"></a>00059 nowy.<a class="code" href="classwierzcholek.html#ad67644b5f408397f28d7150d3bac76d2">zajety</a>=<span class="keyword">true</span>;
-<a name="l00060"></a>00060 <a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[nowy.<a class="code" href="classwierzcholek.html#a66aaea6b1187250f7100542adc1617d2">numer</a>]=nowy;
-<a name="l00061"></a>00061 <a class="code" href="classgraf.html#ad9204c0bbc75a2bef4a43200672f9694">ilosc</a>++;
-<a name="l00062"></a>00062 }
-<a name="l00063"></a>00063 
-<a name="l00068"></a><a class="code" href="classgraf.html#afaa55f5a9aef1f30a2b3be97b59a476b">00068</a> <span class="keywordtype">void</span> <a class="code" href="classgraf.html#afaa55f5a9aef1f30a2b3be97b59a476b" title="funkcja dodaje wierzcholek">graf::dodaj_wierzcholek</a>()
-<a name="l00069"></a>00069 {
-<a name="l00070"></a>00070         <a class="code" href="classwierzcholek.html" title="clasa modeluje pojecie pojecie poedynczego wierzcholka grafu">wierzcholek</a> nowy;
-<a name="l00071"></a>00071         cout&lt;&lt;<span class="stringliteral">&quot;podaj numer wierzcholka&quot;</span>&lt;&lt;endl;
-<a name="l00072"></a>00072         cin&gt;&gt;nowy.<a class="code" href="classwierzcholek.html#a66aaea6b1187250f7100542adc1617d2">numer</a>;
-<a name="l00073"></a>00073         cout&lt;&lt;<span class="stringliteral">&quot;podaj wartosc wiercholka&quot;</span>&lt;&lt;endl;
-<a name="l00074"></a>00074         cin&gt;&gt;nowy.<a class="code" href="classwierzcholek.html#a19aa16bf7e01a987fcc360e5da902209" title="identyfikator wierzcholka">wartosc</a>;
-<a name="l00075"></a>00075         nowy.<a class="code" href="classwierzcholek.html#ad67644b5f408397f28d7150d3bac76d2">zajety</a>=<span class="keyword">true</span>;
-<a name="l00076"></a>00076 <span class="keywordflow">if</span>(nowy.<a class="code" href="classwierzcholek.html#a66aaea6b1187250f7100542adc1617d2">numer</a>&gt;<a class="code" href="classgraf.html#a596da8a77b680d7ec408b1253c2c43c3">rozmiar</a>-1)
-<a name="l00077"></a>00077 {
-<a name="l00078"></a>00078         cout&lt;&lt;<span class="stringliteral">&quot;numer wierzcholka za duzy&quot;</span>;
-<a name="l00079"></a>00079         <span class="keywordflow">return</span>;
-<a name="l00080"></a>00080 }
-<a name="l00081"></a>00081 <a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[nowy.<a class="code" href="classwierzcholek.html#a66aaea6b1187250f7100542adc1617d2">numer</a>]=nowy;
-<a name="l00082"></a>00082 <a class="code" href="classgraf.html#ad9204c0bbc75a2bef4a43200672f9694">ilosc</a>++;
-<a name="l00083"></a>00083 }
-<a name="l00084"></a>00084 
-<a name="l00089"></a><a class="code" href="classgraf.html#a369202eb63332e9faad779591c862ece">00089</a> <span class="keywordtype">void</span> <a class="code" href="classgraf.html#a369202eb63332e9faad779591c862ece" title="funkcja usuwa wierzcholek o zadanym kluczu">graf::usun_wierzcholek</a>(<span class="keywordtype">int</span> numer)
-<a name="l00090"></a>00090 {
-<a name="l00091"></a>00091         <span class="keywordflow">while</span>(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[numer].polaczenia.size())
-<a name="l00092"></a>00092                 <a class="code" href="classgraf.html#ac7e01e940f136f4020e4da816c2fb1b4" title="funkcja usuwa polaczenie miedzy zadanymi wierzcholkami">usun_polaczenie</a>(numer,<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[numer].polaczenia[0]);
-<a name="l00093"></a>00093 
-<a name="l00094"></a>00094         <a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[numer].<a class="code" href="classwierzcholek.html#ad67644b5f408397f28d7150d3bac76d2">zajety</a>=NULL;
-<a name="l00095"></a>00095         <a class="code" href="classgraf.html#ad9204c0bbc75a2bef4a43200672f9694">ilosc</a>--;
-<a name="l00096"></a>00096 
-<a name="l00097"></a>00097 }
-<a name="l00098"></a>00098 
-<a name="l00103"></a><a class="code" href="classgraf.html#aa045d28e07e38ca32adf1b353077f877">00103</a> <span class="keywordtype">int</span> <a class="code" href="classgraf.html#aa045d28e07e38ca32adf1b353077f877" title="funkcja zwraca rozmiar grafu">graf::wrozmiar</a>()
-<a name="l00104"></a>00104 {
-<a name="l00105"></a>00105         <span class="keywordflow">return</span> <a class="code" href="classgraf.html#a596da8a77b680d7ec408b1253c2c43c3">rozmiar</a>;
-<a name="l00106"></a>00106 }
-<a name="l00107"></a>00107 
-<a name="l00113"></a><a class="code" href="classgraf.html#ac7e01e940f136f4020e4da816c2fb1b4">00113</a> <span class="keywordtype">void</span> <a class="code" href="classgraf.html#ac7e01e940f136f4020e4da816c2fb1b4" title="funkcja usuwa polaczenie miedzy zadanymi wierzcholkami">graf::usun_polaczenie</a>(<span class="keywordtype">int</span> v1, <span class="keywordtype">int</span> v2)
-<a name="l00114"></a>00114 {
-<a name="l00115"></a>00115         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v2].<a class="code" href="classwierzcholek.html#a30b8190b35ec29e5cc13910ce56e59e9" title="wartosc przechowywana w wierzcholku">polaczenia</a>.size();i++)
-<a name="l00116"></a>00116         {
-<a name="l00117"></a>00117                 <span class="keywordflow">if</span>(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v2].polaczenia[i]==v1)<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v2].<a class="code" href="classwierzcholek.html#a30b8190b35ec29e5cc13910ce56e59e9" title="wartosc przechowywana w wierzcholku">polaczenia</a>.erase(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v2].polaczenia.begin()+i);
-<a name="l00118"></a>00118         }
-<a name="l00119"></a>00119         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v1].<a class="code" href="classwierzcholek.html#a30b8190b35ec29e5cc13910ce56e59e9" title="wartosc przechowywana w wierzcholku">polaczenia</a>.size();i++)
-<a name="l00120"></a>00120         {
-<a name="l00121"></a>00121                 <span class="keywordflow">if</span>(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v1].polaczenia[i]==v2)<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v1].<a class="code" href="classwierzcholek.html#a30b8190b35ec29e5cc13910ce56e59e9" title="wartosc przechowywana w wierzcholku">polaczenia</a>.erase(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v1].polaczenia.begin()+i);
-<a name="l00122"></a>00122         }
-<a name="l00123"></a>00123 }
-<a name="l00124"></a>00124 
-<a name="l00132"></a><a class="code" href="classgraf.html#aa70de90b152f2cf47dac635793bcc5c4">00132</a> <span class="keywordtype">void</span> <a class="code" href="classgraf.html#aa70de90b152f2cf47dac635793bcc5c4" title="funkcja dodaje polaczenie miedzy zadanymi wierzcholkami">graf::dodaj_polaczenie</a>(<span class="keywordtype">int</span> v1, <span class="keywordtype">int</span> v2)
-<a name="l00133"></a>00133 {
-<a name="l00134"></a>00134         <span class="keywordflow">if</span>(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v1].zajety==NULL)cout&lt;&lt;<span class="stringliteral">&quot;wierzcholek :&quot;</span>&lt;&lt;v1&lt;&lt;<span class="stringliteral">&quot; nie istnieje \n&quot;</span>;
-<a name="l00135"></a>00135         <span class="keywordflow">if</span>(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v2].zajety==NULL)cout&lt;&lt;<span class="stringliteral">&quot;wierzcholek :&quot;</span>&lt;&lt;v2&lt;&lt;<span class="stringliteral">&quot; nie istnieje \n&quot;</span>;
-<a name="l00136"></a>00136         <span class="keywordflow">if</span>(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v1].zajety==NULL|<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v2].zajety==NULL|<a class="code" href="classgraf.html#ae1ebd85c7cb288174a5dccc5fd90634e" title="funkcja sprawdza czy mieszy podanymi wierzchokami istnieje polaczenie">sprawdz_polaczenie</a>(v1,v2))<span class="keywordflow">return</span>;
-<a name="l00137"></a>00137         <a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v1].<a class="code" href="classwierzcholek.html#a30b8190b35ec29e5cc13910ce56e59e9" title="wartosc przechowywana w wierzcholku">polaczenia</a>.push_back(v2);
-<a name="l00138"></a>00138         <a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v2].<a class="code" href="classwierzcholek.html#a30b8190b35ec29e5cc13910ce56e59e9" title="wartosc przechowywana w wierzcholku">polaczenia</a>.push_back(v1);
-<a name="l00139"></a>00139 }
-<a name="l00140"></a>00140 
-<a name="l00146"></a><a class="code" href="classgraf.html#a8dd83fa1722d917a143b2da9245b5db9">00146</a> <span class="keywordtype">void</span> <a class="code" href="classgraf.html#a8dd83fa1722d917a143b2da9245b5db9" title="funkcja wyswietla sasiadow wierzcholka">graf::wyswietl_sasiadow</a>(<span class="keywordtype">int</span> numer)
-<a name="l00147"></a>00147 {
-<a name="l00148"></a>00148         <span class="keywordflow">if</span>(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[numer].zajety==NULL)cout&lt;&lt;<span class="stringliteral">&quot;wierzcholek nie istnieje&quot;</span>&lt;&lt;endl;
-<a name="l00149"></a>00149         <span class="keywordflow">else</span> cout&lt;&lt;<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[numer]&lt;&lt;endl;
-<a name="l00150"></a>00150 }
-<a name="l00158"></a><a class="code" href="classgraf.html#ae1ebd85c7cb288174a5dccc5fd90634e">00158</a> <span class="keywordtype">bool</span> <a class="code" href="classgraf.html#ae1ebd85c7cb288174a5dccc5fd90634e" title="funkcja sprawdza czy mieszy podanymi wierzchokami istnieje polaczenie">graf::sprawdz_polaczenie</a>(<span class="keywordtype">int</span> v1, <span class="keywordtype">int</span> v2)
-<a name="l00159"></a>00159 {
-<a name="l00160"></a>00160         <span class="keywordflow">if</span>(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v1].zajety==NULL)cout&lt;&lt;<span class="stringliteral">&quot;wierzcholek :&quot;</span>&lt;&lt;v1&lt;&lt;<span class="stringliteral">&quot; nie istnieje \n&quot;</span>;
-<a name="l00161"></a>00161         <span class="keywordflow">if</span>(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v2].zajety==NULL)cout&lt;&lt;<span class="stringliteral">&quot;wierzcholek :&quot;</span>&lt;&lt;v2&lt;&lt;<span class="stringliteral">&quot; nie istnieje \n&quot;</span>;
-<a name="l00162"></a>00162         <span class="keywordtype">bool</span> v1_2=<span class="keyword">false</span>, v2_1=<span class="keyword">false</span>;
-<a name="l00163"></a>00163         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v1].<a class="code" href="classwierzcholek.html#a30b8190b35ec29e5cc13910ce56e59e9" title="wartosc przechowywana w wierzcholku">polaczenia</a>.size();i++)
-<a name="l00164"></a>00164         {
-<a name="l00165"></a>00165                 <span class="keywordflow">if</span>(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v1].polaczenia[i]==v2)v1_2=<span class="keyword">true</span>;
-<a name="l00166"></a>00166                 <span class="keywordflow">else</span> v1_2=<span class="keyword">false</span>;
-<a name="l00167"></a>00167         }
-<a name="l00168"></a>00168         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v2].<a class="code" href="classwierzcholek.html#a30b8190b35ec29e5cc13910ce56e59e9" title="wartosc przechowywana w wierzcholku">polaczenia</a>.size();i++)
-<a name="l00169"></a>00169         {
-<a name="l00170"></a>00170                 <span class="keywordflow">if</span>(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v2].polaczenia[i]==v1)v2_1=<span class="keyword">true</span>;
-<a name="l00171"></a>00171                 <span class="keywordflow">else</span> v2_1=<span class="keyword">false</span>;
-<a name="l00172"></a>00172         }
-<a name="l00173"></a>00173                 <span class="keywordflow">if</span>(v2_1&amp;v1_2)
-<a name="l00174"></a>00174                         {
-<a name="l00175"></a>00175                         <span class="keywordflow">return</span> <span class="keyword">true</span>;
-<a name="l00176"></a>00176                         }
-<a name="l00177"></a>00177                 <span class="keywordflow">else</span>
-<a name="l00178"></a>00178                 <span class="keywordflow">return</span> <span class="keyword">false</span>;
-<a name="l00179"></a>00179 
-<a name="l00180"></a>00180 }
-<a name="l00181"></a>00181 
-<a name="l00189"></a><a class="code" href="classgraf.html#a5b67e5e829440e984782b232188a5f57">00189</a> <a class="code" href="structelement__bfs.html" title="struktura definiuje element drzewa przechodzenie w szerz">element_bfs</a> *<a class="code" href="classgraf.html#a5b67e5e829440e984782b232188a5f57" title="implementacja algorytmu przechodzenie wszerz grafu">graf::przejdz_bfs</a>(<span class="keywordtype">int</span> v1)
-<a name="l00190"></a>00190 {
-<a name="l00191"></a>00191 <span class="keywordflow">if</span>(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v1].zajety==NULL)
-<a name="l00192"></a>00192 {
-<a name="l00193"></a>00193         cout&lt;&lt;<span class="stringliteral">&quot;wierzcholek nie istnieje&quot;</span>&lt;&lt;endl;
-<a name="l00194"></a>00194 }
-<a name="l00195"></a>00195 <a class="code" href="structelement__bfs.html" title="struktura definiuje element drzewa przechodzenie w szerz">element_bfs</a> *tablica_bfs;
-<a name="l00196"></a>00196 tablica_bfs=<span class="keyword">new</span> <a class="code" href="structelement__bfs.html" title="struktura definiuje element drzewa przechodzenie w szerz">element_bfs</a>[<a class="code" href="classgraf.html#a596da8a77b680d7ec408b1253c2c43c3">rozmiar</a>];
-<a name="l00197"></a>00197 queue &lt;int&gt; kolejka; <span class="comment">//kolejka z stl</span>
-<a name="l00198"></a>00198 <span class="keywordtype">int</span> v=v1;
-<a name="l00200"></a>00200 tablica_bfs[v].<a class="code" href="structelement__bfs.html#aa654df64808f513f41d0349571e4b90e">stan</a>=2;
-<a name="l00201"></a>00201 tablica_bfs[v].<a class="code" href="structelement__bfs.html#a94b882f6922be485d6942f71c29e581d">poprzedni</a>=NULL;
-<a name="l00202"></a>00202 tablica_bfs[v].<a class="code" href="structelement__bfs.html#a91fcdfed5d5dc2bce6ca9bb4414df196">odleglosc</a>=0;
-<a name="l00203"></a>00203 <span class="keywordtype">bool</span> pelny=<span class="keyword">true</span>;
-<a name="l00205"></a>00205 <span class="keywordflow">while</span>(pelny)
-<a name="l00206"></a>00206 {
-<a name="l00207"></a>00207                 <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v].<a class="code" href="classwierzcholek.html#a30b8190b35ec29e5cc13910ce56e59e9" title="wartosc przechowywana w wierzcholku">polaczenia</a>.size(); i++)
-<a name="l00208"></a>00208                 {
-<a name="l00209"></a>00209                         <span class="keywordtype">int</span> a;
-<a name="l00210"></a>00210                         a = <a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v].<a class="code" href="classwierzcholek.html#a30b8190b35ec29e5cc13910ce56e59e9" title="wartosc przechowywana w wierzcholku">polaczenia</a>[i];
-<a name="l00211"></a>00211                         <span class="keywordflow">if</span> (tablica_bfs[a].stan == 0)
-<a name="l00212"></a>00212                         {
-<a name="l00213"></a>00213                                 kolejka.push(a);
-<a name="l00214"></a>00214                                 tablica_bfs[a].<a class="code" href="structelement__bfs.html#aa654df64808f513f41d0349571e4b90e">stan</a> = 1;
-<a name="l00215"></a>00215                                 tablica_bfs[a].<a class="code" href="structelement__bfs.html#a91fcdfed5d5dc2bce6ca9bb4414df196">odleglosc</a>=tablica_bfs[v].<a class="code" href="structelement__bfs.html#a91fcdfed5d5dc2bce6ca9bb4414df196">odleglosc</a>+1;
-<a name="l00216"></a>00216                                 tablica_bfs[a].<a class="code" href="structelement__bfs.html#a94b882f6922be485d6942f71c29e581d">poprzedni</a>=v;
-<a name="l00217"></a>00217                         }
-<a name="l00218"></a>00218                 }
-<a name="l00219"></a>00219                 tablica_bfs[v].<a class="code" href="structelement__bfs.html#aa654df64808f513f41d0349571e4b90e">stan</a>=2;
-<a name="l00220"></a>00220         <span class="keywordflow">if</span>(kolejka.empty())pelny=NULL;
-<a name="l00221"></a>00221         v=kolejka.front();
-<a name="l00222"></a>00222         kolejka.pop();
-<a name="l00223"></a>00223 
-<a name="l00224"></a>00224 }
-<a name="l00225"></a>00225 <span class="keywordflow">return</span> tablica_bfs;
-<a name="l00226"></a>00226 }
-<a name="l00227"></a>00227 
-<a name="l00228"></a>00228 <span class="comment">//element_dfs *graf::przejdz_dfs(int v1)</span>
-<a name="l00229"></a>00229 <span class="comment">//{</span>
-<a name="l00230"></a>00230 <span class="comment">//if(tablica[v1].zajety==NULL)</span>
-<a name="l00231"></a>00231 <span class="comment">//{</span>
-<a name="l00232"></a>00232 <span class="comment">//      cout&lt;&lt;&quot;wierzcholek nie istnieje&quot;&lt;&lt;endl;</span>
-<a name="l00233"></a>00233 <span class="comment">//}</span>
-<a name="l00234"></a>00234 <span class="comment">//element_dfs *tablica_dfs;</span>
-<a name="l00235"></a>00235 <span class="comment">//tablica_dfs=new element_dfs[rozmiar];</span>
-<a name="l00236"></a>00236 <span class="comment">//stack &lt;int&gt; kolejka;</span>
-<a name="l00237"></a>00237 <span class="comment">//int v=v1;</span>
-<a name="l00238"></a>00238 <span class="comment">//int time;</span>
-<a name="l00239"></a>00239 <span class="comment">//tablica_dfs[v].stan=2;</span>
-<a name="l00240"></a>00240 <span class="comment">//tablica_dfs[v].poprzedni=NULL;</span>
-<a name="l00241"></a>00241 <span class="comment">//bool pelny=true;</span>
-<a name="l00242"></a>00242 <span class="comment">//while(pelny)</span>
-<a name="l00243"></a>00243 <span class="comment">//{</span>
-<a name="l00244"></a>00244 <span class="comment">//              for (int i = 0; i &lt; tablica[v].polaczenia.size(); i++)</span>
-<a name="l00245"></a>00245 <span class="comment">//              {</span>
-<a name="l00246"></a>00246 <span class="comment">//                      int a;</span>
-<a name="l00247"></a>00247 <span class="comment">//                      a = tablica[v].polaczenia[i];</span>
-<a name="l00248"></a>00248 <span class="comment">//                      if (tablica_dfs[a].stan == 0)</span>
-<a name="l00249"></a>00249 <span class="comment">//                      {</span>
-<a name="l00250"></a>00250 <span class="comment">//                              kolejka.push(a);</span>
-<a name="l00251"></a>00251 <span class="comment">//                              tablica_dfs[a].stan = 1;</span>
-<a name="l00252"></a>00252 <span class="comment">//                              tablica_dfs[a].poprzedni=v;</span>
-<a name="l00253"></a>00253 <span class="comment">//                      }</span>
-<a name="l00254"></a>00254 <span class="comment">//              }</span>
-<a name="l00255"></a>00255 <span class="comment">//              tablica_dfs[v].stan=2;</span>
-<a name="l00256"></a>00256 <span class="comment">//      if(kolejka.empty())pelny=NULL;</span>
-<a name="l00257"></a>00257 <span class="comment">//      v=kolejka.top();</span>
-<a name="l00258"></a>00258 <span class="comment">//      kolejka.pop();</span>
-<a name="l00259"></a>00259 <span class="comment">//}</span>
-<a name="l00260"></a>00260 <span class="comment">//return tablica_dfs;</span>
-<a name="l00261"></a>00261 <span class="comment">//}</span>
-<a name="l00262"></a>00262 
-<a name="l00268"></a><a class="code" href="classgraf.html#a4947702a6d93feb805b1e11e14ec1e13">00268</a> <span class="keywordtype">void</span> *<a class="code" href="classgraf.html#a4947702a6d93feb805b1e11e14ec1e13" title="funkcja wywyołuje przejscie wglab drzewa dla kazdego nie odwiedzonego wierzcholka  to stworzenie paru...">graf::przejdz_dfs</a>()
-<a name="l00269"></a>00269 {
-<a name="l00270"></a>00270 <a class="code" href="classgraf.html#a9202cb6ab351f5bbdbb79de440ab1fb5">time</a>=0;
-<a name="l00271"></a>00271 <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="classgraf.html#a596da8a77b680d7ec408b1253c2c43c3">rozmiar</a>;i++)
-<a name="l00272"></a>00272 {
-<a name="l00273"></a>00273         <span class="keywordflow">if</span>(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[i].zajety==<span class="keyword">true</span> &amp;&amp; <a class="code" href="classgraf.html#a325616745236599f83bffb58d61b0fa9">tablica_dfs</a>[i].stan==0)
-<a name="l00274"></a>00274                 <a class="code" href="classgraf.html#a84527840c48cc131f9ef2ca493550ea0" title="funkcja przechodzi w głąb graf tworzac drzewo przejscia">dfs_visit</a>(i);
-<a name="l00275"></a>00275 
-<a name="l00276"></a>00276 }
-<a name="l00277"></a>00277 
-<a name="l00278"></a>00278 }
-<a name="l00285"></a><a class="code" href="classgraf.html#a84527840c48cc131f9ef2ca493550ea0">00285</a> <span class="keywordtype">void</span> <a class="code" href="classgraf.html#a84527840c48cc131f9ef2ca493550ea0" title="funkcja przechodzi w głąb graf tworzac drzewo przejscia">graf::dfs_visit</a>(<span class="keywordtype">int</span> v1)
+<a name="l00033"></a>00033 <a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a> = <span class="keyword">new</span> <a class="code" href="classwierzcholek.html">wierzcholek</a>[<a class="code" href="classgraf.html#a596da8a77b680d7ec408b1253c2c43c3">rozmiar</a>];
+<a name="l00034"></a>00034 <a class="code" href="classgraf.html#ad9204c0bbc75a2bef4a43200672f9694">ilosc</a>=0;
+<a name="l00035"></a>00035 <a class="code" href="classgraf.html#a9202cb6ab351f5bbdbb79de440ab1fb5">time</a>=0;
+<a name="l00036"></a>00036 }
+<a name="l00037"></a>00037 
+<a name="l00041"></a><a class="code" href="classgraf.html#a9aefd40799975c316a17bd67021e05f2">00041</a> <a class="code" href="classgraf.html#a9aefd40799975c316a17bd67021e05f2" title="destruktor grafu">graf::~graf</a>()
+<a name="l00042"></a>00042 {
+<a name="l00043"></a>00043         <span class="keyword">delete</span> <a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>;
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045 }
+<a name="l00046"></a>00046 
+<a name="l00051"></a><a class="code" href="classgraf.html#a6a50b0bfb5fc3cfc7a443014170b9565">00051</a> <span class="keywordtype">void</span> <a class="code" href="classgraf.html#afaa55f5a9aef1f30a2b3be97b59a476b" title="funkcja dodaje wierzcholek">graf::dodaj_wierzcholek</a>(<a class="code" href="classwierzcholek.html">wierzcholek</a> nowy)
+<a name="l00052"></a>00052 {
+<a name="l00053"></a>00053 <span class="keywordflow">if</span>(nowy.<a class="code" href="classwierzcholek.html#a66aaea6b1187250f7100542adc1617d2">numer</a>&gt;<a class="code" href="classgraf.html#a596da8a77b680d7ec408b1253c2c43c3">rozmiar</a>-1)
+<a name="l00054"></a>00054 {
+<a name="l00055"></a>00055         cout&lt;&lt;<span class="stringliteral">&quot;numer wierzcholka za duzy&quot;</span>;
+<a name="l00056"></a>00056         <span class="keywordflow">return</span>;
+<a name="l00057"></a>00057 }
+<a name="l00058"></a>00058 nowy.<a class="code" href="classwierzcholek.html#ad67644b5f408397f28d7150d3bac76d2">zajety</a>=<span class="keyword">true</span>;
+<a name="l00059"></a>00059 <a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[nowy.<a class="code" href="classwierzcholek.html#a66aaea6b1187250f7100542adc1617d2">numer</a>]=nowy;
+<a name="l00060"></a>00060 <a class="code" href="classgraf.html#ad9204c0bbc75a2bef4a43200672f9694">ilosc</a>++;
+<a name="l00061"></a>00061 }
+<a name="l00062"></a>00062 
+<a name="l00067"></a><a class="code" href="classgraf.html#afaa55f5a9aef1f30a2b3be97b59a476b">00067</a> <span class="keywordtype">void</span> <a class="code" href="classgraf.html#afaa55f5a9aef1f30a2b3be97b59a476b" title="funkcja dodaje wierzcholek">graf::dodaj_wierzcholek</a>()
+<a name="l00068"></a>00068 {
+<a name="l00069"></a>00069         <a class="code" href="classwierzcholek.html">wierzcholek</a> nowy;
+<a name="l00070"></a>00070         cout&lt;&lt;<span class="stringliteral">&quot;podaj numer wierzcholka&quot;</span>&lt;&lt;endl;
+<a name="l00071"></a>00071         cin&gt;&gt;nowy.<a class="code" href="classwierzcholek.html#a66aaea6b1187250f7100542adc1617d2">numer</a>;
+<a name="l00072"></a>00072         cout&lt;&lt;<span class="stringliteral">&quot;podaj wartosc wiercholka&quot;</span>&lt;&lt;endl;
+<a name="l00073"></a>00073         cin&gt;&gt;nowy.<a class="code" href="classwierzcholek.html#a19aa16bf7e01a987fcc360e5da902209" title="identyfikator wierzcholka">wartosc</a>;
+<a name="l00074"></a>00074         nowy.<a class="code" href="classwierzcholek.html#ad67644b5f408397f28d7150d3bac76d2">zajety</a>=<span class="keyword">true</span>;
+<a name="l00075"></a>00075 <span class="keywordflow">if</span>(nowy.<a class="code" href="classwierzcholek.html#a66aaea6b1187250f7100542adc1617d2">numer</a>&gt;<a class="code" href="classgraf.html#a596da8a77b680d7ec408b1253c2c43c3">rozmiar</a>-1)
+<a name="l00076"></a>00076 {
+<a name="l00077"></a>00077         cout&lt;&lt;<span class="stringliteral">&quot;numer wierzcholka za duzy&quot;</span>;
+<a name="l00078"></a>00078         <span class="keywordflow">return</span>;
+<a name="l00079"></a>00079 }
+<a name="l00080"></a>00080 <a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[nowy.<a class="code" href="classwierzcholek.html#a66aaea6b1187250f7100542adc1617d2">numer</a>]=nowy;
+<a name="l00081"></a>00081 <a class="code" href="classgraf.html#ad9204c0bbc75a2bef4a43200672f9694">ilosc</a>++;
+<a name="l00082"></a>00082 }
+<a name="l00083"></a>00083 
+<a name="l00088"></a><a class="code" href="classgraf.html#a369202eb63332e9faad779591c862ece">00088</a> <span class="keywordtype">void</span> <a class="code" href="classgraf.html#a369202eb63332e9faad779591c862ece" title="funkcja usuwa wierzcholek o zadanym kluczu">graf::usun_wierzcholek</a>(<span class="keywordtype">int</span> numer)
+<a name="l00089"></a>00089 {
+<a name="l00090"></a>00090         <span class="keywordflow">while</span>(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[numer].polaczenia.size())
+<a name="l00091"></a>00091                 <a class="code" href="classgraf.html#ac7e01e940f136f4020e4da816c2fb1b4" title="funkcja usuwa polaczenie miedzy zadanymi wierzcholkami">usun_polaczenie</a>(numer,<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[numer].polaczenia[0].<a class="code" href="classwierzcholek.html">wierzcholek</a>);
+<a name="l00092"></a>00092 
+<a name="l00093"></a>00093         <a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[numer].<a class="code" href="classwierzcholek.html#ad67644b5f408397f28d7150d3bac76d2">zajety</a>=NULL;
+<a name="l00094"></a>00094         <a class="code" href="classgraf.html#ad9204c0bbc75a2bef4a43200672f9694">ilosc</a>--;
+<a name="l00095"></a>00095 
+<a name="l00096"></a>00096 }
+<a name="l00097"></a>00097 
+<a name="l00102"></a><a class="code" href="classgraf.html#aa045d28e07e38ca32adf1b353077f877">00102</a> <span class="keywordtype">int</span> <a class="code" href="classgraf.html#aa045d28e07e38ca32adf1b353077f877" title="funkcja zwraca rozmiar grafu">graf::wrozmiar</a>()
+<a name="l00103"></a>00103 {
+<a name="l00104"></a>00104         <span class="keywordflow">return</span> <a class="code" href="classgraf.html#a596da8a77b680d7ec408b1253c2c43c3">rozmiar</a>;
+<a name="l00105"></a>00105 }
+<a name="l00106"></a>00106 
+<a name="l00112"></a><a class="code" href="classgraf.html#ac7e01e940f136f4020e4da816c2fb1b4">00112</a> <span class="keywordtype">void</span> <a class="code" href="classgraf.html#ac7e01e940f136f4020e4da816c2fb1b4" title="funkcja usuwa polaczenie miedzy zadanymi wierzcholkami">graf::usun_polaczenie</a>(<span class="keywordtype">int</span> v1, <span class="keywordtype">int</span> v2)
+<a name="l00113"></a>00113 {
+<a name="l00114"></a>00114         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v2].<a class="code" href="classwierzcholek.html#a34145a2de26c5e95c1ec72b0773005f4" title="wartosc przechowywana w wierzcholku">polaczenia</a>.size();i++)
+<a name="l00115"></a>00115         {
+<a name="l00116"></a>00116                 <span class="keywordflow">if</span>(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v2].polaczenia[i].<a class="code" href="classwierzcholek.html">wierzcholek</a>==v1)<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v2].<a class="code" href="classwierzcholek.html#a34145a2de26c5e95c1ec72b0773005f4" title="wartosc przechowywana w wierzcholku">polaczenia</a>.erase(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v2].polaczenia.begin()+i);
+<a name="l00117"></a>00117         }
+<a name="l00118"></a>00118         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v1].<a class="code" href="classwierzcholek.html#a34145a2de26c5e95c1ec72b0773005f4" title="wartosc przechowywana w wierzcholku">polaczenia</a>.size();i++)
+<a name="l00119"></a>00119         {
+<a name="l00120"></a>00120                 <span class="keywordflow">if</span>(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v1].polaczenia[i].<a class="code" href="classwierzcholek.html">wierzcholek</a>==v2)<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v1].<a class="code" href="classwierzcholek.html#a34145a2de26c5e95c1ec72b0773005f4" title="wartosc przechowywana w wierzcholku">polaczenia</a>.erase(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v1].polaczenia.begin()+i);
+<a name="l00121"></a>00121         }
+<a name="l00122"></a>00122 }
+<a name="l00123"></a>00123 
+<a name="l00131"></a><a class="code" href="classgraf.html#a4db0ebc4302facfc027dd7790542fb94">00131</a> <span class="keywordtype">void</span> <a class="code" href="classgraf.html#a4db0ebc4302facfc027dd7790542fb94" title="funkcja dodaje polaczenie miedzy zadanymi wierzcholkami">graf::dodaj_polaczenie</a>(<span class="keywordtype">int</span> v1, <span class="keywordtype">int</span> v2,<span class="keywordtype">int</span> waga)
+<a name="l00132"></a>00132 {
+<a name="l00133"></a>00133         <a class="code" href="structpoloczenie.html" title="clasa modeluje pojecie pojecie poedynczego wierzcholka grafu">poloczenie</a> nowev1, nowev2;
+<a name="l00134"></a>00134         nowev1.<a class="code" href="structpoloczenie.html#a23302e095b791149b562eaf65fa78383">waga</a>=nowev2.<a class="code" href="structpoloczenie.html#a23302e095b791149b562eaf65fa78383">waga</a>=waga;
+<a name="l00135"></a>00135         nowev1.<a class="code" href="structpoloczenie.html#a2386dd47a396eec04be21bbdc722f870">wierzcholek</a>=v2;
+<a name="l00136"></a>00136         nowev2.<a class="code" href="structpoloczenie.html#a2386dd47a396eec04be21bbdc722f870">wierzcholek</a>=v1;
+<a name="l00137"></a>00137         <span class="keywordflow">if</span>(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v1].zajety==NULL)cout&lt;&lt;<span class="stringliteral">&quot;wierzcholek :&quot;</span>&lt;&lt;v1&lt;&lt;<span class="stringliteral">&quot; nie istnieje \n&quot;</span>;
+<a name="l00138"></a>00138         <span class="keywordflow">if</span>(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v2].zajety==NULL)cout&lt;&lt;<span class="stringliteral">&quot;wierzcholek :&quot;</span>&lt;&lt;v2&lt;&lt;<span class="stringliteral">&quot; nie istnieje \n&quot;</span>;
+<a name="l00139"></a>00139         <span class="keywordflow">if</span>(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v1].zajety==NULL|<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v2].zajety==NULL|<a class="code" href="classgraf.html#ae1ebd85c7cb288174a5dccc5fd90634e" title="funkcja sprawdza czy mieszy podanymi wierzchokami istnieje polaczenie">sprawdz_polaczenie</a>(v1,v2))<span class="keywordflow">return</span>;
+<a name="l00140"></a>00140         <a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v1].<a class="code" href="classwierzcholek.html#a34145a2de26c5e95c1ec72b0773005f4" title="wartosc przechowywana w wierzcholku">polaczenia</a>.push_back(nowev1);
+<a name="l00141"></a>00141         <a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v2].<a class="code" href="classwierzcholek.html#a34145a2de26c5e95c1ec72b0773005f4" title="wartosc przechowywana w wierzcholku">polaczenia</a>.push_back(nowev2);
+<a name="l00142"></a>00142 }
+<a name="l00143"></a>00143 
+<a name="l00149"></a><a class="code" href="classgraf.html#a8dd83fa1722d917a143b2da9245b5db9">00149</a> <span class="keywordtype">void</span> <a class="code" href="classgraf.html#a8dd83fa1722d917a143b2da9245b5db9" title="funkcja wyswietla sasiadow wierzcholka">graf::wyswietl_sasiadow</a>(<span class="keywordtype">int</span> numer)
+<a name="l00150"></a>00150 {
+<a name="l00151"></a>00151         <span class="keywordflow">if</span>(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[numer].zajety==NULL)cout&lt;&lt;<span class="stringliteral">&quot;wierzcholek nie istnieje&quot;</span>&lt;&lt;endl;
+<a name="l00152"></a>00152         <span class="keywordflow">else</span> cout&lt;&lt;<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[numer]&lt;&lt;endl;
+<a name="l00153"></a>00153 }
+<a name="l00161"></a><a class="code" href="classgraf.html#ae1ebd85c7cb288174a5dccc5fd90634e">00161</a> <span class="keywordtype">bool</span> <a class="code" href="classgraf.html#ae1ebd85c7cb288174a5dccc5fd90634e" title="funkcja sprawdza czy mieszy podanymi wierzchokami istnieje polaczenie">graf::sprawdz_polaczenie</a>(<span class="keywordtype">int</span> v1, <span class="keywordtype">int</span> v2)
+<a name="l00162"></a>00162 {
+<a name="l00163"></a>00163         <span class="keywordflow">if</span>(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v1].zajety==NULL)cout&lt;&lt;<span class="stringliteral">&quot;wierzcholek :&quot;</span>&lt;&lt;v1&lt;&lt;<span class="stringliteral">&quot; nie istnieje \n&quot;</span>;
+<a name="l00164"></a>00164         <span class="keywordflow">if</span>(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v2].zajety==NULL)cout&lt;&lt;<span class="stringliteral">&quot;wierzcholek :&quot;</span>&lt;&lt;v2&lt;&lt;<span class="stringliteral">&quot; nie istnieje \n&quot;</span>;
+<a name="l00165"></a>00165         <span class="keywordtype">bool</span> v1_2=<span class="keyword">false</span>, v2_1=<span class="keyword">false</span>;
+<a name="l00166"></a>00166         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v1].<a class="code" href="classwierzcholek.html#a34145a2de26c5e95c1ec72b0773005f4" title="wartosc przechowywana w wierzcholku">polaczenia</a>.size();i++)
+<a name="l00167"></a>00167         {
+<a name="l00168"></a>00168                 <span class="keywordflow">if</span>(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v1].polaczenia[i].<a class="code" href="classwierzcholek.html">wierzcholek</a>==v2)v1_2=<span class="keyword">true</span>;
+<a name="l00169"></a>00169                 <span class="keywordflow">else</span> v1_2=<span class="keyword">false</span>;
+<a name="l00170"></a>00170         }
+<a name="l00171"></a>00171         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v2].<a class="code" href="classwierzcholek.html#a34145a2de26c5e95c1ec72b0773005f4" title="wartosc przechowywana w wierzcholku">polaczenia</a>.size();i++)
+<a name="l00172"></a>00172         {
+<a name="l00173"></a>00173                 <span class="keywordflow">if</span>(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v2].polaczenia[i].<a class="code" href="classwierzcholek.html">wierzcholek</a>==v1)v2_1=<span class="keyword">true</span>;
+<a name="l00174"></a>00174                 <span class="keywordflow">else</span> v2_1=<span class="keyword">false</span>;
+<a name="l00175"></a>00175         }
+<a name="l00176"></a>00176                 <span class="keywordflow">if</span>(v2_1&amp;v1_2)
+<a name="l00177"></a>00177                         {
+<a name="l00178"></a>00178                         <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00179"></a>00179                         }
+<a name="l00180"></a>00180                 <span class="keywordflow">else</span>
+<a name="l00181"></a>00181                 <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00182"></a>00182 
+<a name="l00183"></a>00183 }
+<a name="l00184"></a>00184 
+<a name="l00192"></a><a class="code" href="classgraf.html#a83fde8c542586d92421c9870f07a0cc2">00192</a> <a class="code" href="structelement__bfs.html" title="struktura definiuje element drzewa przechodzenie w szerz">element_bfs</a> *<a class="code" href="classgraf.html#a83fde8c542586d92421c9870f07a0cc2" title="implementacja algorytmu przechodzenie wszerz grafu">graf::przejdz_bfs</a>(<span class="keywordtype">int</span> v)
+<a name="l00193"></a>00193 {
+<a name="l00194"></a>00194 <span class="keywordflow">if</span>(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v].zajety==NULL)
+<a name="l00195"></a>00195 {
+<a name="l00196"></a>00196         cout&lt;&lt;<span class="stringliteral">&quot;wierzcholek nie istnieje&quot;</span>&lt;&lt;endl;
+<a name="l00197"></a>00197         <span class="keywordflow">return</span> NULL;
+<a name="l00198"></a>00198 }
+<a name="l00199"></a>00199 <a class="code" href="structelement__bfs.html" title="struktura definiuje element drzewa przechodzenie w szerz">element_bfs</a> *tablica_bfs;
+<a name="l00200"></a>00200 tablica_bfs=<span class="keyword">new</span> <a class="code" href="structelement__bfs.html" title="struktura definiuje element drzewa przechodzenie w szerz">element_bfs</a>[<a class="code" href="classgraf.html#a596da8a77b680d7ec408b1253c2c43c3">rozmiar</a>];
+<a name="l00201"></a>00201 queue &lt;int&gt; kolejka; <span class="comment">//kolejka z stl</span>
+<a name="l00203"></a>00203 <span class="comment"></span>tablica_bfs[v].<a class="code" href="structelement__bfs.html#aa654df64808f513f41d0349571e4b90e">stan</a>=2;
+<a name="l00204"></a>00204 tablica_bfs[v].<a class="code" href="structelement__bfs.html#a94b882f6922be485d6942f71c29e581d">poprzedni</a>=NULL;
+<a name="l00205"></a>00205 tablica_bfs[v].<a class="code" href="structelement__bfs.html#a91fcdfed5d5dc2bce6ca9bb4414df196">odleglosc</a>=0;
+<a name="l00206"></a>00206 <span class="keywordtype">bool</span> pelny=<span class="keyword">true</span>;
+<a name="l00208"></a>00208 <span class="keywordflow">while</span>(pelny)
+<a name="l00209"></a>00209 {
+<a name="l00210"></a>00210                 <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v].<a class="code" href="classwierzcholek.html#a34145a2de26c5e95c1ec72b0773005f4" title="wartosc przechowywana w wierzcholku">polaczenia</a>.size(); i++)
+<a name="l00211"></a>00211                 {
+<a name="l00212"></a>00212                         <span class="keywordtype">int</span> a;
+<a name="l00213"></a>00213                         a = <a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v].<a class="code" href="classwierzcholek.html#a34145a2de26c5e95c1ec72b0773005f4" title="wartosc przechowywana w wierzcholku">polaczenia</a>[i].wierzcholek;
+<a name="l00214"></a>00214                         <span class="keywordflow">if</span> (tablica_bfs[a].stan == 0)
+<a name="l00215"></a>00215                         {
+<a name="l00216"></a>00216                                 kolejka.push(a);
+<a name="l00217"></a>00217                                 tablica_bfs[a].<a class="code" href="structelement__bfs.html#aa654df64808f513f41d0349571e4b90e">stan</a> = 1;
+<a name="l00218"></a>00218                                 tablica_bfs[a].<a class="code" href="structelement__bfs.html#a91fcdfed5d5dc2bce6ca9bb4414df196">odleglosc</a>=tablica_bfs[v].<a class="code" href="structelement__bfs.html#a91fcdfed5d5dc2bce6ca9bb4414df196">odleglosc</a>+1;
+<a name="l00219"></a>00219                                 tablica_bfs[a].<a class="code" href="structelement__bfs.html#a94b882f6922be485d6942f71c29e581d">poprzedni</a>=v;
+<a name="l00220"></a>00220                         }
+<a name="l00221"></a>00221                 }
+<a name="l00222"></a>00222                 tablica_bfs[v].<a class="code" href="structelement__bfs.html#aa654df64808f513f41d0349571e4b90e">stan</a>=2;
+<a name="l00223"></a>00223         <span class="keywordflow">if</span>(kolejka.empty())pelny=NULL;
+<a name="l00224"></a>00224         v=kolejka.front();
+<a name="l00225"></a>00225         kolejka.pop();
+<a name="l00226"></a>00226 
+<a name="l00227"></a>00227 }
+<a name="l00228"></a>00228 <span class="keywordflow">return</span> tablica_bfs;
+<a name="l00229"></a>00229 }
+<a name="l00230"></a>00230 
+<a name="l00238"></a><a class="code" href="classgraf.html#a420367f5ce066bd467c2621e3c69bdc3">00238</a> <a class="code" href="structelement__bfs.html" title="struktura definiuje element drzewa przechodzenie w szerz">element_bfs</a>* <a class="code" href="classgraf.html#a420367f5ce066bd467c2621e3c69bdc3" title="funkjcja znajduje najkrutsza droge miedzy zadanymi wierzcholkami">graf::znajdz_droge_bfs</a>(<span class="keywordtype">int</span> korzen, <span class="keywordtype">int</span> v)
+<a name="l00239"></a>00239 {
+<a name="l00240"></a>00240 <span class="keywordflow">if</span>(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[korzen].zajety==NULL)
+<a name="l00241"></a>00241 {
+<a name="l00242"></a>00242         cout&lt;&lt;<span class="stringliteral">&quot;wierzcholek nie istnieje&quot;</span>&lt;&lt;endl;
+<a name="l00243"></a>00243         <span class="keywordflow">return</span> NULL;
+<a name="l00244"></a>00244 }
+<a name="l00245"></a>00245 <a class="code" href="structelement__bfs.html" title="struktura definiuje element drzewa przechodzenie w szerz">element_bfs</a> *tablica_bfs;
+<a name="l00246"></a>00246 tablica_bfs=<span class="keyword">new</span> <a class="code" href="structelement__bfs.html" title="struktura definiuje element drzewa przechodzenie w szerz">element_bfs</a>[<a class="code" href="classgraf.html#a596da8a77b680d7ec408b1253c2c43c3">rozmiar</a>];
+<a name="l00247"></a>00247 queue &lt;int&gt; kolejka; <span class="comment">//kolejka z stl</span>
+<a name="l00249"></a>00249 <span class="comment"></span>tablica_bfs[korzen].<a class="code" href="structelement__bfs.html#aa654df64808f513f41d0349571e4b90e">stan</a>=2;
+<a name="l00250"></a>00250 tablica_bfs[korzen].<a class="code" href="structelement__bfs.html#a94b882f6922be485d6942f71c29e581d">poprzedni</a>=-1;<span class="comment">//poniewaz wierzcholki indeksujeemy od 0 dla czytania sciezki potrzebujemy wyjatkowy indeks dla korzenia</span>
+<a name="l00251"></a>00251 tablica_bfs[korzen].<a class="code" href="structelement__bfs.html#a91fcdfed5d5dc2bce6ca9bb4414df196">odleglosc</a>=0;
+<a name="l00252"></a>00252 <span class="keywordtype">bool</span> pelny=<span class="keyword">true</span>;
+<a name="l00254"></a>00254 <span class="keywordflow">while</span>(pelny)
+<a name="l00255"></a>00255 {
+<a name="l00256"></a>00256                 <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[korzen].<a class="code" href="classwierzcholek.html#a34145a2de26c5e95c1ec72b0773005f4" title="wartosc przechowywana w wierzcholku">polaczenia</a>.size(); i++)
+<a name="l00257"></a>00257                 {
+<a name="l00258"></a>00258                         <span class="keywordtype">int</span> a;
+<a name="l00259"></a>00259                         a = <a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[korzen].<a class="code" href="classwierzcholek.html#a34145a2de26c5e95c1ec72b0773005f4" title="wartosc przechowywana w wierzcholku">polaczenia</a>[i].wierzcholek;
+<a name="l00260"></a>00260                         <span class="keywordflow">if</span> (tablica_bfs[a].stan == 0)
+<a name="l00261"></a>00261                         {
+<a name="l00262"></a>00262                                 kolejka.push(a);
+<a name="l00263"></a>00263                                 tablica_bfs[a].<a class="code" href="structelement__bfs.html#aa654df64808f513f41d0349571e4b90e">stan</a> = 1;
+<a name="l00264"></a>00264                                 tablica_bfs[a].<a class="code" href="structelement__bfs.html#a91fcdfed5d5dc2bce6ca9bb4414df196">odleglosc</a>=tablica_bfs[korzen].<a class="code" href="structelement__bfs.html#a91fcdfed5d5dc2bce6ca9bb4414df196">odleglosc</a>+1;
+<a name="l00265"></a>00265                                 tablica_bfs[a].<a class="code" href="structelement__bfs.html#a94b882f6922be485d6942f71c29e581d">poprzedni</a>=korzen;
+<a name="l00266"></a>00266                                 <span class="keywordflow">if</span>(a==v)<span class="keywordflow">return</span> tablica_bfs;
+<a name="l00267"></a>00267                         }
+<a name="l00268"></a>00268                 }
+<a name="l00269"></a>00269                 tablica_bfs[korzen].<a class="code" href="structelement__bfs.html#aa654df64808f513f41d0349571e4b90e">stan</a>=2;
+<a name="l00270"></a>00270         <span class="keywordflow">if</span>(kolejka.empty())pelny=NULL;
+<a name="l00271"></a>00271         korzen=kolejka.front();
+<a name="l00272"></a>00272         kolejka.pop();
+<a name="l00273"></a>00273 }
+<a name="l00274"></a>00274 <span class="keywordflow">return</span> tablica_bfs;
+<a name="l00275"></a>00275 }
+<a name="l00276"></a>00276 
+<a name="l00283"></a><a class="code" href="classgraf.html#a50eb021e0338d01d1f2a915f50add7c2">00283</a> <span class="keywordtype">void</span> <a class="code" href="classgraf.html#a50eb021e0338d01d1f2a915f50add7c2" title="funkcja wyswietla zanleziona droge miedzy wierzcholkami">graf::czytaj_droge_bfs</a>(<a class="code" href="structelement__bfs.html" title="struktura definiuje element drzewa przechodzenie w szerz">element_bfs</a>* tablica_bfs, <span class="keywordtype">int</span> v1)
+<a name="l00284"></a>00284 {
+<a name="l00285"></a>00285 <span class="keywordflow">while</span>(v1&gt;=0)
 <a name="l00286"></a>00286 {
-<a name="l00287"></a>00287         <span class="keywordflow">if</span>(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v1].zajety==NULL)
-<a name="l00288"></a>00288                 {
-<a name="l00289"></a>00289                 cout&lt;&lt;<span class="stringliteral">&quot;wierzcholek nie istnieje&quot;</span>&lt;&lt;endl;
-<a name="l00290"></a>00290                 <span class="keywordflow">return</span>;
-<a name="l00291"></a>00291                 }
-<a name="l00292"></a>00292         <a class="code" href="classgraf.html#a325616745236599f83bffb58d61b0fa9">tablica_dfs</a>[v1].<a class="code" href="structelement__dfs.html#a48b8257c62eb0f4c52e10bf2c06fffda">stan</a>=1;
-<a name="l00293"></a>00293         <a class="code" href="classgraf.html#a9202cb6ab351f5bbdbb79de440ab1fb5">time</a>+=1;
-<a name="l00294"></a>00294         <a class="code" href="classgraf.html#a325616745236599f83bffb58d61b0fa9">tablica_dfs</a>[v1].<a class="code" href="structelement__dfs.html#ae2d3c82805dc8b9b24a7dc1511c283dd" title="czas wejscia do wierzcholka">d</a>=<a class="code" href="classgraf.html#a9202cb6ab351f5bbdbb79de440ab1fb5">time</a>;
-<a name="l00295"></a>00295         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v1].<a class="code" href="classwierzcholek.html#a30b8190b35ec29e5cc13910ce56e59e9" title="wartosc przechowywana w wierzcholku">polaczenia</a>.size(); i++)
-<a name="l00296"></a>00296         {
-<a name="l00297"></a>00297                 <span class="keywordtype">int</span> a=<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v1].<a class="code" href="classwierzcholek.html#a30b8190b35ec29e5cc13910ce56e59e9" title="wartosc przechowywana w wierzcholku">polaczenia</a>[i];
-<a name="l00298"></a>00298                 <span class="keywordflow">if</span>(<a class="code" href="classgraf.html#a325616745236599f83bffb58d61b0fa9">tablica_dfs</a>[a].stan==0)
-<a name="l00299"></a>00299                 {
-<a name="l00300"></a>00300                         <a class="code" href="classgraf.html#a325616745236599f83bffb58d61b0fa9">tablica_dfs</a>[a].<a class="code" href="structelement__dfs.html#af3205a446fe8c834532d3b5de81deefa">poprzedni</a>=v1;
-<a name="l00301"></a>00301                         <a class="code" href="classgraf.html#a84527840c48cc131f9ef2ca493550ea0" title="funkcja przechodzi w głąb graf tworzac drzewo przejscia">dfs_visit</a>(a);
-<a name="l00302"></a>00302                 }
-<a name="l00303"></a>00303         }
-<a name="l00304"></a>00304         <a class="code" href="classgraf.html#a325616745236599f83bffb58d61b0fa9">tablica_dfs</a>[v1].<a class="code" href="structelement__dfs.html#a48b8257c62eb0f4c52e10bf2c06fffda">stan</a>=2;
-<a name="l00305"></a>00305         <a class="code" href="classgraf.html#a325616745236599f83bffb58d61b0fa9">tablica_dfs</a>[v1].<a class="code" href="structelement__dfs.html#a9a75ad927680701485941a4e42b36290" title="czas wyjscia z wierzcholka">f</a>=<a class="code" href="classgraf.html#a9202cb6ab351f5bbdbb79de440ab1fb5">time</a>;
-<a name="l00306"></a>00306         <a class="code" href="classgraf.html#a9202cb6ab351f5bbdbb79de440ab1fb5">time</a>+=1;
-<a name="l00307"></a>00307 }
-<a name="l00311"></a><a class="code" href="classgraf.html#a97c2722a11d3a7f90c82bc9b1cd56ef6">00311</a> <span class="keywordtype">void</span> <a class="code" href="classgraf.html#a97c2722a11d3a7f90c82bc9b1cd56ef6" title="funkcja wyswietla &quot;las drzew przejsc&quot;">graf::wyswietl_dfs</a>()
-<a name="l00312"></a>00312 {
-<a name="l00313"></a>00313         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="classgraf.html#a596da8a77b680d7ec408b1253c2c43c3">rozmiar</a>;i++)
-<a name="l00314"></a>00314                 {
-<a name="l00315"></a>00315                         <span class="keywordflow">if</span>(<a class="code" href="classgraf.html#a325616745236599f83bffb58d61b0fa9">tablica_dfs</a>[i].stan==2)
-<a name="l00316"></a>00316                         {
-<a name="l00317"></a>00317                         cout&lt;&lt;<span class="stringliteral">&quot;wierzcholek: &quot;</span>&lt;&lt;i&lt;&lt;endl;
-<a name="l00318"></a>00318                         cout&lt;&lt;<a class="code" href="classgraf.html#a325616745236599f83bffb58d61b0fa9">tablica_dfs</a>[i]&lt;&lt;endl;
-<a name="l00319"></a>00319                         }
-<a name="l00320"></a>00320                 }
-<a name="l00321"></a>00321 }
+<a name="l00287"></a>00287         cout&lt;&lt;v1&lt;&lt;endl;
+<a name="l00288"></a>00288         v1=tablica_bfs[v1].<a class="code" href="structelement__bfs.html#a94b882f6922be485d6942f71c29e581d">poprzedni</a>;
+<a name="l00289"></a>00289 }
+<a name="l00290"></a>00290 }
+<a name="l00291"></a>00291 
+<a name="l00292"></a>00292 
+<a name="l00299"></a><a class="code" href="classgraf.html#a1a4c08e7c698459b7ceb172fd687dc78">00299</a> <a class="code" href="structelement__dfs.html" title="element drzewa przejscia dla przeszukiwania w głąb;">element_dfs</a>* <a class="code" href="classgraf.html#a1a4c08e7c698459b7ceb172fd687dc78" title="funkcja wywyołuje przejscie wglab drzewa dla kazdego nie odwiedzonego wierzcholka  to stworzenie paru...">graf::przejdz_dfs</a>()
+<a name="l00300"></a>00300 {
+<a name="l00301"></a>00301 <a class="code" href="classgraf.html#a9202cb6ab351f5bbdbb79de440ab1fb5">time</a>=0;
+<a name="l00302"></a>00302 <a class="code" href="structelement__dfs.html" title="element drzewa przejscia dla przeszukiwania w głąb;">element_dfs</a> *tablica_dfs;
+<a name="l00303"></a>00303 tablica_dfs=<span class="keyword">new</span> <a class="code" href="structelement__dfs.html" title="element drzewa przejscia dla przeszukiwania w głąb;">element_dfs</a>[<a class="code" href="classgraf.html#a596da8a77b680d7ec408b1253c2c43c3">rozmiar</a>];
+<a name="l00304"></a>00304 <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="classgraf.html#a596da8a77b680d7ec408b1253c2c43c3">rozmiar</a>;i++)
+<a name="l00305"></a>00305 {
+<a name="l00306"></a>00306         <span class="keywordflow">if</span>(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[i].zajety==<span class="keyword">true</span> &amp;&amp; tablica_dfs[i].stan==0)
+<a name="l00307"></a>00307                 <a class="code" href="classgraf.html#a16090538c8c5c1414f3eb45d754ec2cc" title="funkcja przechodzi w głąb graf tworzac drzewo przejscia oparta na wywolaniu rekurencyjnym">dfs_visit</a>(tablica_dfs,i);
+<a name="l00308"></a>00308 }
+<a name="l00309"></a>00309 <span class="keywordflow">return</span> tablica_dfs;
+<a name="l00310"></a>00310 }
+<a name="l00311"></a>00311 
+<a name="l00318"></a><a class="code" href="classgraf.html#a16090538c8c5c1414f3eb45d754ec2cc">00318</a> <span class="keywordtype">bool</span> <a class="code" href="classgraf.html#a16090538c8c5c1414f3eb45d754ec2cc" title="funkcja przechodzi w głąb graf tworzac drzewo przejscia oparta na wywolaniu rekurencyjnym">graf::dfs_visit</a>(<a class="code" href="structelement__dfs.html" title="element drzewa przejscia dla przeszukiwania w głąb;">element_dfs</a> * tablica_dfs,<span class="keywordtype">int</span> v1)
+<a name="l00319"></a>00319 {
+<a name="l00320"></a>00320 
+<a name="l00321"></a>00321         <span class="keywordflow">if</span>(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v1].zajety==NULL)
+<a name="l00322"></a>00322                 {
+<a name="l00323"></a>00323                 cout&lt;&lt;<span class="stringliteral">&quot;wierzcholek nie istnieje&quot;</span>&lt;&lt;endl;
+<a name="l00324"></a>00324                 <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00325"></a>00325                 }
+<a name="l00326"></a>00326         tablica_dfs[v1].<a class="code" href="structelement__dfs.html#a48b8257c62eb0f4c52e10bf2c06fffda">stan</a>=1;
+<a name="l00327"></a>00327         <a class="code" href="classgraf.html#a9202cb6ab351f5bbdbb79de440ab1fb5">time</a>+=1;
+<a name="l00328"></a>00328         tablica_dfs[v1].<a class="code" href="structelement__dfs.html#ae2d3c82805dc8b9b24a7dc1511c283dd" title="czas wejscia do wierzcholka">d</a>=<a class="code" href="classgraf.html#a9202cb6ab351f5bbdbb79de440ab1fb5">time</a>;
+<a name="l00329"></a>00329         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v1].<a class="code" href="classwierzcholek.html#a34145a2de26c5e95c1ec72b0773005f4" title="wartosc przechowywana w wierzcholku">polaczenia</a>.size(); i++)
+<a name="l00330"></a>00330         {
+<a name="l00331"></a>00331                 <span class="keywordtype">int</span> a=<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v1].<a class="code" href="classwierzcholek.html#a34145a2de26c5e95c1ec72b0773005f4" title="wartosc przechowywana w wierzcholku">polaczenia</a>[i].wierzcholek;
+<a name="l00332"></a>00332                 <span class="keywordflow">if</span>(tablica_dfs[a].stan==0)
+<a name="l00333"></a>00333                 {
+<a name="l00334"></a>00334                         tablica_dfs[a].<a class="code" href="structelement__dfs.html#af3205a446fe8c834532d3b5de81deefa">poprzedni</a>=v1;
+<a name="l00335"></a>00335                         <a class="code" href="classgraf.html#a16090538c8c5c1414f3eb45d754ec2cc" title="funkcja przechodzi w głąb graf tworzac drzewo przejscia oparta na wywolaniu rekurencyjnym">dfs_visit</a>(tablica_dfs, a);
+<a name="l00336"></a>00336 
+<a name="l00337"></a>00337                 }
+<a name="l00338"></a>00338         }
+<a name="l00339"></a>00339         tablica_dfs[v1].<a class="code" href="structelement__dfs.html#a48b8257c62eb0f4c52e10bf2c06fffda">stan</a>=2;
+<a name="l00340"></a>00340         tablica_dfs[v1].<a class="code" href="structelement__dfs.html#a9a75ad927680701485941a4e42b36290" title="czas wyjscia z wierzcholka">f</a>=<a class="code" href="classgraf.html#a9202cb6ab351f5bbdbb79de440ab1fb5">time</a>;
+<a name="l00341"></a>00341         <a class="code" href="classgraf.html#a9202cb6ab351f5bbdbb79de440ab1fb5">time</a>+=1;
+<a name="l00342"></a>00342         <span class="keywordflow">return</span> NULL;
+<a name="l00343"></a>00343 }
+<a name="l00344"></a>00344 
+<a name="l00345"></a>00345 
+<a name="l00349"></a><a class="code" href="classgraf.html#a5b26730ff96f99be35adef3c706a1d72">00349</a> <span class="keywordtype">void</span> <a class="code" href="classgraf.html#a5b26730ff96f99be35adef3c706a1d72" title="funkcja wyswietla &quot;las drzew przejsc&quot;">graf::wyswietl_dfs</a>(<a class="code" href="structelement__dfs.html" title="element drzewa przejscia dla przeszukiwania w głąb;">element_dfs</a> *tablica_dfs)
+<a name="l00350"></a>00350 {
+<a name="l00351"></a>00351 <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="classgraf.html#a596da8a77b680d7ec408b1253c2c43c3">rozmiar</a>;i++)
+<a name="l00352"></a>00352 {
+<a name="l00353"></a>00353 <span class="keywordflow">if</span>(tablica_dfs[i].stan==2)
+<a name="l00354"></a>00354 {
+<a name="l00355"></a>00355 cout&lt;&lt;<span class="stringliteral">&quot;wierzcholek: &quot;</span>&lt;&lt;i&lt;&lt;endl;
+<a name="l00356"></a>00356 cout&lt;&lt;tablica_dfs[i]&lt;&lt;endl;
+<a name="l00357"></a>00357 }
+<a name="l00358"></a>00358 }
+<a name="l00359"></a>00359 }
+<a name="l00367"></a><a class="code" href="classgraf.html#a687140bdc84e60aa5f8342496bc2c06f">00367</a> <a class="code" href="structelement__dfs.html" title="element drzewa przejscia dla przeszukiwania w głąb;">element_dfs</a>* <a class="code" href="classgraf.html#a687140bdc84e60aa5f8342496bc2c06f" title="funkcja znajduje droge miedzy wierzcholkami. W tym przypadku oparta na stosie. A mozna by i na rekure...">graf::znajdz_droge_dfs</a>(<span class="keywordtype">int</span> korzen, <span class="keywordtype">int</span> v1)
+<a name="l00368"></a>00368 {
+<a name="l00369"></a>00369         {
+<a name="l00370"></a>00370         <span class="keywordflow">if</span>(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[korzen].zajety==NULL)
+<a name="l00371"></a>00371         {
+<a name="l00372"></a>00372                 cout&lt;&lt;<span class="stringliteral">&quot;wierzcholek nie istnieje&quot;</span>&lt;&lt;endl;
+<a name="l00373"></a>00373                 <span class="keywordflow">return</span> NULL;
+<a name="l00374"></a>00374         }
+<a name="l00375"></a>00375         <a class="code" href="structelement__dfs.html" title="element drzewa przejscia dla przeszukiwania w głąb;">element_dfs</a> *tablica_dfs;
+<a name="l00376"></a>00376         tablica_dfs=<span class="keyword">new</span> <a class="code" href="structelement__dfs.html" title="element drzewa przejscia dla przeszukiwania w głąb;">element_dfs</a>[<a class="code" href="classgraf.html#a596da8a77b680d7ec408b1253c2c43c3">rozmiar</a>];
+<a name="l00377"></a>00377         stack &lt;int&gt; stos; <span class="comment">//kolejka z stl</span>
+<a name="l00379"></a>00379 <span class="comment"></span>        tablica_dfs[korzen].<a class="code" href="structelement__dfs.html#a48b8257c62eb0f4c52e10bf2c06fffda">stan</a>=2;
+<a name="l00380"></a>00380         tablica_dfs[korzen].<a class="code" href="structelement__dfs.html#af3205a446fe8c834532d3b5de81deefa">poprzedni</a>=-1;<span class="comment">//poniewaz wierzcholki indeksujeemy od 0 dla czytania sciezki potrzebujemy wyjatkowy indeks dla korzenia</span>
+<a name="l00381"></a>00381         <span class="keywordtype">bool</span> pelny=<span class="keyword">true</span>;
+<a name="l00383"></a>00383         <span class="keywordflow">while</span>(pelny)
+<a name="l00384"></a>00384         {
+<a name="l00385"></a>00385                         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[korzen].<a class="code" href="classwierzcholek.html#a34145a2de26c5e95c1ec72b0773005f4" title="wartosc przechowywana w wierzcholku">polaczenia</a>.size(); i++)
+<a name="l00386"></a>00386                         {
+<a name="l00387"></a>00387                                 <span class="keywordtype">int</span> a;
+<a name="l00388"></a>00388                                 a = <a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[korzen].<a class="code" href="classwierzcholek.html#a34145a2de26c5e95c1ec72b0773005f4" title="wartosc przechowywana w wierzcholku">polaczenia</a>[i].wierzcholek;
+<a name="l00389"></a>00389                                 <span class="keywordflow">if</span> (tablica_dfs[a].stan == 0)
+<a name="l00390"></a>00390                                 {
+<a name="l00391"></a>00391                                         stos.push(a);
+<a name="l00392"></a>00392                                         tablica_dfs[a].<a class="code" href="structelement__dfs.html#a48b8257c62eb0f4c52e10bf2c06fffda">stan</a> = 1;
+<a name="l00393"></a>00393                                         tablica_dfs[a].<a class="code" href="structelement__dfs.html#af3205a446fe8c834532d3b5de81deefa">poprzedni</a>=korzen;
+<a name="l00394"></a>00394                                         <span class="keywordflow">if</span>(a==v1) <span class="keywordflow">return</span> tablica_dfs;
+<a name="l00395"></a>00395                                 }
+<a name="l00396"></a>00396                         }
+<a name="l00397"></a>00397                         tablica_dfs[korzen].<a class="code" href="structelement__dfs.html#a48b8257c62eb0f4c52e10bf2c06fffda">stan</a>=2;
+<a name="l00398"></a>00398                 <span class="keywordflow">if</span>(stos.empty())pelny=NULL;
+<a name="l00399"></a>00399                 korzen=stos.top();
+<a name="l00400"></a>00400                 stos.pop();
+<a name="l00401"></a>00401 
+<a name="l00402"></a>00402         }
+<a name="l00403"></a>00403         <span class="keywordflow">return</span> tablica_dfs;
+<a name="l00404"></a>00404         }
+<a name="l00405"></a>00405 }
+<a name="l00406"></a>00406 
+<a name="l00413"></a><a class="code" href="classgraf.html#ac5e916e9b4f36cd6949ee8132e044e9c">00413</a> <span class="keywordtype">void</span> <a class="code" href="classgraf.html#ac5e916e9b4f36cd6949ee8132e044e9c" title="funkcja wyswietla zanleziona droge miedzy wierzcholkami">graf::czytaj_droge_dfs</a>(<a class="code" href="structelement__dfs.html" title="element drzewa przejscia dla przeszukiwania w głąb;">element_dfs</a>* tablica_dfs, <span class="keywordtype">int</span> v1)
+<a name="l00414"></a>00414 {
+<a name="l00415"></a>00415 <span class="keywordflow">while</span>(v1&gt;=0)
+<a name="l00416"></a>00416 {
+<a name="l00417"></a>00417         cout&lt;&lt;v1&lt;&lt;endl;
+<a name="l00418"></a>00418         v1=tablica_dfs[v1].<a class="code" href="structelement__dfs.html#af3205a446fe8c834532d3b5de81deefa">poprzedni</a>;
+<a name="l00419"></a>00419 }
+<a name="l00420"></a>00420 }
 </pre></div></div><!-- contents -->
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="graf_8cpp.html">graf.cpp</a>      </li>
 
-    <li class="footer">Generated on Sun May 11 2014 19:33:49 for Graf by
+    <li class="footer">Generated on Fri May 16 2014 14:46:03 for Graf by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>
