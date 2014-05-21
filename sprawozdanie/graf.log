@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.5.11)  16 MAY 2014 14:53
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.5.11)  21 MAY 2014 20:58
 entering extended mode
  %&-line parsing enabled.
 **graf.tex
@@ -281,19 +281,19 @@ Package: times 2005/04/12 PSNFSS-v9.2a (SPQR)
 ) (./graf.aux)
 \openout1 = `graf.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 50.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 49.
 
 (/usr/share/texmf-texlive/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
@@ -312,50 +312,59 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 \everyMPtoPDFconversion=\toks18
 )
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 51.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 50.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 51.
+(Font)              <7> on input line 50.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 51.
+(Font)              <5> on input line 50.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 52.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 51.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 52.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 51.
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--57
+Underfull \hbox (badness 10000) in paragraph at lines 54--56
 
  []
 
 
-Underfull \hbox (badness 1005) in paragraph at lines 62--66
+Underfull \hbox (badness 1005) in paragraph at lines 61--66
 \T1/ptm/m/n/10 prze-zem-nie opie-ra si¦ na dy-na-micz-nej ta-bli-cy oraz vec-to
 -rze. Wierz-choª-ki gra-fu
  []
 
 
-Underfull \hbox (badness 1681) in paragraph at lines 62--66
+Underfull \hbox (badness 1681) in paragraph at lines 61--66
 \T1/ptm/m/n/10 prze-cho-wy-wy-ane s¡ w ta-bli-cy dy-na-micz-nej a kra-w¦-dzie w
  li-stach sa-siedz-twa.
  []
 
 
-Underfull \hbox (badness 1127) in paragraph at lines 62--66
+Underfull \hbox (badness 1127) in paragraph at lines 61--66
 \T1/ptm/m/n/10 Im-ple-men-ta-cja prze-zem-nie wy-bra-na chrak-te-ry-zu-je si¦ k
 o-rzyst-niej-sz¡ zªo-»o-no-±ci¡
  []
 
 
-Underfull \hbox (badness 1354) in paragraph at lines 62--66
+Underfull \hbox (badness 1354) in paragraph at lines 61--66
 \OML/cmm/m/it/10 O\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 V[]\OT1/cmr/m/n/10 )$\T1/pt
 m/m/n/10 . Pro-gram prze-zem-nie na-pi-sa-ny po-zwa-la na two-rze-nie gra-fu za
  po-mo-c¡
  []
 
-[1]
+
+Underfull \hbox (badness 4429) in paragraph at lines 61--66
+[]\T1/ptm/m/n/10 Do ge-ne-ro-wa-nia pli-ku tek-sto-we-go zo-sta-ªa na-pi-sa-na 
+od-po-wied-nia funk-cja.
+ []
+
+
+Underfull \vbox (badness 1715) has occurred while \output is active []
+
+ [1]
 Underfull \hbox (badness 2165) in paragraph at lines 81--85
 []\T1/ptm/m/n/10 Przeszukiwanie w gª¡b (ang. Depth-first se-arch, w skró-cie DF
 S) ^^U je-den
@@ -379,15 +388,19 @@ Underfull \hbox (badness 1810) in paragraph at lines 81--85
 ¡-ce-go w¦-zªa, pod-czas
  []
 
-[2] (./graf.aux) ) 
+[2] <./czas_wyszukiwania_1.png, id=18, 642.4pt x 481.8pt>
+File: ./czas_wyszukiwania_1.png Graphic file (type png)
+
+<use ./czas_wyszukiwania_1.png> [3 <./czas_wyszukiwania_1.png (PNG copy)>]
+[4] (./graf.aux) ) 
 Here is how much of TeX's memory you used:
- 1406 strings out of 495026
- 17051 string characters out of 1181802
- 68036 words of memory out of 3000000
- 4608 multiletter control sequences out of 15000+50000
- 21811 words of font info for 27 fonts, out of 3000000 for 9000
+ 1414 strings out of 495026
+ 17209 string characters out of 1181802
+ 71004 words of memory out of 3000000
+ 4613 multiletter control sequences out of 15000+50000
+ 22889 words of font info for 28 fonts, out of 3000000 for 9000
  48 hyphenation exceptions out of 8191
- 25i,8n,19p,430b,314s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 25i,8n,19p,454b,314s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/s
 hare/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-
 texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/font
@@ -395,9 +408,9 @@ s/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type1/publi
 c/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a
 .pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/tex
 mf-texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on graf.pdf (3 pages, 80150 bytes).
+Output written on graf.pdf (5 pages, 95078 bytes).
 PDF statistics:
- 41 PDF objects out of 1000 (max. 8388607)
+ 49 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

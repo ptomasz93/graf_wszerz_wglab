@@ -27,12 +27,12 @@ int rozmiar=ROZMIAR;
 srand( time( NULL ) );
 ifstream polaczenia;
 ifstream wierzcholki;
-fstream wynik;
+ofstream wynik;
 czas stoper;
 wierzcholek pomocniczy;
 graf graf1(rozmiar);
 //generuj_wierzcholki(rozmiar);
-//generuj_polaczenia(rozmiar);
+generuj_polaczenia(rozmiar);
 polaczenia.open("polaczenia");
 wierzcholki.open("wierzcholki");
 for(int i=0;i<rozmiar;i++)
@@ -52,46 +52,50 @@ polaczenia.close();
 wierzcholki.close();
 
 //*************************************POMIARY CZASU****************************//
-double czasy;
-wynik.open("wynik.txt");
-v1=1;
-v2=94;
-stoper.start();
-for(int i=0;i<10000;i++)
-{
+//wynik.open("wynik_4000.txt");
+//cout<<"A*      bfs       dfs"<<endl;
+//wynik<<"A*      bfs       dfs"<<endl;
+//for(int a=10;a<ROZMIAR;a+=500)
+//{
+//
+//	for(int i=0;i<10000;i++)
+//	{
+//
+//		graf1.znajdz_droge_A(4000,a);
+//
+//	}
+//	stoper.stop();
+//
+//	wynik<<a<<" "<<stoper.time;
+//	cout<<a<<" "<<stoper.time;
+//	stoper.start();
+//	for(int i=0;i<10000;i++)
+//	{
+//
+//		graf1.znajdz_droge_bfs(4000,a);
+//
+//	}
+//	stoper.stop();
+//	stoper.wynik();
+//	wynik<<" "<<stoper.time;
+//	cout<<" "<<stoper.time;
+//	stoper.start();
+//	stoper.wynik();
+//	for(int i=0;i<10000;i++)
+//	{
+//
+//		graf1.znajdz_droge_dfs(4000,a);
+//
+//	}
+//	stoper.stop();
+//	stoper.wynik();
+//	wynik<<" "<<stoper.time<<endl;
+//	cout<<" "<<stoper.time<<endl;
+//	wynik.close();
+//
+//}
 
-	graf1.znajdz_droge_A(v1,v2);
-
-}
-stoper.stop();
-
-wynik<<"A* "<<v1<<" do "<<v2<<" czas "<<stoper.time<<endl;
-stoper.start();
-for(int i=0;i<10000;i++)
-{
-
-	graf1.znajdz_droge_bfs(v1,v2);
-
-}
-stoper.stop();
-stoper.wynik();
-wynik<<"bfs z :"<<v1<<" do "<<v2<<" czas "<<stoper.time<<endl;
-stoper.start();
-stoper.wynik();
-for(int i=0;i<10000;i++)
-{
-
-	graf1.znajdz_droge_dfs(v1,v2);
-
-}
-stoper.stop();
-stoper.wynik();
-wynik<<"dfs z :"<<v1<<" do "<<v2<<" czas "<<stoper.time<<endl;
-wynik.close();
-
-
-
-
+//wynik.close();
 menu(graf1);
 
 }

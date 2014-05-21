@@ -11,6 +11,7 @@ void menu(graf& graf1)
 {
 	element_bfs *tablica_bfs;
 	element_dfs *tablica_dfs;
+	element_a* tablica_a;
 	int v1,v2,waga;
 	int wybor;
 	string opcje[13];
@@ -104,6 +105,7 @@ void menu(graf& graf1)
 					cout<<tablica_bfs[i]<<endl;
 					}
 				}
+			delete [] tablica_bfs;
 			break;
 		case 9:
 				cout<<"wybrales: "<<opcje[8]<<endl;
@@ -113,11 +115,13 @@ void menu(graf& graf1)
 				cin>>v2;
 				tablica_bfs=graf1.znajdz_droge_bfs(v1,v2);
 				graf1.czytaj_droge_bfs(tablica_bfs,v2);
+				delete [] tablica_bfs;
 				break;
 		case 10:
 			cout<<"wybrales: "<<opcje[9]<<endl;
 			tablica_dfs=graf1.przejdz_dfs();
 			graf1.wyswietl_dfs(tablica_dfs);
+			delete [] tablica_dfs;
 			break;
 		case 11:
 			cout<<"wybrales: "<<opcje[10]<<endl;
@@ -127,6 +131,7 @@ void menu(graf& graf1)
 			cin>>v2;
 			tablica_dfs=graf1.znajdz_droge_dfs(v1,v2);
 			graf1.czytaj_droge_dfs(tablica_dfs,v2);
+			delete [] tablica_dfs;
 			break;
 		case 12:
 			cout<<"wybrales: "<<opcje[11]<<endl;
@@ -134,8 +139,9 @@ void menu(graf& graf1)
 			cin>>v1;
 			cout<<"podaj wierzcholek koncowy"<<endl;
 			cin>>v2;
-			tablica_dfs=graf1.znajdz_droge_dfs(v1,v2);
-			graf1.czytaj_droge_a(graf1.znajdz_droge_A(v1,v2),v2);
+			tablica_a=graf1.znajdz_droge_A(v1,v2);
+			graf1.czytaj_droge_a(tablica_a,v2);
+			delete [] tablica_a;
 			break;
 		case 13:
 			cout<<"wybrales: "<<opcje[12]<<endl;

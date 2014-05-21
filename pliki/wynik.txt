@@ -1,0 +1,36 @@
+A* 1 do 94 czas -1.54178e-41
+bfs z :1 do 94 czas 0.46
+dfs z :1 do 94 czas 0.38
+A* 1 do 94 czas -1.43846e-41
+bfs z :1 do 94 czas 0.48
+dfs z :1 do 94 czas 0.38
+A* 1 do 10 czas -1.81962e-41
+bfs z :1 do 10 czas 0.33
+dfs z :1 do 10 czas 0.35
+A* 1 do 20 czas -2.14696e-41
+bfs z :1 do 20 czas 0.35
+dfs z :1 do 20 czas 0.34
+A* 1 do 30 czas -1.14523e-41
+bfs z :1 do 30 czas 0.36
+dfs z :1 do 30 czas 0.36
+A* 1 do 40 czas -1.94966e-41
+bfs z :1 do 40 czas 0.38
+dfs z :1 do 40 czas 0.35
+A* 1 do 50 czas -1.14747e-41
+bfs z :1 do 50 czas 0.4
+dfs z :1 do 50 czas 18.08
+A* 1 do 60 czas -1.09814e-41
+bfs z :1 do 60 czas 0.42
+dfs z :1 do 60 czas 0.36
+A* 1 do 70 czas -1.47434e-41
+bfs z :1 do 70 czas 0.44
+dfs z :1 do 70 czas 0.37
+A* 1 do 80 czas -1.4295e-41
+bfs z :1 do 80 czas 0.45
+dfs z :1 do 80 czas 0.38
+A* 1 do 90 czas -2.09764e-41
+bfs z :1 do 90 czas 0.46
+dfs z :1 do 90 czas 0.38
+A* 1 do 100 czas -1.16942e-41
+bfs z :1 do 100 czas 0.49
+dfs z :1 do 100 czas 0.39

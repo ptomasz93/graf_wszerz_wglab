@@ -1,0 +1,98 @@
+\documentclass[10pt,oneside]{mwbk}
+
+% ustawienia kodowania pliku i języka
+\usepackage[T1]{polski}
+\usepackage[utf8]{inputenc}
+
+\usepackage{indentfirst}
+\usepackage{graphicx}
+
+
+% czcionka Times
+\usepackage{times}
+
+% odstępy na 1.5 (pomimo, iż linespread jest na 1.3
+\linespread{1.3}
+
+% dzielenie wyrazów – większe odstępy, mniej dzielenia
+\hyphenpenalty=5000
+\tolerance=5000
+
+%import z pliku csv
+%\usepackage{csvsimple}
+
+%strona tytułowa
+\renewcommand {\maketitle}{
+\begin {titlepage}
+\begin {center}
+	\LARGE
+	\textbf {PROJEKTOWANIE ALGORYTMOW I METODY SZTUCZNEJ INTELIGENCJI}
+	\newline
+	\newline
+	\textit {SPRAWOZDANIE Z  LABORATORIUM}
+	\textbf{ GRAF-przszukiwanie wszerz i w głąb}
+	\newline
+	\begin{table}
+	\begin{center}
+	\begin{tabular}{rl}
+	IMIĘ I NAZWISKO & Tomasz Piotrowski \\
+	NR INDEKSU & 200524 \\	
+	TERMIN & czwartek 10:00-12:35 \\
+	DATA  & 24.04.2014 \\
+	\end{tabular}
+
+	\end{center}
+	\end{table}
+\end {center}
+\end {titlepage}}
+
+\renewcommand*\thesection{\arabic{section}} 
+\begin{document}
+\maketitle
+\section{Wstęp}
+	
+
+	\indent  W informatyce grafem nazywamy strukturę G=(V, E) składającą się z węzłów (wierzchołków, oznaczanych przez V) wzajemnie połączonych za pomocą krawędzi (oznaczonych przez E).
+Grafy dzielimy na grafy skierowane i nieskierowane:\\
+	
+	\indent Celem tego ćwiczenia jest zaimplementowanie struktury grafu oraz przetestowanie działania algorytmów przechodzenia w szerz .
+	
+\section {Graf}
+
+W literaturze można znaleźć dwie propozycję implementacji grafu. Implementacja z pomocą list sąsiedztwa lub za pomocą macierzy sąsiedztwa.
+Graf zaimplementowany przezemnie opiera się na dynamicznej tablicy oraz vectorze. Wierzchołki grafu przechowywyane są w tablicy dynamicznej a krawędzie w listach sasiedztwa. Implementacja przezemnie wybrana chrakteryzuje się korzystniejszą złożonością obliczeniową $O(V+E)$.
+Macierz sąsiedztwa posiada złożononość obliczeniową $O(V^2)$.
+Program przezemnie napisany pozwala na tworzenie grafu za pomocą dostarczonego MENuU, lub odpowiednio wyedytowanych plikow *.txt.
+\section {Przeszukiwanie wszerz}
+	Przeszukiwanie wszerz (ang. Breadth-first search, w skrócie BFS) – jeden z  algorytmów przeszukiwania grafu. Przechodzenie grafu rozpoczyna się od zadanego wierzchołka s i polega na odwiedzeniu wszystkich osiągalnych z niego wierzchołków. Wynikiem działania algorytmu jest także drzewo przeszukiwania wszerz o korzeniu w s, zawierające wszystkie wierzchołki do których prowadzi droga z s.\\
+	\indent Algorytm działa prawidłowo zarówno dla grafów skierowanych jak i nieskierowanych. Algorytm przechodzenie wszerz jest kompletny. Jeśli istnieje droga między zadanymi wierzchołkami, zostanie ona zawsze odnaleziona.\\
+	\indent Złożoność czasowa algorytmu związana jest z ilością krawędzi oraz wierzchołków jakie musi przejsc algorytm. W najgorszym przypadku jest to $O(|V|+|E|)$
+	\\Zastosowanie algorytmu:
+\begin{itemize}
+\item odnalezienie wszsytskich połączonych węzłów w grafie.
+\item odnalezienie najkrótszej drogi między dwoma wierzchołkami.
+\item sprawdzenie czy graf jest dwudzielny
+\end{itemize}
+
+\section {wyszukiwanie drogi za pomoca bfs}
+W programie została zaimplementowana funkcja pozwalająca na odnalezienie dorgi za pomoca przeszukiwania w szerz. Droga znaleziona ta metoda jest najkrtosza z mozliwych drog. Algorytm nie uwzglednia jednak wag polaczen co powoduje jego niedoskonalosc.
+\newpage
+\section {Przeszukiwanie w głąb}
+Przeszukiwanie w głąb (ang. Depth-first search, w skrócie DFS) – jeden z algorytmów przeszukiwania grafu. Przeszukiwanie w głąb polega na badaniu wszystkich krawędzi wychodzących z podanego wierzchołka. Po zbadaniu wszystkich krawędzi wychodzących z danego wierzchołka algorytm powraca do wierzchołka, z którego dany wierzchołek został odwiedzony[1].\\
+\indent Złożoność czasowa algorytmu również wynosi $O(|V|+|E|)$ ponieważ tak jak i w przechodzeniu wszerz algorytm odwiedza wszystkie białe wierzchołki \\
+\indent Złożoność pamięciowa przeszukiwania w głąb w przypadku drzewa jest o wiele mniejsza niż przeszukiwania wszerz, gdyż algorytm w każdym momencie wymaga zapamiętania tylko ścieżki od korzenia do bieżącego węzła, podczas gdy przeszukiwanie wszerz wymaga zapamiętywania wszystkich węzłów w danej odległości od korzenia, co zwykle rośnie wykładniczo w funkcji długości ścieżki.\\
+\indent Algorytm przechodzeni w głąb jest wykorzystywany jako pod program w innych algorytmach działających na grafach.
+\begin{itemize}
+\item do wyznaczania silnych spójnych składowych grafu skierowanego
+\item w algorytmie sortowania topologicznego skierowanego grafu acyklicznego
+\end{itemize}
+\section {wyszukiwanie drogi za pomoca dfs}
+W programie została zaimplementowana rowniez funkcja wyszukiwania drogi za pomoca algorytmu dfs. Funkcja ta znajduje drogę, jednak w przeciwieństwie do wyszukiwania za pomoca algorytmu bfs nie jest to droga najkrutsza. Funkcja rowniez nie uwzglednia wag polaczen.
+\section{Bibliografia}
+\begin{itemize}
+\item Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein: Wprowadzenie do algorytmów.
+
+\end{itemize}
+
+ 
+\end{document}

@@ -1,0 +1,8 @@
+set terminal png
+set output 'czas_wyszukiwania_1.png'
+set title "czas wyszukiwania wierzcholka w grafie"
+set xlabel "wyszukiwany wierzchołek(dlugosc drogi)"
+set ylabel "czas [s]"
+set grid
+plot 'losowy_graf.txt' using 1 : 2 smooth bezier, 'losowy_graf.txt' using 1 : 3 smooth bezier, 'losowy_graf.txt' using 1 : 4 smooth bezier
+unset output

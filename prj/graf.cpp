@@ -266,9 +266,9 @@ while(pelny)
 				if(a==v)
 				{
 				//w celu pomiarow nie brudzimy pamieci
-				delete[] tablica_bfs;
-				return NULL;
-				//return tablica_bfs;
+				//delete[] tablica_bfs;
+				//return NULL;
+				return tablica_bfs;
 				}
 			}
 		}
@@ -288,6 +288,7 @@ return tablica_bfs;
 
 void graf::czytaj_droge_bfs(element_bfs* tablica_bfs, int v1)
 {
+	if(tablica_bfs==NULL)return;
 while(v1>=0)
 {
 	cout<<v1<<endl;
@@ -354,6 +355,7 @@ bool graf::dfs_visit(element_dfs * tablica_dfs,int v1)
 */
 void graf::wyswietl_dfs(element_dfs *tablica_dfs)
 {
+	if(tablica_dfs==NULL)return;
 for(int i=0;i<rozmiar;i++)
 {
 if(tablica_dfs[i].stan==2)
@@ -400,9 +402,9 @@ element_dfs* graf::znajdz_droge_dfs(int korzen, int v1)
 					if(a==v1)
 						{
 						//zeby nie brudzi w pamieci przy pomiarach
-						delete[] tablica_dfs;
-						return NULL;
-						//return tablica_dfs;
+						//delete[] tablica_dfs;
+						//return NULL;
+						return tablica_dfs;
 						}
 				}
 			}
@@ -424,6 +426,7 @@ element_dfs* graf::znajdz_droge_dfs(int korzen, int v1)
 
 void graf::czytaj_droge_dfs(element_dfs* tablica_dfs, int v1)
 {
+	if(tablica_dfs==NULL)return;
 while(v1>=0)
 {
 	cout<<v1<<endl;
@@ -457,10 +460,10 @@ element_a *graf::znajdz_droge_A(int korzen, int v)
 				pomocniczy=(root+tablica[a].polaczenia[i]);
 			if(tablica_a[tablica[a].polaczenia[i].wierzcholek].stan!=2)
 			{
-				x=v/10-pomocniczy.wierzcholek/100;//trzeba dobrac dzielniki do rozmiaru
-				y=v%10-pomocniczy.wierzcholek/100;
-				pomocniczy.waga+=5*(x+y);//heurystyka manhatan
-//				pomocniczy.waga+=5*(sqrt(x*x+y*y));//heurystyka euklidesowa
+				x=abs(v/10-pomocniczy.wierzcholek/100);//trzeba dobrac dzielniki do rozmiaru
+				y=abs(v%10-pomocniczy.wierzcholek%100);
+//				pomocniczy.waga+=5*(x+y);//heurystyka manhatan
+				pomocniczy.waga+=5*(sqrt(x*x+y*y));//heurystyka euklidesowa
 				if(tablica_a[pomocniczy.wierzcholek].stan==0)
 				{
 					otwarte.push_back(pomocniczy);
@@ -468,9 +471,9 @@ element_a *graf::znajdz_droge_A(int korzen, int v)
 					tablica_a[pomocniczy.wierzcholek].stan=1;
 					if(pomocniczy.wierzcholek==v)
 					{
-						delete[] tablica_a;//w celu pomiarow zeby nie brudzic pamieci
-						return NULL;
-						//return tablica_a;
+						//delete[] tablica_a;//w celu pomiarow zeby nie brudzic pamieci
+						//return NULL;
+						return tablica_a;
 					}
 				}
 			}

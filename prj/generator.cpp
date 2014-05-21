@@ -30,7 +30,7 @@ void generuj_polaczenia(int rozmiar)
 			{
 			test<<i<<"\n";//wierzcholek pierwszy
 			test<<a<<"\n";//wierzcholek drugi
-			test<<(rand()%5)<<"\n";//waga polaczenia
+			test<<(rand()%15)<<"\n";//waga polaczenia
 			}
 			else
 				test<<rozmiar+999<<endl;//znacznik konca pliku
