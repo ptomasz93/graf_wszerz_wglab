@@ -2,6 +2,7 @@ var classgraf =
 [
     [ "graf", "classgraf.html#a66fe29b772c7e3085b161a31682ef093", null ],
     [ "~graf", "classgraf.html#a9aefd40799975c316a17bd67021e05f2", null ],
+    [ "czytaj_droge_a", "classgraf.html#a2731ba6f5c2d4f02755b66cc0eaec693", null ],
     [ "czytaj_droge_bfs", "classgraf.html#a50eb021e0338d01d1f2a915f50add7c2", null ],
     [ "czytaj_droge_dfs", "classgraf.html#ac5e916e9b4f36cd6949ee8132e044e9c", null ],
     [ "dfs_visit", "classgraf.html#a16090538c8c5c1414f3eb45d754ec2cc", null ],
@@ -16,6 +17,7 @@ var classgraf =
     [ "wrozmiar", "classgraf.html#aa045d28e07e38ca32adf1b353077f877", null ],
     [ "wyswietl_dfs", "classgraf.html#a5b26730ff96f99be35adef3c706a1d72", null ],
     [ "wyswietl_sasiadow", "classgraf.html#a8dd83fa1722d917a143b2da9245b5db9", null ],
+    [ "znajdz_droge_A", "classgraf.html#a11b9a4982bc85f888ff570875b65bba0", null ],
     [ "znajdz_droge_bfs", "classgraf.html#a420367f5ce066bd467c2621e3c69bdc3", null ],
     [ "znajdz_droge_dfs", "classgraf.html#a687140bdc84e60aa5f8342496bc2c06f", null ],
     [ "bfs", "classgraf.html#af2b2242aa53a3230ae67c7b57d7d9d11", null ],

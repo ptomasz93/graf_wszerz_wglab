@@ -433,7 +433,14 @@ while(v1>=0)
 	v1=tablica_dfs[v1].poprzedni;
 }
 }
-
+/***
+ *  \brief funkcja wyszukuję drogę za pomocą algorytmu A*
+ *  \details  implementacja oparta jest na vectorze przechowywujacym  otwarte wiercholki
+ *  oraz na tablicy przejscia
+ * @param korzen wiercholek poczatkowy
+ * @param v wierzcholek docelowy
+ * @return zwraca wskaznik do drzewa przejscia
+ */
 element_a *graf::znajdz_droge_A(int korzen, int v)
 {
 	int x,y;
@@ -486,7 +493,11 @@ element_a *graf::znajdz_droge_A(int korzen, int v)
 	cout<<"drogi nie ma"<<endl;
 	return NULL;
 }
-
+/**
+ * \brief funkcja wyswietla drzewo przejscia a*
+ * @param tablica_a
+ * @param v1
+ */
 void graf::czytaj_droge_a(element_a* tablica_a, int v1)
 {
 	if(tablica_a==NULL)return;

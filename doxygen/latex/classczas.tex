@@ -1,0 +1,124 @@
+\hypertarget{classczas}{\section{czas \-Class \-Reference}
+\label{classczas}\index{czas@{czas}}
+}
+
+
+{\ttfamily \#include $<$stoper.\-hh$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classczas_a1e4c793526806f459e7f5c8c4a3ae29f}{start} ()
+\begin{DoxyCompactList}\small\item\em start pomiaru zapisuje stan zegara \end{DoxyCompactList}\item 
+void \hyperlink{classczas_a27f391e3c6bfb1f15f97c61bf403eb2d}{stop} ()
+\begin{DoxyCompactList}\small\item\em koniec pomiaru zapisuje stan zegara \end{DoxyCompactList}\item 
+void \hyperlink{classczas_a579654b3ae8126b00cf4d477f6d18d96}{wynik} ()
+\begin{DoxyCompactList}\small\item\em zwraca wynik pomiaru \end{DoxyCompactList}\item 
+void \hyperlink{classczas_a53e5d67a7dd77239f2ef6ae0866e0596}{zapisz} (fstream \&\hyperlink{classczas_a579654b3ae8126b00cf4d477f6d18d96}{wynik}, int rozmiar)
+\begin{DoxyCompactList}\small\item\em zapisuje wynik do pliku \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classczas_a1348fd4948270410b3087bb0318bd147}{time}
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+clock\-\_\-t \hyperlink{classczas_a3e75d47bf9beee497b56997b0b7be45c}{poczatek}
+\item 
+clock\-\_\-t \hyperlink{classczas_a65324dff284c101f2594b0b05b30399e}{koniec}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 19 of file stoper.\-hh.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classczas_a1e4c793526806f459e7f5c8c4a3ae29f}{\index{czas@{czas}!start@{start}}
+\index{start@{start}!czas@{czas}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf czas\-::start} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{classczas_a1e4c793526806f459e7f5c8c4a3ae29f}
+
+
+\-Definition at line 31 of file stoper.\-hh.
+
+\hypertarget{classczas_a27f391e3c6bfb1f15f97c61bf403eb2d}{\index{czas@{czas}!stop@{stop}}
+\index{stop@{stop}!czas@{czas}}
+\subsubsection[{stop}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf czas\-::stop} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{classczas_a27f391e3c6bfb1f15f97c61bf403eb2d}
+
+
+\-Definition at line 39 of file stoper.\-hh.
+
+\hypertarget{classczas_a579654b3ae8126b00cf4d477f6d18d96}{\index{czas@{czas}!wynik@{wynik}}
+\index{wynik@{wynik}!czas@{czas}}
+\subsubsection[{wynik}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf czas\-::wynik} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{classczas_a579654b3ae8126b00cf4d477f6d18d96}
+\begin{DoxyReturn}{\-Returns}
+zwraca czas dzialania 
+\end{DoxyReturn}
+
+
+\-Definition at line 47 of file stoper.\-hh.
+
+\hypertarget{classczas_a53e5d67a7dd77239f2ef6ae0866e0596}{\index{czas@{czas}!zapisz@{zapisz}}
+\index{zapisz@{zapisz}!czas@{czas}}
+\subsubsection[{zapisz}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf czas\-::zapisz} (
+\begin{DoxyParamCaption}
+\item[{fstream \&}]{wynik, }
+\item[{int}]{rozmiar}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{classczas_a53e5d67a7dd77239f2ef6ae0866e0596}
+
+\begin{DoxyParams}{\-Parameters}
+{\em wynik} & pomiaru \\
+\hline
+{\em rozmiar} & rozmiar problemu \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 57 of file stoper.\-hh.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classczas_a65324dff284c101f2594b0b05b30399e}{\index{czas@{czas}!koniec@{koniec}}
+\index{koniec@{koniec}!czas@{czas}}
+\subsubsection[{koniec}]{\setlength{\rightskip}{0pt plus 5cm}clock\-\_\-t {\bf czas\-::koniec}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classczas_a65324dff284c101f2594b0b05b30399e}
+
+
+\-Definition at line 24 of file stoper.\-hh.
+
+\hypertarget{classczas_a3e75d47bf9beee497b56997b0b7be45c}{\index{czas@{czas}!poczatek@{poczatek}}
+\index{poczatek@{poczatek}!czas@{czas}}
+\subsubsection[{poczatek}]{\setlength{\rightskip}{0pt plus 5cm}clock\-\_\-t {\bf czas\-::poczatek}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classczas_a3e75d47bf9beee497b56997b0b7be45c}
+
+
+\-Definition at line 24 of file stoper.\-hh.
+
+\hypertarget{classczas_a1348fd4948270410b3087bb0318bd147}{\index{czas@{czas}!time@{time}}
+\index{time@{time}!czas@{czas}}
+\subsubsection[{time}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf czas\-::time}}}\label{classczas_a1348fd4948270410b3087bb0318bd147}
+
+
+\-Definition at line 26 of file stoper.\-hh.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+prj/\hyperlink{stoper_8hh}{stoper.\-hh}\end{DoxyCompactItemize}

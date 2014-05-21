@@ -79,24 +79,26 @@
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br/>
-<code>#include &lt;cstdio&gt;</code><br/>
+<code>#include &lt;fstream&gt;</code><br/>
+<code>#include &lt;string&gt;</code><br/>
 <code>#include &quot;<a class="el" href="graf_8hh_source.html">graf.hh</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="wierzcholek_8hh_source.html">wierzcholek.hh</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="generator_8hh_source.html">generator.hh</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="menu_8hh_source.html">menu.hh</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="stoper_8hh_source.html">stoper.hh</a>&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for main.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#prj_2main_8cpp" alt=""/></div>
 <map name="prj_2main_8cpp" id="prj_2main_8cpp">
-<area shape="rect" id="node7" href="graf_8hh.html" title="graf.hh" alt="" coords="64,160,126,189"/><area shape="rect" id="node14" href="wierzcholek_8hh.html" title="wierzcholek.hh" alt="" coords="274,237,383,267"/><area shape="rect" id="node24" href="generator_8hh.html" title="generator.hh" alt="" coords="350,83,443,112"/><area shape="rect" id="node33" href="menu_8hh.html" title="menu.hh" alt="" coords="203,83,275,112"/></map>
+<area shape="rect" id="node9" href="graf_8hh.html" title="graf.hh" alt="" coords="339,160,401,189"/><area shape="rect" id="node17" href="wierzcholek_8hh.html" title="wierzcholek.hh" alt="" coords="22,237,131,267"/><area shape="rect" id="node29" href="generator_8hh.html" title="generator.hh" alt="" coords="515,83,609,112"/><area shape="rect" id="node37" href="menu_8hh.html" title="menu.hh" alt="" coords="317,83,389,112"/><area shape="rect" id="node42" href="stoper_8hh.html" title="stoper.hh" alt="" coords="639,83,714,112"/></map>
 </div>
 </div>
 <p><a href="main_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="define-members"></a>
 Defines</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#aa50aa866c5823769bb02e986d29a0589">ROZMIAR</a>&#160;&#160;&#160;11</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#aa50aa866c5823769bb02e986d29a0589">ROZMIAR</a>&#160;&#160;&#160;10000</td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
@@ -107,7 +109,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define <a class="el" href="main_8cpp.html#aa50aa866c5823769bb02e986d29a0589">ROZMIAR</a>&#160;&#160;&#160;11</td>
+          <td class="memname">#define <a class="el" href="main_8cpp.html#aa50aa866c5823769bb02e986d29a0589">ROZMIAR</a>&#160;&#160;&#160;10000</td>
         </tr>
       </table>
 </div>
@@ -132,14 +134,14 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="main_8cpp_source.html#l00018">18</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p>Definition at line <a class="el" href="main_8cpp_source.html#l00023">23</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" alt=""/></div>
 <map name="main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" id="main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph">
-<area shape="rect" id="node3" href="classgraf.html#a6a50b0bfb5fc3cfc7a443014170b9565" title="funkcja sluzy do dodawania wierzcholkow" alt="" coords="212,5,369,35"/><area shape="rect" id="node5" href="classgraf.html#a4db0ebc4302facfc027dd7790542fb94" title="funkcja dodaje polaczenie miedzy zadanymi wierzcholkami" alt="" coords="215,59,367,88"/><area shape="rect" id="node9" href="menu_8cpp.html#aacc433e415d518c27882997e60a20fe8" title="menu" alt="" coords="105,111,159,140"/><area shape="rect" id="node7" href="classgraf.html#ae1ebd85c7cb288174a5dccc5fd90634e" title="funkcja sprawdza czy mieszy podanymi wierzchokami istnieje polaczenie" alt="" coords="421,85,592,115"/><area shape="rect" id="node12" href="classgraf.html#a369202eb63332e9faad779591c862ece" title="funkcja usuwa wierzcholek o zadanym kluczu" alt="" coords="213,267,368,296"/><area shape="rect" id="node14" href="classgraf.html#ac7e01e940f136f4020e4da816c2fb1b4" title="funkcja usuwa polaczenie miedzy zadanymi wierzcholkami" alt="" coords="432,241,581,271"/><area shape="rect" id="node19" href="classgraf.html#a8dd83fa1722d917a143b2da9245b5db9" title="funkcja wyswietla sasiadow wierzcholka" alt="" coords="208,163,373,192"/></map>
+<area shape="rect" id="node3" href="generator_8cpp.html#a242a9701c409c59f651874736f8cef01" title="generuje plik *.txt o zadanej ilosci polaczen." alt="" coords="104,5,237,35"/><area shape="rect" id="node5" href="classgraf.html#a6a50b0bfb5fc3cfc7a443014170b9565" title="funkcja sluzy do dodawania wierzcholkow" alt="" coords="289,55,447,84"/><area shape="rect" id="node7" href="classgraf.html#a4db0ebc4302facfc027dd7790542fb94" title="funkcja dodaje polaczenie miedzy zadanymi wierzcholkami" alt="" coords="292,108,444,137"/><area shape="rect" id="node11" href="menu_8cpp.html#aacc433e415d518c27882997e60a20fe8" title="menu" alt="" coords="144,160,197,189"/><area shape="rect" id="node9" href="classgraf.html#ae1ebd85c7cb288174a5dccc5fd90634e" title="funkcja sprawdza czy mieszy podanymi wierzchokami istnieje polaczenie" alt="" coords="499,135,669,164"/><area shape="rect" id="node14" href="classgraf.html#a369202eb63332e9faad779591c862ece" title="funkcja usuwa wierzcholek o zadanym kluczu" alt="" coords="291,316,445,345"/><area shape="rect" id="node16" href="classgraf.html#ac7e01e940f136f4020e4da816c2fb1b4" title="funkcja usuwa polaczenie miedzy zadanymi wierzcholkami" alt="" coords="509,291,659,320"/><area shape="rect" id="node21" href="classgraf.html#a8dd83fa1722d917a143b2da9245b5db9" title="funkcja wyswietla sasiadow wierzcholka" alt="" coords="285,212,451,241"/></map>
 </div>
 </p>
 
@@ -151,7 +153,7 @@ Here is the call graph for this function:</div>
     <ul>
       <li class="navelem"><a class="el" href="main_8cpp.html">main.cpp</a>      </li>
 
-    <li class="footer">Generated on Fri May 16 2014 14:46:03 for Graf by
+    <li class="footer">Generated on Wed May 21 2014 22:35:01 for Graf by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

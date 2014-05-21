@@ -85,38 +85,49 @@
 <a name="l00008"></a>00008 
 <a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="generator_8hh.html">generator.hh</a>&quot;</span>
 <a name="l00010"></a>00010 
-<a name="l00019"></a><a class="code" href="generator_8hh.html#a242a9701c409c59f651874736f8cef01">00019</a> <span class="keywordtype">void</span> <a class="code" href="generator_8cpp.html#a242a9701c409c59f651874736f8cef01" title="generuje plik *.txt o zadanej ilosci danych i nazwie">generuj_polaczenia</a>(<span class="keywordtype">int</span> rozmiar)
-<a name="l00020"></a>00020 {
-<a name="l00021"></a>00021 
-<a name="l00022"></a>00022         ofstream test;
-<a name="l00023"></a>00023         test.open(<span class="stringliteral">&quot;polaczenia&quot;</span>);
-<a name="l00024"></a>00024         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;rozmiar*5; i++)
-<a name="l00025"></a>00025         {
-<a name="l00026"></a>00026                 test&lt;&lt;(rand()%rozmiar)&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span>;
-<a name="l00027"></a>00027                 test&lt;&lt;(rand()%rozmiar)&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span>;
-<a name="l00028"></a>00028         }
-<a name="l00029"></a>00029         test.close();
-<a name="l00030"></a>00030 }
-<a name="l00031"></a>00031 
-<a name="l00032"></a><a class="code" href="generator_8hh.html#ae448f3fbbbd7702dc3faea2a133947d8">00032</a> <span class="keywordtype">void</span> <a class="code" href="generator_8cpp.html#ae448f3fbbbd7702dc3faea2a133947d8">generuj_wierzcholki</a>(<span class="keywordtype">int</span> rozmiar)
-<a name="l00033"></a>00033 {
-<a name="l00034"></a>00034         ofstream test;
-<a name="l00035"></a>00035         test.open(<span class="stringliteral">&quot;wierzcholki&quot;</span>);
-<a name="l00036"></a>00036         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;rozmiar; i++)
-<a name="l00037"></a>00037         {
-<a name="l00038"></a>00038                 test&lt;&lt;i&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span>;
-<a name="l00039"></a>00039                 test&lt;&lt;i&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span>;
-<a name="l00040"></a>00040         }
-<a name="l00041"></a>00041         test.close();
-<a name="l00042"></a>00042 }
-<a name="l00043"></a>00043 
+<a name="l00018"></a><a class="code" href="generator_8hh.html#a242a9701c409c59f651874736f8cef01">00018</a> <span class="keywordtype">void</span> <a class="code" href="generator_8cpp.html#a242a9701c409c59f651874736f8cef01" title="generuje plik *.txt o zadanej ilosci polaczen.">generuj_polaczenia</a>(<span class="keywordtype">int</span> rozmiar)
+<a name="l00019"></a>00019 {
+<a name="l00020"></a>00020         <span class="keywordtype">int</span> a;
+<a name="l00021"></a>00021         ofstream test;
+<a name="l00022"></a>00022         test.open(<span class="stringliteral">&quot;polaczenia&quot;</span>);
+<a name="l00023"></a>00023         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;rozmiar; i++)
+<a name="l00024"></a>00024         {
+<a name="l00025"></a>00025                 <span class="keywordflow">for</span>(<span class="keywordtype">int</span> b=0;b&lt;5;b++)
+<a name="l00026"></a>00026                 {
+<a name="l00027"></a>00027                         a=(rand())%6+i;
+<a name="l00028"></a>00028                         <span class="keywordflow">if</span>(a&lt;rozmiar)
+<a name="l00029"></a>00029                         {
+<a name="l00030"></a>00030                         test&lt;&lt;i&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span>;<span class="comment">//wierzcholek pierwszy</span>
+<a name="l00031"></a>00031                         test&lt;&lt;a&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span>;<span class="comment">//wierzcholek drugi</span>
+<a name="l00032"></a>00032                         test&lt;&lt;(rand()%15)&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span>;<span class="comment">//waga polaczenia</span>
+<a name="l00033"></a>00033                         }
+<a name="l00034"></a>00034                         <span class="keywordflow">else</span>
+<a name="l00035"></a>00035                                 test&lt;&lt;rozmiar+999&lt;&lt;endl;<span class="comment">//znacznik konca pliku</span>
+<a name="l00036"></a>00036                 }
+<a name="l00037"></a>00037         }
+<a name="l00038"></a>00038         test.close();
+<a name="l00039"></a>00039 }
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041 
+<a name="l00042"></a><a class="code" href="generator_8hh.html#ae448f3fbbbd7702dc3faea2a133947d8">00042</a> <span class="keywordtype">void</span> <a class="code" href="generator_8cpp.html#ae448f3fbbbd7702dc3faea2a133947d8">generuj_wierzcholki</a>(<span class="keywordtype">int</span> rozmiar)
+<a name="l00043"></a>00043 {
+<a name="l00044"></a>00044         ofstream test;
+<a name="l00045"></a>00045         test.open(<span class="stringliteral">&quot;wierzcholki&quot;</span>);
+<a name="l00046"></a>00046         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;rozmiar; i++)
+<a name="l00047"></a>00047         {
+<a name="l00048"></a>00048                 test&lt;&lt;i&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span>;
+<a name="l00049"></a>00049                 test&lt;&lt;i&lt;&lt;<span class="stringliteral">&quot;\n&quot;</span>;
+<a name="l00050"></a>00050         }
+<a name="l00051"></a>00051         test.close();
+<a name="l00052"></a>00052 }
+<a name="l00053"></a>00053 
 </pre></div></div><!-- contents -->
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="generator_8cpp.html">generator.cpp</a>      </li>
 
-    <li class="footer">Generated on Fri May 16 2014 14:46:03 for Graf by
+    <li class="footer">Generated on Wed May 21 2014 22:35:01 for Graf by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

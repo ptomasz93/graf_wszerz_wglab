@@ -9,9 +9,8 @@ using namespace std;
 #include "generator.hh"
 
 /**
- * \brief generuje plik *.txt o zadanej ilosci danych i nazwie
- * \details W pliku umieszczane sa liczby naturalne od 1 wzwyrz
- * w pierwszym wierszu umieszczana jest liczba mowiaca o ilosci wierszy danych.
+ * \brief generuje plik *.txt o zadanej ilosci polaczen.
+ * \details polaczenia sa generowane maxymalnie miedzy wierzcholkiem oddalonym o 6.
  * @param nazwa - utworzonego pliku
  * @param rozmiar - ilosc wierszy sanych
  */
@@ -38,6 +37,7 @@ void generuj_polaczenia(int rozmiar)
 	}
 	test.close();
 }
+
 
 void generuj_wierzcholki(int rozmiar)
 {

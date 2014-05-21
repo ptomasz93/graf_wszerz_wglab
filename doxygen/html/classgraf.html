@@ -129,10 +129,13 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">funkcja wyswietla zanleziona droge miedzy wierzcholkami  <a href="#ac5e916e9b4f36cd6949ee8132e044e9c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structelement__dfs.html">element_dfs</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraf.html#a1a4c08e7c698459b7ceb172fd687dc78">przejdz_dfs</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">funkcja wywyołuje przejscie wglab drzewa dla kazdego nie odwiedzonego wierzcholka  to stworzenie paru drzew przejscia  <a href="#a1a4c08e7c698459b7ceb172fd687dc78"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structelement__a.html">element_a</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraf.html#a11b9a4982bc85f888ff570875b65bba0">znajdz_droge_A</a> (int korzen, int v)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraf.html#a16090538c8c5c1414f3eb45d754ec2cc">dfs_visit</a> (<a class="el" href="structelement__dfs.html">element_dfs</a> *tablica_dfs, int v1)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">funkcja przechodzi w głąb graf tworzac drzewo przejscia oparta na wywolaniu rekurencyjnym  <a href="#a16090538c8c5c1414f3eb45d754ec2cc"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraf.html#a5b26730ff96f99be35adef3c706a1d72">wyswietl_dfs</a> (<a class="el" href="structelement__dfs.html">element_dfs</a> *tablica_dfs)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">funkcja wyswietla "las drzew przejsc"  <a href="#a5b26730ff96f99be35adef3c706a1d72"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraf.html#a2731ba6f5c2d4f02755b66cc0eaec693">czytaj_droge_a</a> (<a class="el" href="structelement__a.html">element_a</a> *tablica_dfs, int v1)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">funkcja wyswietla drzewo przejscia a*  <a href="#a2731ba6f5c2d4f02755b66cc0eaec693"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classwierzcholek.html">wierzcholek</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a></td></tr>
@@ -148,7 +151,7 @@ Friends</h2></td></tr>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>w klasie przechowywana jest tablica wierzcholkow oraz informacje mozliwej ilosci wierzcholkow i ilosci wierzcholkow wykorzystanych </p>
 
-<p>Definition at line <a class="el" href="graf_8hh_source.html#l00027">27</a> of file <a class="el" href="graf_8hh_source.html">graf.hh</a>.</p>
+<p>Definition at line <a class="el" href="graf_8hh_source.html#l00028">28</a> of file <a class="el" href="graf_8hh_source.html">graf.hh</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a66fe29b772c7e3085b161a31682ef093"></a><!-- doxytag: member="graf::graf" ref="a66fe29b772c7e3085b161a31682ef093" args="(int il)" -->
 <div class="memitem">
@@ -194,6 +197,42 @@ Friends</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a2731ba6f5c2d4f02755b66cc0eaec693"></a><!-- doxytag: member="graf::czytaj_droge_a" ref="a2731ba6f5c2d4f02755b66cc0eaec693" args="(element_a *tablica_dfs, int v1)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classgraf.html#a2731ba6f5c2d4f02755b66cc0eaec693">graf::czytaj_droge_a</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structelement__a.html">element_a</a> *&#160;</td>
+          <td class="paramname"><em>tablica_a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>v1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tablica_a</td><td></td></tr>
+    <tr><td class="paramname">v1</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="graf_8cpp_source.html#l00501">501</a> of file <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a50eb021e0338d01d1f2a915f50add7c2"></a><!-- doxytag: member="graf::czytaj_droge_bfs" ref="a50eb021e0338d01d1f2a915f50add7c2" args="(element_bfs *tablica_bfs, int v1)" -->
 <div class="memitem">
 <div class="memproto">
@@ -226,7 +265,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="graf_8cpp_source.html#l00283">283</a> of file <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
+<p>Definition at line <a class="el" href="graf_8cpp_source.html#l00289">289</a> of file <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
 
 </div>
 </div>
@@ -262,7 +301,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="graf_8cpp_source.html#l00413">413</a> of file <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
+<p>Definition at line <a class="el" href="graf_8cpp_source.html#l00427">427</a> of file <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
 
 </div>
 </div>
@@ -298,7 +337,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="graf_8cpp_source.html#l00318">318</a> of file <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
+<p>Definition at line <a class="el" href="graf_8cpp_source.html#l00325">325</a> of file <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -469,7 +508,7 @@ Here is the caller graph for this function:</div>
 <div class="memdoc">
 <p>na ten moment wszystkie drzewa przechowywyane sa w jednej tablicy </p>
 
-<p>Definition at line <a class="el" href="graf_8cpp_source.html#l00299">299</a> of file <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
+<p>Definition at line <a class="el" href="graf_8cpp_source.html#l00306">306</a> of file <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -651,7 +690,7 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="graf_8cpp_source.html#l00349">349</a> of file <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
+<p>Definition at line <a class="el" href="graf_8cpp_source.html#l00356">356</a> of file <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
 
 </div>
 </div>
@@ -685,6 +724,44 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="classgraf_a8dd83fa1722d917a143b2da9245b5db9_icgraph.png" border="0" usemap="#classgraf_a8dd83fa1722d917a143b2da9245b5db9_icgraph" alt=""/></div>
 <map name="classgraf_a8dd83fa1722d917a143b2da9245b5db9_icgraph" id="classgraf_a8dd83fa1722d917a143b2da9245b5db9_icgraph">
 <area shape="rect" id="node3" href="menu_8hh.html#aacc433e415d518c27882997e60a20fe8" title="menu" alt="" coords="220,5,273,35"/><area shape="rect" id="node5" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="323,5,373,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a11b9a4982bc85f888ff570875b65bba0"></a><!-- doxytag: member="graf::znajdz_droge_A" ref="a11b9a4982bc85f888ff570875b65bba0" args="(int korzen, int v)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structelement__a.html">element_a</a> * <a class="el" href="classgraf.html#a11b9a4982bc85f888ff570875b65bba0">graf::znajdz_droge_A</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>korzen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="graf_8cpp_source.html#l00444">444</a> of file <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classgraf_a11b9a4982bc85f888ff570875b65bba0_cgraph.png" border="0" usemap="#classgraf_a11b9a4982bc85f888ff570875b65bba0_cgraph" alt=""/></div>
+<map name="classgraf_a11b9a4982bc85f888ff570875b65bba0_cgraph" id="classgraf_a11b9a4982bc85f888ff570875b65bba0_cgraph">
+<area shape="rect" id="node3" href="wierzcholek_8cpp.html#abf7cee761b1201166cbe397d8723789a" title="porownanie" alt="" coords="200,5,288,35"/></map>
 </div>
 </p>
 
@@ -766,7 +843,7 @@ Here is the caller graph for this function:</div>
 <p>kolorujemy korzen</p>
 <p>petla wykonuje sie dopuki jest cos w kolejca </p>
 
-<p>Definition at line <a class="el" href="graf_8cpp_source.html#l00367">367</a> of file <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
+<p>Definition at line <a class="el" href="graf_8cpp_source.html#l00375">375</a> of file <a class="el" href="graf_8cpp_source.html">graf.cpp</a>.</p>
 
 </div>
 </div>
@@ -782,7 +859,7 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="graf_8hh_source.html#l00051">51</a> of file <a class="el" href="graf_8hh_source.html">graf.hh</a>.</p>
+<p>Definition at line <a class="el" href="graf_8hh_source.html#l00053">53</a> of file <a class="el" href="graf_8hh_source.html">graf.hh</a>.</p>
 
 </div>
 </div>
@@ -834,7 +911,7 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="graf_8hh_source.html#l00031">31</a> of file <a class="el" href="graf_8hh_source.html">graf.hh</a>.</p>
+<p>Definition at line <a class="el" href="graf_8hh_source.html#l00032">32</a> of file <a class="el" href="graf_8hh_source.html">graf.hh</a>.</p>
 
 </div>
 </div>
@@ -849,7 +926,7 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="graf_8hh_source.html#l00030">30</a> of file <a class="el" href="graf_8hh_source.html">graf.hh</a>.</p>
+<p>Definition at line <a class="el" href="graf_8hh_source.html#l00031">31</a> of file <a class="el" href="graf_8hh_source.html">graf.hh</a>.</p>
 
 </div>
 </div>
@@ -864,7 +941,7 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="graf_8hh_source.html#l00029">29</a> of file <a class="el" href="graf_8hh_source.html">graf.hh</a>.</p>
+<p>Definition at line <a class="el" href="graf_8hh_source.html#l00030">30</a> of file <a class="el" href="graf_8hh_source.html">graf.hh</a>.</p>
 
 </div>
 </div>
@@ -879,7 +956,7 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="graf_8hh_source.html#l00032">32</a> of file <a class="el" href="graf_8hh_source.html">graf.hh</a>.</p>
+<p>Definition at line <a class="el" href="graf_8hh_source.html#l00033">33</a> of file <a class="el" href="graf_8hh_source.html">graf.hh</a>.</p>
 
 </div>
 </div>
@@ -893,7 +970,7 @@ Here is the caller graph for this function:</div>
     <ul>
       <li class="navelem"><a class="el" href="classgraf.html">graf</a>      </li>
 
-    <li class="footer">Generated on Fri May 16 2014 14:46:03 for Graf by
+    <li class="footer">Generated on Wed May 21 2014 22:35:02 for Graf by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

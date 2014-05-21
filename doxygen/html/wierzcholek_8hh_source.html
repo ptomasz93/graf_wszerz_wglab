@@ -90,76 +90,100 @@
 <a name="l00013"></a>00013 <span class="preprocessor">#include &lt;iostream&gt;</span>
 <a name="l00014"></a>00014 
 <a name="l00015"></a>00015 <span class="keyword">using namespace </span>std;
-<a name="l00020"></a><a class="code" href="structpoloczenie.html">00020</a> <span class="keyword">struct </span><a class="code" href="structpoloczenie.html" title="clasa modeluje pojecie pojecie poedynczego wierzcholka grafu">poloczenie</a>
-<a name="l00021"></a>00021 {
-<a name="l00022"></a><a class="code" href="structpoloczenie.html#a2386dd47a396eec04be21bbdc722f870">00022</a>         <span class="keywordtype">int</span> <a class="code" href="structpoloczenie.html#a2386dd47a396eec04be21bbdc722f870">wierzcholek</a>;
-<a name="l00023"></a><a class="code" href="structpoloczenie.html#a23302e095b791149b562eaf65fa78383">00023</a>         <span class="keywordtype">int</span> <a class="code" href="structpoloczenie.html#a23302e095b791149b562eaf65fa78383">waga</a>;
-<a name="l00024"></a>00024 
-<a name="l00025"></a>00025 };
-<a name="l00026"></a>00026 
-<a name="l00027"></a><a class="code" href="classwierzcholek.html">00027</a> <span class="keyword">class </span><a class="code" href="classwierzcholek.html">wierzcholek</a>
-<a name="l00028"></a>00028 {
+<a name="l00016"></a>00016 
+<a name="l00017"></a>00017 
+<a name="l00022"></a><a class="code" href="structpolaczenie.html">00022</a> <span class="keyword">struct </span><a class="code" href="structpolaczenie.html" title="clasa modeluje pojecie pojecie poedynczego wierzcholka grafu">polaczenie</a>
+<a name="l00023"></a>00023 {
+<a name="l00024"></a><a class="code" href="structpolaczenie.html#a9faa3298bef8b4c35a1897caad57f2b0">00024</a>         <span class="keywordtype">int</span> <a class="code" href="structpolaczenie.html#a9faa3298bef8b4c35a1897caad57f2b0">wierzcholek</a>;
+<a name="l00025"></a><a class="code" href="structpolaczenie.html#a3cf76ce70d5eea1c5d96abd57f737ff2">00025</a>         <span class="keywordtype">int</span> <a class="code" href="structpolaczenie.html#a3cf76ce70d5eea1c5d96abd57f737ff2">waga</a>;
+<a name="l00026"></a><a class="code" href="structpolaczenie.html#ab05efb1d31231883dca69f9067a5cfaf">00026</a>         <a class="code" href="structpolaczenie.html" title="clasa modeluje pojecie pojecie poedynczego wierzcholka grafu">polaczenie</a>()
+<a name="l00027"></a>00027         :waga(0), <a class="code" href="classwierzcholek.html">wierzcholek</a>(0)
+<a name="l00028"></a>00028         {};
 <a name="l00029"></a>00029 
-<a name="l00030"></a><a class="code" href="classwierzcholek.html#a66aaea6b1187250f7100542adc1617d2">00030</a>         <span class="keywordtype">int</span> <a class="code" href="classwierzcholek.html#a66aaea6b1187250f7100542adc1617d2">numer</a>;
-<a name="l00031"></a><a class="code" href="classwierzcholek.html#a19aa16bf7e01a987fcc360e5da902209">00031</a>         <span class="keywordtype">string</span>  <a class="code" href="classwierzcholek.html#a19aa16bf7e01a987fcc360e5da902209" title="identyfikator wierzcholka">wartosc</a>;
-<a name="l00032"></a><a class="code" href="classwierzcholek.html#a34145a2de26c5e95c1ec72b0773005f4">00032</a>         vector &lt;poloczenie&gt; <a class="code" href="classwierzcholek.html#a34145a2de26c5e95c1ec72b0773005f4" title="wartosc przechowywana w wierzcholku">polaczenia</a>;
-<a name="l00033"></a>00033 <span class="keyword">public</span>:
-<a name="l00034"></a>00034         <span class="keyword">friend</span> ostream &amp; <a class="code" href="graf_8cpp.html#aaf525f8cdadbe40d9ad7c39f79fd8a2c" title="przeladowanie operatora wyjscia">operator &lt;&lt; </a>(ostream &amp;wyjscie, <a class="code" href="classwierzcholek.html">wierzcholek</a>  &amp;wej);
-<a name="l00035"></a>00035         <span class="keyword">friend</span> istream &amp; <a class="code" href="wierzcholek_8cpp.html#a221c2b565a9506a8eaed69e42e374f4e">operator &gt;&gt; </a>(istream &amp;wejscie, <a class="code" href="classwierzcholek.html">wierzcholek</a>  &amp;wyj);
-<a name="l00036"></a><a class="code" href="classwierzcholek.html#ad67644b5f408397f28d7150d3bac76d2">00036</a>         <span class="keywordtype">bool</span> <a class="code" href="classwierzcholek.html#ad67644b5f408397f28d7150d3bac76d2">zajety</a>;
-<a name="l00037"></a><a class="code" href="classwierzcholek.html#a1726ca1919686bdccbca505bacf6de2f">00037</a>         <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classgraf.html" title="klasa modeluje graf.">graf</a>;
+<a name="l00030"></a><a class="code" href="structpolaczenie.html#aa16901afdb430c2cb37142fbd90b7c03">00030</a>         <a class="code" href="structpolaczenie.html" title="clasa modeluje pojecie pojecie poedynczego wierzcholka grafu">polaczenie</a> operator +(<a class="code" href="structpolaczenie.html" title="clasa modeluje pojecie pojecie poedynczego wierzcholka grafu">polaczenie</a> element)
+<a name="l00031"></a>00031         {
+<a name="l00032"></a>00032                 <a class="code" href="structpolaczenie.html" title="clasa modeluje pojecie pojecie poedynczego wierzcholka grafu">polaczenie</a> wynik;
+<a name="l00033"></a>00033                 wynik.<a class="code" href="structpolaczenie.html#a3cf76ce70d5eea1c5d96abd57f737ff2">waga</a>=waga+element.<a class="code" href="structpolaczenie.html#a3cf76ce70d5eea1c5d96abd57f737ff2">waga</a>;
+<a name="l00034"></a>00034                 wynik.<a class="code" href="structpolaczenie.html#a9faa3298bef8b4c35a1897caad57f2b0">wierzcholek</a>=element.<a class="code" href="structpolaczenie.html#a9faa3298bef8b4c35a1897caad57f2b0">wierzcholek</a>;
+<a name="l00035"></a>00035                 <span class="keywordflow">return</span> wynik;
+<a name="l00036"></a>00036         }
+<a name="l00037"></a>00037 };
 <a name="l00038"></a>00038 
-<a name="l00039"></a><a class="code" href="classwierzcholek.html#a0e72695b032e7f750c51041e1a59673b">00039</a>         <a class="code" href="classwierzcholek.html">wierzcholek</a>()
-<a name="l00040"></a>00040         :zajety(NULL), numer(0)
-<a name="l00041"></a>00041         {
-<a name="l00042"></a>00042                 wartosc.clear();
-<a name="l00043"></a>00043         }
-<a name="l00044"></a>00044 };
-<a name="l00045"></a>00045 
-<a name="l00049"></a><a class="code" href="structelement__bfs.html">00049</a> <span class="keyword">struct </span><a class="code" href="structelement__bfs.html" title="struktura definiuje element drzewa przechodzenie w szerz">element_bfs</a>
-<a name="l00050"></a>00050 {
-<a name="l00051"></a><a class="code" href="structelement__bfs.html#aa654df64808f513f41d0349571e4b90e">00051</a>         <span class="keywordtype">int</span> <a class="code" href="structelement__bfs.html#aa654df64808f513f41d0349571e4b90e">stan</a>;
-<a name="l00052"></a><a class="code" href="structelement__bfs.html#a91fcdfed5d5dc2bce6ca9bb4414df196">00052</a>         <span class="keywordtype">int</span> <a class="code" href="structelement__bfs.html#a91fcdfed5d5dc2bce6ca9bb4414df196">odleglosc</a>;
-<a name="l00053"></a><a class="code" href="structelement__bfs.html#a94b882f6922be485d6942f71c29e581d">00053</a>         <span class="keywordtype">int</span> <a class="code" href="structelement__bfs.html#a94b882f6922be485d6942f71c29e581d">poprzedni</a>;
-<a name="l00054"></a><a class="code" href="structelement__bfs.html#a9c764ce268e74260e6634ea98ed13781">00054</a>         <a class="code" href="structelement__bfs.html" title="struktura definiuje element drzewa przechodzenie w szerz">element_bfs</a>()
-<a name="l00055"></a>00055         :stan(0), odleglosc(0), poprzedni(0){};
-<a name="l00056"></a><a class="code" href="structelement__bfs.html#a8b076b347dc8398fd7e704d74299eb3a">00056</a>         <span class="keyword">friend</span> ostream &amp; <a class="code" href="graf_8cpp.html#aaf525f8cdadbe40d9ad7c39f79fd8a2c" title="przeladowanie operatora wyjscia">operator &lt;&lt;</a>(ostream &amp; wyjscie, <a class="code" href="structelement__bfs.html" title="struktura definiuje element drzewa przechodzenie w szerz">element_bfs</a> &amp; dane)
-<a name="l00057"></a>00057         {
-<a name="l00058"></a>00058                 <span class="keywordflow">if</span>(dane.<a class="code" href="structelement__bfs.html#aa654df64808f513f41d0349571e4b90e">stan</a>==2)
-<a name="l00059"></a>00059                 wyjscie&lt;&lt;<span class="stringliteral">&quot;poprzedni: &quot;</span>&lt;&lt;dane.<a class="code" href="structelement__bfs.html#a94b882f6922be485d6942f71c29e581d">poprzedni</a>&lt;&lt;endl;
-<a name="l00060"></a>00060                 wyjscie&lt;&lt;<span class="stringliteral">&quot;odleglosc: &quot;</span>&lt;&lt;dane.<a class="code" href="structelement__bfs.html#a91fcdfed5d5dc2bce6ca9bb4414df196">odleglosc</a>&lt;&lt;endl;
-<a name="l00061"></a>00061                 <span class="keywordflow">return</span> wyjscie;
-<a name="l00062"></a>00062         }
-<a name="l00063"></a>00063 
-<a name="l00064"></a>00064 };
-<a name="l00068"></a><a class="code" href="structelement__dfs.html">00068</a> <span class="keyword">struct </span><a class="code" href="structelement__dfs.html" title="element drzewa przejscia dla przeszukiwania w głąb;">element_dfs</a>
-<a name="l00069"></a>00069 {
-<a name="l00070"></a><a class="code" href="structelement__dfs.html#a48b8257c62eb0f4c52e10bf2c06fffda">00070</a>         <span class="keywordtype">int</span> <a class="code" href="structelement__dfs.html#a48b8257c62eb0f4c52e10bf2c06fffda">stan</a>;
-<a name="l00071"></a><a class="code" href="structelement__dfs.html#af3205a446fe8c834532d3b5de81deefa">00071</a>         <span class="keywordtype">int</span> <a class="code" href="structelement__dfs.html#af3205a446fe8c834532d3b5de81deefa">poprzedni</a>;
-<a name="l00073"></a><a class="code" href="structelement__dfs.html#ae2d3c82805dc8b9b24a7dc1511c283dd">00073</a>         <span class="keywordtype">int</span> <a class="code" href="structelement__dfs.html#ae2d3c82805dc8b9b24a7dc1511c283dd" title="czas wejscia do wierzcholka">d</a>;
-<a name="l00075"></a><a class="code" href="structelement__dfs.html#a9a75ad927680701485941a4e42b36290">00075</a>         <span class="keywordtype">int</span> <a class="code" href="structelement__dfs.html#a9a75ad927680701485941a4e42b36290" title="czas wyjscia z wierzcholka">f</a>;
-<a name="l00076"></a><a class="code" href="structelement__dfs.html#a7a70ed0a00bcaafd111e9b07a135bbe4">00076</a>         <a class="code" href="structelement__dfs.html" title="element drzewa przejscia dla przeszukiwania w głąb;">element_dfs</a>()
-<a name="l00077"></a>00077         :stan(0), poprzedni(0){};
-<a name="l00078"></a><a class="code" href="structelement__dfs.html#abb6d36003fb4e11d878e4bd1d794469b">00078</a>         <span class="keyword">friend</span> ostream &amp; <a class="code" href="graf_8cpp.html#aaf525f8cdadbe40d9ad7c39f79fd8a2c" title="przeladowanie operatora wyjscia">operator &lt;&lt;</a>(ostream &amp; wyjscie, <a class="code" href="structelement__dfs.html" title="element drzewa przejscia dla przeszukiwania w głąb;">element_dfs</a> &amp; dane)
-<a name="l00079"></a>00079         {
-<a name="l00080"></a>00080                 <span class="keywordflow">if</span>(dane.<a class="code" href="structelement__dfs.html#a48b8257c62eb0f4c52e10bf2c06fffda">stan</a>==2)
-<a name="l00081"></a>00081                 {
-<a name="l00082"></a>00082                         wyjscie&lt;&lt;<span class="stringliteral">&quot;poprzedni: &quot;</span>&lt;&lt;dane.<a class="code" href="structelement__dfs.html#af3205a446fe8c834532d3b5de81deefa">poprzedni</a>&lt;&lt;endl;
-<a name="l00083"></a>00083                         wyjscie&lt;&lt;<span class="stringliteral">&quot;czas wizyty: &quot;</span>&lt;&lt;dane.<a class="code" href="structelement__dfs.html#ae2d3c82805dc8b9b24a7dc1511c283dd" title="czas wejscia do wierzcholka">d</a>&lt;&lt;endl;
-<a name="l00084"></a>00084                         wyjscie&lt;&lt;<span class="stringliteral">&quot;czas wyjscie: &quot;</span>&lt;&lt;dane.<a class="code" href="structelement__dfs.html#a9a75ad927680701485941a4e42b36290" title="czas wyjscia z wierzcholka">f</a>&lt;&lt;endl;
-<a name="l00085"></a>00085                 }
-<a name="l00086"></a>00086                 <span class="keywordflow">return</span> wyjscie;
-<a name="l00087"></a>00087         }
-<a name="l00088"></a>00088 
-<a name="l00089"></a>00089 };
-<a name="l00090"></a>00090 <span class="preprocessor">#endif </span><span class="comment">/* WIERZCHOLEK_HH_ */</span>
+<a name="l00039"></a><a class="code" href="classwierzcholek.html">00039</a> <span class="keyword">class </span><a class="code" href="classwierzcholek.html">wierzcholek</a>
+<a name="l00040"></a>00040 {
+<a name="l00041"></a>00041 
+<a name="l00042"></a><a class="code" href="classwierzcholek.html#a66aaea6b1187250f7100542adc1617d2">00042</a>         <span class="keywordtype">int</span> <a class="code" href="classwierzcholek.html#a66aaea6b1187250f7100542adc1617d2">numer</a>;
+<a name="l00043"></a><a class="code" href="classwierzcholek.html#a19aa16bf7e01a987fcc360e5da902209">00043</a>         <span class="keywordtype">string</span>  <a class="code" href="classwierzcholek.html#a19aa16bf7e01a987fcc360e5da902209" title="identyfikator wierzcholka">wartosc</a>;
+<a name="l00044"></a><a class="code" href="classwierzcholek.html#ad6442177753c61769b0fa1822e75f551">00044</a>         vector &lt;polaczenie&gt; <a class="code" href="classwierzcholek.html#ad6442177753c61769b0fa1822e75f551" title="wartosc przechowywana w wierzcholku">polaczenia</a>;
+<a name="l00045"></a>00045 <span class="keyword">public</span>:
+<a name="l00046"></a>00046         <span class="keyword">friend</span> ostream &amp; <a class="code" href="graf_8cpp.html#aaf525f8cdadbe40d9ad7c39f79fd8a2c" title="przeladowanie operatora wyjscia">operator &lt;&lt; </a>(ostream &amp;wyjscie, <a class="code" href="classwierzcholek.html">wierzcholek</a>  &amp;wej);
+<a name="l00047"></a>00047         <span class="keyword">friend</span> istream &amp; <a class="code" href="wierzcholek_8cpp.html#a221c2b565a9506a8eaed69e42e374f4e">operator &gt;&gt; </a>(istream &amp;wejscie, <a class="code" href="classwierzcholek.html">wierzcholek</a>  &amp;wyj);
+<a name="l00048"></a><a class="code" href="classwierzcholek.html#ad67644b5f408397f28d7150d3bac76d2">00048</a>         <span class="keywordtype">bool</span> <a class="code" href="classwierzcholek.html#ad67644b5f408397f28d7150d3bac76d2">zajety</a>;
+<a name="l00049"></a><a class="code" href="classwierzcholek.html#a1726ca1919686bdccbca505bacf6de2f">00049</a>         <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classgraf.html" title="klasa modeluje graf.">graf</a>;
+<a name="l00050"></a>00050 
+<a name="l00051"></a><a class="code" href="classwierzcholek.html#a0e72695b032e7f750c51041e1a59673b">00051</a>         <a class="code" href="classwierzcholek.html">wierzcholek</a>()
+<a name="l00052"></a>00052         :zajety(NULL), numer(0)
+<a name="l00053"></a>00053         {
+<a name="l00054"></a>00054                 wartosc.clear();
+<a name="l00055"></a>00055         }
+<a name="l00056"></a>00056 };
+<a name="l00057"></a>00057 
+<a name="l00061"></a><a class="code" href="structelement__bfs.html">00061</a> <span class="keyword">struct </span><a class="code" href="structelement__bfs.html" title="struktura definiuje element drzewa przechodzenie w szerz">element_bfs</a>
+<a name="l00062"></a>00062 {
+<a name="l00063"></a><a class="code" href="structelement__bfs.html#aa654df64808f513f41d0349571e4b90e">00063</a>         <span class="keywordtype">int</span> <a class="code" href="structelement__bfs.html#aa654df64808f513f41d0349571e4b90e">stan</a>;
+<a name="l00064"></a><a class="code" href="structelement__bfs.html#a91fcdfed5d5dc2bce6ca9bb4414df196">00064</a>         <span class="keywordtype">int</span> <a class="code" href="structelement__bfs.html#a91fcdfed5d5dc2bce6ca9bb4414df196">odleglosc</a>;
+<a name="l00065"></a><a class="code" href="structelement__bfs.html#a94b882f6922be485d6942f71c29e581d">00065</a>         <span class="keywordtype">int</span> <a class="code" href="structelement__bfs.html#a94b882f6922be485d6942f71c29e581d">poprzedni</a>;
+<a name="l00066"></a><a class="code" href="structelement__bfs.html#a9c764ce268e74260e6634ea98ed13781">00066</a>         <a class="code" href="structelement__bfs.html" title="struktura definiuje element drzewa przechodzenie w szerz">element_bfs</a>()
+<a name="l00067"></a>00067         :stan(0), odleglosc(0), poprzedni(0){};
+<a name="l00068"></a><a class="code" href="structelement__bfs.html#a8b076b347dc8398fd7e704d74299eb3a">00068</a>         <span class="keyword">friend</span> ostream &amp; <a class="code" href="graf_8cpp.html#aaf525f8cdadbe40d9ad7c39f79fd8a2c" title="przeladowanie operatora wyjscia">operator &lt;&lt;</a>(ostream &amp; wyjscie, <a class="code" href="structelement__bfs.html" title="struktura definiuje element drzewa przechodzenie w szerz">element_bfs</a> &amp; dane)
+<a name="l00069"></a>00069         {
+<a name="l00070"></a>00070                 <span class="keywordflow">if</span>(dane.<a class="code" href="structelement__bfs.html#aa654df64808f513f41d0349571e4b90e">stan</a>==2)
+<a name="l00071"></a>00071                 wyjscie&lt;&lt;<span class="stringliteral">&quot;poprzedni: &quot;</span>&lt;&lt;dane.<a class="code" href="structelement__bfs.html#a94b882f6922be485d6942f71c29e581d">poprzedni</a>&lt;&lt;endl;
+<a name="l00072"></a>00072                 wyjscie&lt;&lt;<span class="stringliteral">&quot;odleglosc: &quot;</span>&lt;&lt;dane.<a class="code" href="structelement__bfs.html#a91fcdfed5d5dc2bce6ca9bb4414df196">odleglosc</a>&lt;&lt;endl;
+<a name="l00073"></a>00073                 <span class="keywordflow">return</span> wyjscie;
+<a name="l00074"></a>00074         }
+<a name="l00075"></a>00075 
+<a name="l00076"></a>00076 };
+<a name="l00080"></a><a class="code" href="structelement__dfs.html">00080</a> <span class="keyword">struct </span><a class="code" href="structelement__dfs.html" title="element drzewa przejscia dla przeszukiwania w głąb;">element_dfs</a>
+<a name="l00081"></a>00081 {
+<a name="l00082"></a><a class="code" href="structelement__dfs.html#a48b8257c62eb0f4c52e10bf2c06fffda">00082</a>         <span class="keywordtype">int</span> <a class="code" href="structelement__dfs.html#a48b8257c62eb0f4c52e10bf2c06fffda">stan</a>;
+<a name="l00083"></a><a class="code" href="structelement__dfs.html#af3205a446fe8c834532d3b5de81deefa">00083</a>         <span class="keywordtype">int</span> <a class="code" href="structelement__dfs.html#af3205a446fe8c834532d3b5de81deefa">poprzedni</a>;
+<a name="l00085"></a><a class="code" href="structelement__dfs.html#ae2d3c82805dc8b9b24a7dc1511c283dd">00085</a>         <span class="keywordtype">int</span> <a class="code" href="structelement__dfs.html#ae2d3c82805dc8b9b24a7dc1511c283dd" title="czas wejscia do wierzcholka">d</a>;
+<a name="l00087"></a><a class="code" href="structelement__dfs.html#a9a75ad927680701485941a4e42b36290">00087</a>         <span class="keywordtype">int</span> <a class="code" href="structelement__dfs.html#a9a75ad927680701485941a4e42b36290" title="czas wyjscia z wierzcholka">f</a>;
+<a name="l00088"></a><a class="code" href="structelement__dfs.html#a7a70ed0a00bcaafd111e9b07a135bbe4">00088</a>         <a class="code" href="structelement__dfs.html" title="element drzewa przejscia dla przeszukiwania w głąb;">element_dfs</a>()
+<a name="l00089"></a>00089         :stan(0), poprzedni(0){};
+<a name="l00090"></a><a class="code" href="structelement__dfs.html#abb6d36003fb4e11d878e4bd1d794469b">00090</a>         <span class="keyword">friend</span> ostream &amp; <a class="code" href="graf_8cpp.html#aaf525f8cdadbe40d9ad7c39f79fd8a2c" title="przeladowanie operatora wyjscia">operator &lt;&lt;</a>(ostream &amp; wyjscie, <a class="code" href="structelement__dfs.html" title="element drzewa przejscia dla przeszukiwania w głąb;">element_dfs</a> &amp; dane)
+<a name="l00091"></a>00091         {
+<a name="l00092"></a>00092                 <span class="keywordflow">if</span>(dane.<a class="code" href="structelement__dfs.html#a48b8257c62eb0f4c52e10bf2c06fffda">stan</a>==2)
+<a name="l00093"></a>00093                 {
+<a name="l00094"></a>00094                         wyjscie&lt;&lt;<span class="stringliteral">&quot;poprzedni: &quot;</span>&lt;&lt;dane.<a class="code" href="structelement__dfs.html#af3205a446fe8c834532d3b5de81deefa">poprzedni</a>&lt;&lt;endl;
+<a name="l00095"></a>00095                         wyjscie&lt;&lt;<span class="stringliteral">&quot;czas wizyty: &quot;</span>&lt;&lt;dane.<a class="code" href="structelement__dfs.html#ae2d3c82805dc8b9b24a7dc1511c283dd" title="czas wejscia do wierzcholka">d</a>&lt;&lt;endl;
+<a name="l00096"></a>00096                         wyjscie&lt;&lt;<span class="stringliteral">&quot;czas wyjscie: &quot;</span>&lt;&lt;dane.<a class="code" href="structelement__dfs.html#a9a75ad927680701485941a4e42b36290" title="czas wyjscia z wierzcholka">f</a>&lt;&lt;endl;
+<a name="l00097"></a>00097                 }
+<a name="l00098"></a>00098                 <span class="keywordflow">return</span> wyjscie;
+<a name="l00099"></a>00099         }
+<a name="l00100"></a>00100 
+<a name="l00101"></a>00101 };
+<a name="l00102"></a>00102 
+<a name="l00103"></a><a class="code" href="structelement__a.html">00103</a> <span class="keyword">struct </span><a class="code" href="structelement__a.html">element_a</a>
+<a name="l00104"></a>00104 {
+<a name="l00105"></a><a class="code" href="structelement__a.html#acebbe0c4962a9b7f11702c041474bdfc">00105</a>         <span class="keywordtype">int</span> <a class="code" href="structelement__a.html#acebbe0c4962a9b7f11702c041474bdfc">wierzcholek</a>;
+<a name="l00106"></a><a class="code" href="structelement__a.html#a0c44e77b4e694ff0f7e2a5ec75a78f48">00106</a>         <span class="keywordtype">int</span> <a class="code" href="structelement__a.html#a0c44e77b4e694ff0f7e2a5ec75a78f48">waga</a>;
+<a name="l00107"></a><a class="code" href="structelement__a.html#a4e6b23a45c539eea4ab51d74aeef11e2">00107</a>         <span class="keywordtype">int</span> <a class="code" href="structelement__a.html#a4e6b23a45c539eea4ab51d74aeef11e2">poprzedni</a>;
+<a name="l00108"></a><a class="code" href="structelement__a.html#a1be911aa9cf4faf7105ae58ec04d4bd7">00108</a>         <span class="keywordtype">int</span> <a class="code" href="structelement__a.html#a1be911aa9cf4faf7105ae58ec04d4bd7">stan</a>;
+<a name="l00109"></a><a class="code" href="structelement__a.html#a75d6e0125b7bd95c6d2012332cdf3957">00109</a>         <a class="code" href="structelement__a.html">element_a</a>()
+<a name="l00110"></a>00110         :<a class="code" href="classwierzcholek.html">wierzcholek</a>(0), waga(0), stan(0), poprzedni(-1){};
+<a name="l00111"></a>00111 };
+<a name="l00112"></a>00112 <span class="keywordtype">bool</span> <a class="code" href="wierzcholek_8cpp.html#abf7cee761b1201166cbe397d8723789a">porownanie</a>(<a class="code" href="structpolaczenie.html" title="clasa modeluje pojecie pojecie poedynczego wierzcholka grafu">polaczenie</a> aaa ,<a class="code" href="structpolaczenie.html" title="clasa modeluje pojecie pojecie poedynczego wierzcholka grafu">polaczenie</a> bbb);
+<a name="l00113"></a>00113 
+<a name="l00114"></a>00114 <span class="preprocessor">#endif </span><span class="comment">/* WIERZCHOLEK_HH_ */</span>
 </pre></div></div><!-- contents -->
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><a class="el" href="wierzcholek_8hh.html">wierzcholek.hh</a>      </li>
 
-    <li class="footer">Generated on Fri May 16 2014 14:46:03 for Graf by
+    <li class="footer">Generated on Wed May 21 2014 22:35:01 for Graf by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

@@ -7,6 +7,7 @@ var files =
     [ "prj/main.cpp", "main_8cpp.html", "main_8cpp" ],
     [ "prj/menu.cpp", "menu_8cpp.html", "menu_8cpp" ],
     [ "prj/menu.hh", "menu_8hh.html", "menu_8hh" ],
+    [ "prj/stoper.hh", "stoper_8hh.html", "stoper_8hh" ],
     [ "prj/wierzcholek.cpp", "wierzcholek_8cpp.html", "wierzcholek_8cpp" ],
-    [ "prj/wierzcholek.hh", "wierzcholek_8hh.html", null ]
+    [ "prj/wierzcholek.hh", "wierzcholek_8hh.html", "wierzcholek_8hh" ]
 ];
