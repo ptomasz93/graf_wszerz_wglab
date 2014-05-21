@@ -13,15 +13,27 @@
 #include <iostream>
 
 using namespace std;
+
+
 /**
  * \brief clasa modeluje pojecie pojecie poedynczego wierzcholka grafu
  */
 
-struct poloczenie
+struct polaczenie
 {
 	int wierzcholek;
 	int waga;
+	polaczenie()
+	:waga(0), wierzcholek(0)
+	{};
 
+	polaczenie operator +(polaczenie element)
+	{
+		polaczenie wynik;
+		wynik.waga=waga+element.waga;
+		wynik.wierzcholek=element.wierzcholek;
+		return wynik;
+	}
 };
 
 class wierzcholek
@@ -29,7 +41,7 @@ class wierzcholek
 
 	int numer;///identyfikator wierzcholka
 	string  wartosc;///wartosc przechowywana w wierzcholku
-	vector <poloczenie> polaczenia;///lista polaczen wierzcholka
+	vector <polaczenie> polaczenia;///lista polaczen wierzcholka
 public:
 	friend ostream & operator << (ostream &wyjscie, wierzcholek  &wej);
 	friend istream & operator >> (istream &wejscie, wierzcholek  &wyj);
@@ -87,4 +99,16 @@ struct element_dfs
 	}
 
 };
+
+struct element_a
+{
+	int wierzcholek;
+	int waga;
+	int poprzedni;
+	int stan;
+	element_a()
+	:wierzcholek(0), waga(0), stan(0), poprzedni(-1){};
+};
+bool porownanie(polaczenie aaa ,polaczenie bbb);
+
 #endif /* WIERZCHOLEK_HH_ */

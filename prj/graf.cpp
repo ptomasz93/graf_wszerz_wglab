@@ -130,7 +130,7 @@ void graf::usun_polaczenie(int v1, int v2)
 
 void graf::dodaj_polaczenie(int v1, int v2,int waga)
 {
-	poloczenie nowev1, nowev2;
+	polaczenie nowev1, nowev2;
 	nowev1.waga=nowev2.waga=waga;
 	nowev1.wierzcholek=v2;
 	nowev2.wierzcholek=v1;
@@ -263,7 +263,13 @@ while(pelny)
 				tablica_bfs[a].stan = 1;
 				tablica_bfs[a].odleglosc=tablica_bfs[korzen].odleglosc+1;
 				tablica_bfs[a].poprzedni=korzen;
-				if(a==v)return tablica_bfs;
+				if(a==v)
+				{
+				//w celu pomiarow nie brudzimy pamieci
+				delete[] tablica_bfs;
+				return NULL;
+				//return tablica_bfs;
+				}
 			}
 		}
 		tablica_bfs[korzen].stan=2;
@@ -391,7 +397,13 @@ element_dfs* graf::znajdz_droge_dfs(int korzen, int v1)
 					stos.push(a);
 					tablica_dfs[a].stan = 1;
 					tablica_dfs[a].poprzedni=korzen;
-					if(a==v1) return tablica_dfs;
+					if(a==v1)
+						{
+						//zeby nie brudzi w pamieci przy pomiarach
+						delete[] tablica_dfs;
+						return NULL;
+						//return tablica_dfs;
+						}
 				}
 			}
 			tablica_dfs[korzen].stan=2;
@@ -416,5 +428,68 @@ while(v1>=0)
 {
 	cout<<v1<<endl;
 	v1=tablica_dfs[v1].poprzedni;
+}
+}
+
+element_a *graf::znajdz_droge_A(int korzen, int v)
+{
+	int x,y;
+	int a;
+	vector <polaczenie> otwarte;
+	vector <int> zamkniete;
+	element_a * tablica_a;
+	tablica_a=new element_a[rozmiar];
+	polaczenie pomocniczy, root;
+	pomocniczy.waga=0;
+	root.wierzcholek=korzen;
+	otwarte.push_back(root);
+	tablica_a[root.wierzcholek].poprzedni=-1;
+	tablica_a[root.wierzcholek].stan=1;
+	while(otwarte.size())
+	{
+		root=otwarte.back();
+		otwarte.pop_back();
+		a=root.wierzcholek;
+		tablica_a[a].stan=2;
+		for(int i=0; i<tablica[a].polaczenia.size();i++)
+		{
+
+				pomocniczy=(root+tablica[a].polaczenia[i]);
+			if(tablica_a[tablica[a].polaczenia[i].wierzcholek].stan!=2)
+			{
+				x=v/10-pomocniczy.wierzcholek/100;//trzeba dobrac dzielniki do rozmiaru
+				y=v%10-pomocniczy.wierzcholek/100;
+				pomocniczy.waga+=5*(x+y);//heurystyka manhatan
+//				pomocniczy.waga+=5*(sqrt(x*x+y*y));//heurystyka euklidesowa
+				if(tablica_a[pomocniczy.wierzcholek].stan==0)
+				{
+					otwarte.push_back(pomocniczy);
+					tablica_a[pomocniczy.wierzcholek].poprzedni=a;
+					tablica_a[pomocniczy.wierzcholek].stan=1;
+					if(pomocniczy.wierzcholek==v)
+					{
+						delete[] tablica_a;//w celu pomiarow zeby nie brudzic pamieci
+						return NULL;
+						//return tablica_a;
+					}
+				}
+			}
+
+		}
+
+		sort(otwarte.begin(), otwarte.end(),porownanie);
+
+	}
+	cout<<"drogi nie ma"<<endl;
+	return NULL;
+}
+
+void graf::czytaj_droge_a(element_a* tablica_a, int v1)
+{
+	if(tablica_a==NULL)return;
+while(v1>=0)
+{
+	cout<<v1<<endl;
+	v1=tablica_a[v1].poprzedni;
 }
 }

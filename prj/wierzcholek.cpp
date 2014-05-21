@@ -6,6 +6,13 @@
  */
 
 #include "wierzcholek.hh"
+bool porownanie(polaczenie aaa ,polaczenie bbb)
+{
+     if(aaa.waga>bbb.waga)
+        return true;
+     if(aaa.waga<bbb.waga)
+        return false;
+}
 
 ostream & operator << (ostream &wyjscie, wierzcholek  &wej)
 	{

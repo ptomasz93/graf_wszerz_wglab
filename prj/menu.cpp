@@ -13,8 +13,7 @@ void menu(graf& graf1)
 	element_dfs *tablica_dfs;
 	int v1,v2,waga;
 	int wybor;
-	string opcje[12];
-	cout<<"Program tworzacy graf";
+	string opcje[13];
 	opcje[0]="1. dodaj wierzcholek";
 	opcje[1]="2. usun wierzcholek";
 	opcje[2]="3. dodaj polaczenie";
@@ -26,7 +25,8 @@ void menu(graf& graf1)
 	opcje[8]="9. znajdz droge w szerz";
 	opcje[9]="10. przejdz graf w gląb";
 	opcje[10]="11. znajdz droge w glab";
-	opcje[11]="12. koniec";
+	opcje[11]="12. znajdz droge A*";
+	opcje[12]="12. koniec";
 	bool petla=true;
 	while(petla)
 	{
@@ -43,6 +43,7 @@ void menu(graf& graf1)
 		cout<<opcje[9]<<endl;
 		cout<<opcje[10]<<endl;
 		cout<<opcje[11]<<endl;
+		cout<<opcje[12]<<endl;
 		cin>>wybor;
 
 		switch(wybor)
@@ -128,7 +129,16 @@ void menu(graf& graf1)
 			graf1.czytaj_droge_dfs(tablica_dfs,v2);
 			break;
 		case 12:
-			cout<<"wybrales: "<<opcje[10]<<endl;
+			cout<<"wybrales: "<<opcje[11]<<endl;
+			cout<<"podaj wierzcholek startowy."<<endl;
+			cin>>v1;
+			cout<<"podaj wierzcholek koncowy"<<endl;
+			cin>>v2;
+			tablica_dfs=graf1.znajdz_droge_dfs(v1,v2);
+			graf1.czytaj_droge_a(graf1.znajdz_droge_A(v1,v2),v2);
+			break;
+		case 13:
+			cout<<"wybrales: "<<opcje[12]<<endl;
 			petla=false;
 			break;
 		default:

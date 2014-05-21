@@ -18,13 +18,23 @@ using namespace std;
 
 void generuj_polaczenia(int rozmiar)
 {
-
+	int a;
 	ofstream test;
 	test.open("polaczenia");
-	for(int i=0; i<rozmiar*5; i++)
+	for(int i=0; i<rozmiar; i++)
 	{
-		test<<(rand()%rozmiar)<<"\n";
-		test<<(rand()%rozmiar)<<"\n";
+		for(int b=0;b<5;b++)
+		{
+			a=(rand())%6+i;
+			if(a<rozmiar)
+			{
+			test<<i<<"\n";//wierzcholek pierwszy
+			test<<a<<"\n";//wierzcholek drugi
+			test<<(rand()%5)<<"\n";//waga polaczenia
+			}
+			else
+				test<<rozmiar+999<<endl;//znacznik konca pliku
+		}
 	}
 	test.close();
 }
