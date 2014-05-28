@@ -1,0 +1,122 @@
+\documentclass[10pt,oneside]{mwbk}
+
+% ustawienia kodowania pliku i języka
+\usepackage[T1]{polski}
+\usepackage[utf8]{inputenc}
+
+\usepackage{indentfirst}
+\usepackage{graphicx}
+
+
+% czcionka Times
+\usepackage{times}
+
+% odstępy na 1.5 (pomimo, iż linespread jest na 1.3
+\linespread{1.3}
+
+% dzielenie wyrazów – większe odstępy, mniej dzielenia
+\hyphenpenalty=5000
+\tolerance=5000
+
+%import z pliku csv
+%\usepackage{csvsimple}
+
+%strona tytułowa
+\renewcommand {\maketitle}{
+\begin {titlepage}
+\begin {center}
+	\LARGE
+	\textbf {PROJEKTOWANIE ALGORYTMOW I METODY SZTUCZNEJ INTELIGENCJI}
+	\newline
+	\newline
+	\textbf{ Problem komiwojażera}
+	\newline
+	\begin{table}
+	\begin{center}
+	\begin{tabular}{rl}
+	IMIĘ I NAZWISKO & Tomasz Piotrowski \\
+	NR INDEKSU & 200524 \\	
+	DATA  & 24.04.2014 \\
+	\end{tabular}
+
+	\end{center}
+	\end{table}
+\end {center}
+\end {titlepage}}
+
+\renewcommand*\thesection{\arabic{section}} 
+\begin{document}
+\maketitle
+\section{Wstęp}
+	
+	\indent Problem komiwojażera formułowany jest następująco: dane jest n miast, a każde dwa z nich połączone są drogą o pewnej długości. W jednym z miast znajduje się komiwojażer, który chce odwiedzić wszystkie miasta w taki sposób, aby w każdym mieście znaleźć się dokładnie jeden raz, a na koniec wędrówki powrócić do miejsca startowego. Naszym celem jest znalezienie najkrótszej możliwej trasy dla komiwojażera.
+
+	
+\section {Rozwiązanie}
+
+Roziwiązanie problemu komiwojażera polega na wyznaczeniu w grafie cyklu Hamiltona o minimalnej sumie wag krawędzi. Pierwszym nasuwającym się rozwiązaniem jest policzenie wszystkich możliwych kombinacji. Czyli permutacji bez powtorzeń. Jednak złożoność obliczeniowa tego algorytmu jest wykładnicza.
+ 
+
+\section {Problem NP-trudny}
+Oznacza to, że żadne szybkie (wielomianowe) rozwiązanie
+nie jest znane i bardzo możliwe, że w ogóle nie istnieje.
+Ponieważ algorytm znajdujący zawsze najlepszą drogę posiada zbyt dużą złożoność czasową należy zastosować algorytm przybliżony, którego czas wykonywania jest znacznie krótszy. Jednak algorytm takie nie zawsze znajduja optymalne rozwiazanie. Stworzona przez nie trasa może być znacznie 'dłuższa' od najkrótszej. Stosowanie algorytmów przybliżonych wynika z konieczności wyboru pomiedzy szybkościa znajdowania a 'jakościa' znalezionego rozwiazan. 
+
+\section {Algorytm najkrótszej lokalnie ścieżki}
+W programie w celu rozwiązania problemu zaimplementowany został algorytm "najkrótszej loalnie ścieżki". 
+Działanie tego algorytmu wygląda następująco:\\
+1.wybieramy miasto początkowe,\\
+2.do listy dodajemy to miasto (z jeszcze
+niedodanych), które jest najbliżej ostatniego
+dodanego do listy\\
+3.jeśli lista miast do wyboru jest pusta –
+dodajemy na koniec miasto początkowe; jeśli
+nie – wracamy do punktu drugiego,
+koniec algorytmu\\
+
+
+\section {Test działania algorytmu}
+W celu przetestowania działania algorytmu stworzony został graf zawierający 11 wierzchołków reprezentujących miasta Polski. Miasta zostaly polaczone scieżkami o wagach odpowiadających odległości między miastami.
+ 
+          \begin{tabular}{|l|l|l|l|l|}
+\hline
+Warszawa	&	Wrocław	&	Antonin	&	Sieradz	&	Ostrów	\\
+74	&	81	&	10	&	55	&	10	\\
+Skierniewice	&	Antonin	&	Ostrów	&	Kalisz	&	Antonin	\\
+61	&	10	&	30	&	30	&	41	\\
+Łódź	&	Ostrów	&	Kalisz	&	Ostrów	&	Kalisz	\\
+64	&	30	&	55	&	10	&	55	\\
+Sieradz	&	Kalisz	&	Sieradz	&	Antonin	&	Sieradz	\\
+55	&	55	&	64	&	81	&	64	\\
+Kalisz	&	Sieradz	&	Łódź	&	Wrocław	&	Łódź	\\
+30	&	64	&	61	&	85	&	61	\\
+Ostrów	&	Łódź	&	Skierniewice	&	Opole	&	Skierniewice	\\
+10	&	61	&	74	&	111	&	74	\\
+Antonin	&	Skierniewice	&	Warszawa	&	Łódź	&	Warszawa	\\
+81	&	74	&	301	&	61	&	301	\\
+Wrocław	&	Warszawa	&	Krakow	&	Skierniewice	&	Krakow	\\
+85	&	301	&	196	&	74	&	196	\\
+Opole	&	Krakow	&	Opole	&	Warszawa	&	Opole	\\
+196	&	196	&	85	&	301	&	85	\\
+Krakow	&	Opole	&	Wrocław	&	Krakow	&	Wrocław	\\
+414	&	244	&	171	&	414	&	171	\\
+Poznań	&	Poznań	&	Poznań	&	Poznań	&	Poznań	\\
+326	&	171	&	137	&	177	&	120	\\
+Warszawa	&	Wrocław	&	Antonin	&	Sieradz	&	Ostrów	\\
+dlugosc trasy:	&	dlugosc trasy:	&	dlugosc trasy:	&	dlugosc trasy:	&	dlugosc trasy:	\\
+1322	&	1206	&	1174	&	1344	&	1168	\\
+
+\hline
+
+
+\hline
+\end{tabular}
+\\\\
+\section{Wnioski}
+Na podstawie tablli można stwierdzić że długość wyznaczonej trasy w tym algorytmie zależna jest od wierzchołka początkowego z którego trasa zostaje wyznaczona.
+Różnice W długości trasy w porównaniu do całej drogi nie są duże. Różnica mędzy maksymalną dług wyznaczonej trasy i minimalną wynosi 221.
+\\\indent W celu wyzaczenia dokładniejeszej trasy można użyć algorytmów genetycznych.
+Algorytmy te wzorowane są na zjawiskach zachodzących w przyrodzie dokładniej ewolucji biologicznej. Wynik przez nie uzyskany również nie zawsze jest najlepszy z możliwych jednak jest dobrym kompromism między czasem działania a jakością wyniku.
+
+ 
+\end{document}

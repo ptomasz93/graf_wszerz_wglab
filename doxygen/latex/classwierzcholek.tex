@@ -3,6 +3,11 @@
 }
 
 
+clasa modeluje pojecie poedynczego wierzcholka grafu  
+
+
+
+
 {\ttfamily \#include $<$wierzcholek.\-hh$>$}
 
 \subsection*{\-Public \-Member \-Functions}
@@ -29,6 +34,8 @@ vector$<$ \hyperlink{structpolaczenie}{polaczenie} $>$ \hyperlink{classwierzchol
 \item 
 class \hyperlink{classwierzcholek_a1726ca1919686bdccbca505bacf6de2f}{graf}
 \begin{DoxyCompactList}\small\item\em zmienna okresla czy wierzcholek zostal zdefiniowany \end{DoxyCompactList}\item 
+class \hyperlink{classwierzcholek_a944f466fbe474d4c25869b2ca1ebce33}{droga\-\_\-komi}
+\item 
 ostream \& \hyperlink{classwierzcholek_ab0941004cc1a9bb9339cf2092b1819a1}{operator$<$$<$} (ostream \&wyjscie, \hyperlink{classwierzcholek}{wierzcholek} \&wej)
 \begin{DoxyCompactList}\small\item\em lista polaczen wierzcholka \end{DoxyCompactList}\item 
 istream \& \hyperlink{classwierzcholek_a221c2b565a9506a8eaed69e42e374f4e}{operator$>$$>$} (istream \&wejscie, \hyperlink{classwierzcholek}{wierzcholek} \&wyj)
@@ -38,7 +45,7 @@ istream \& \hyperlink{classwierzcholek_a221c2b565a9506a8eaed69e42e374f4e}{operat
 \subsection{\-Detailed \-Description}
 
 
-\-Definition at line 39 of file wierzcholek.\-hh.
+\-Definition at line 41 of file wierzcholek.\-hh.
 
 
 
@@ -52,17 +59,24 @@ istream \& \hyperlink{classwierzcholek_a221c2b565a9506a8eaed69e42e374f4e}{operat
 )\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{classwierzcholek_a0e72695b032e7f750c51041e1a59673b}
 
 
-\-Definition at line 51 of file wierzcholek.\-hh.
+\-Definition at line 54 of file wierzcholek.\-hh.
 
 
 
 \subsection{\-Friends \-And \-Related \-Function \-Documentation}
+\hypertarget{classwierzcholek_a944f466fbe474d4c25869b2ca1ebce33}{\index{wierzcholek@{wierzcholek}!droga\-\_\-komi@{droga\-\_\-komi}}
+\index{droga\-\_\-komi@{droga\-\_\-komi}!wierzcholek@{wierzcholek}}
+\subsubsection[{droga\-\_\-komi}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf droga\-\_\-komi}\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}\label{classwierzcholek_a944f466fbe474d4c25869b2ca1ebce33}
+
+
+\-Definition at line 52 of file wierzcholek.\-hh.
+
 \hypertarget{classwierzcholek_a1726ca1919686bdccbca505bacf6de2f}{\index{wierzcholek@{wierzcholek}!graf@{graf}}
 \index{graf@{graf}!wierzcholek@{wierzcholek}}
 \subsubsection[{graf}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf graf}\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}\label{classwierzcholek_a1726ca1919686bdccbca505bacf6de2f}
 
 
-\-Definition at line 49 of file wierzcholek.\-hh.
+\-Definition at line 51 of file wierzcholek.\-hh.
 
 \hypertarget{classwierzcholek_ab0941004cc1a9bb9339cf2092b1819a1}{\index{wierzcholek@{wierzcholek}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!wierzcholek@{wierzcholek}}
@@ -74,7 +88,7 @@ istream \& \hyperlink{classwierzcholek_a221c2b565a9506a8eaed69e42e374f4e}{operat
 )\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}\label{classwierzcholek_ab0941004cc1a9bb9339cf2092b1819a1}
 
 
-\-Definition at line 17 of file wierzcholek.\-cpp.
+\-Definition at line 23 of file wierzcholek.\-cpp.
 
 \hypertarget{classwierzcholek_a221c2b565a9506a8eaed69e42e374f4e}{\index{wierzcholek@{wierzcholek}!operator$>$$>$@{operator$>$$>$}}
 \index{operator$>$$>$@{operator$>$$>$}!wierzcholek@{wierzcholek}}
@@ -86,7 +100,7 @@ istream \& \hyperlink{classwierzcholek_a221c2b565a9506a8eaed69e42e374f4e}{operat
 )\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}\label{classwierzcholek_a221c2b565a9506a8eaed69e42e374f4e}
 
 
-\-Definition at line 32 of file wierzcholek.\-cpp.
+\-Definition at line 38 of file wierzcholek.\-cpp.
 
 
 
@@ -96,28 +110,28 @@ istream \& \hyperlink{classwierzcholek_a221c2b565a9506a8eaed69e42e374f4e}{operat
 \subsubsection[{numer}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf wierzcholek\-::numer}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classwierzcholek_a66aaea6b1187250f7100542adc1617d2}
 
 
-\-Definition at line 42 of file wierzcholek.\-hh.
+\-Definition at line 44 of file wierzcholek.\-hh.
 
 \hypertarget{classwierzcholek_ad6442177753c61769b0fa1822e75f551}{\index{wierzcholek@{wierzcholek}!polaczenia@{polaczenia}}
 \index{polaczenia@{polaczenia}!wierzcholek@{wierzcholek}}
 \subsubsection[{polaczenia}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf polaczenie}$>$ {\bf wierzcholek\-::polaczenia}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classwierzcholek_ad6442177753c61769b0fa1822e75f551}
 
 
-\-Definition at line 44 of file wierzcholek.\-hh.
+\-Definition at line 46 of file wierzcholek.\-hh.
 
 \hypertarget{classwierzcholek_a19aa16bf7e01a987fcc360e5da902209}{\index{wierzcholek@{wierzcholek}!wartosc@{wartosc}}
 \index{wartosc@{wartosc}!wierzcholek@{wierzcholek}}
 \subsubsection[{wartosc}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf wierzcholek\-::wartosc}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classwierzcholek_a19aa16bf7e01a987fcc360e5da902209}
 
 
-\-Definition at line 43 of file wierzcholek.\-hh.
+\-Definition at line 45 of file wierzcholek.\-hh.
 
 \hypertarget{classwierzcholek_ad67644b5f408397f28d7150d3bac76d2}{\index{wierzcholek@{wierzcholek}!zajety@{zajety}}
 \index{zajety@{zajety}!wierzcholek@{wierzcholek}}
 \subsubsection[{zajety}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf wierzcholek\-::zajety}}}\label{classwierzcholek_ad67644b5f408397f28d7150d3bac76d2}
 
 
-\-Definition at line 48 of file wierzcholek.\-hh.
+\-Definition at line 50 of file wierzcholek.\-hh.
 
 
 

@@ -1,6 +1,7 @@
 var classwierzcholek =
 [
     [ "wierzcholek", "classwierzcholek.html#a0e72695b032e7f750c51041e1a59673b", null ],
+    [ "droga_komi", "classwierzcholek.html#a944f466fbe474d4c25869b2ca1ebce33", null ],
     [ "graf", "classwierzcholek.html#a1726ca1919686bdccbca505bacf6de2f", null ],
     [ "operator<<", "classwierzcholek.html#ab0941004cc1a9bb9339cf2092b1819a1", null ],
     [ "operator>>", "classwierzcholek.html#a221c2b565a9506a8eaed69e42e374f4e", null ],

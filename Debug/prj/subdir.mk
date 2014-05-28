@@ -6,6 +6,7 @@
 CPP_SRCS += \
 ../prj/generator.cpp \
 ../prj/graf.cpp \
+../prj/komiwojazer.cpp \
 ../prj/main.cpp \
 ../prj/menu.cpp \
 ../prj/wierzcholek.cpp 
@@ -13,6 +14,7 @@ CPP_SRCS += \
 OBJS += \
 ./prj/generator.o \
 ./prj/graf.o \
+./prj/komiwojazer.o \
 ./prj/main.o \
 ./prj/menu.o \
 ./prj/wierzcholek.o 
@@ -20,6 +22,7 @@ OBJS += \
 CPP_DEPS += \
 ./prj/generator.d \
 ./prj/graf.d \
+./prj/komiwojazer.d \
 ./prj/main.d \
 ./prj/menu.d \
 ./prj/wierzcholek.d 

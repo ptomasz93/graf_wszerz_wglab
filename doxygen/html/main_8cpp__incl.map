@@ -1,7 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node9" href="$graf_8hh.html" title="graf.hh" alt="" coords="339,160,401,189"/>
-<area shape="rect" id="node17" href="$wierzcholek_8hh.html" title="wierzcholek.hh" alt="" coords="22,237,131,267"/>
-<area shape="rect" id="node29" href="$generator_8hh.html" title="generator.hh" alt="" coords="515,83,609,112"/>
-<area shape="rect" id="node37" href="$menu_8hh.html" title="menu.hh" alt="" coords="317,83,389,112"/>
-<area shape="rect" id="node42" href="$stoper_8hh.html" title="stoper.hh" alt="" coords="639,83,714,112"/>
+<area shape="rect" id="node9" href="$graf_8hh.html" title="graf.hh" alt="" coords="295,160,356,189"/>
+<area shape="rect" id="node17" href="$wierzcholek_8hh.html" title="wierzcholek.hh" alt="" coords="509,237,619,267"/>
+<area shape="rect" id="node29" href="$generator_8hh.html" title="generator.hh" alt="" coords="615,83,708,112"/>
+<area shape="rect" id="node37" href="$menu_8hh.html" title="menu.hh" alt="" coords="417,83,489,112"/>
+<area shape="rect" id="node42" href="$stoper_8hh.html" title="stoper.hh" alt="" coords="741,83,816,112"/>
+<area shape="rect" id="node45" href="$komiwojazer_8hh.html" title="komiwojazer.hh" alt="" coords="281,83,393,112"/>
 </map>

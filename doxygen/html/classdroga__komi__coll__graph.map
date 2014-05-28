@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$structelement__komi.html" title="klasa modeluje element drogi komiwojazera" alt="" coords="5,101,107,131"/>
+<area shape="rect" id="node4" href="$classgraf.html" title="klasa modeluje graf." alt="" coords="131,101,173,131"/>
+<area shape="rect" id="node6" href="$classwierzcholek.html" title="clasa modeluje pojecie poedynczego wierzcholka grafu" alt="" coords="107,5,197,35"/>
+</map>

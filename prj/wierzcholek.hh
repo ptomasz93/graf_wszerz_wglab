@@ -15,10 +15,10 @@
 using namespace std;
 
 
-/**
- * \brief clasa modeluje pojecie pojecie poedynczego wierzcholka grafu
- */
 
+/**
+ * \brief struktura modeluje pojecie  polaczenia wierzcholkow grafu
+ */
 struct polaczenie
 {
 	int wierzcholek;
@@ -35,7 +35,9 @@ struct polaczenie
 		return wynik;
 	}
 };
-
+/**
+ * \brief clasa modeluje pojecie  poedynczego wierzcholka grafu
+ */
 class wierzcholek
 {
 
@@ -47,6 +49,7 @@ public:
 	friend istream & operator >> (istream &wejscie, wierzcholek  &wyj);
 	bool zajety;///zmienna okresla czy wierzcholek zostal zdefiniowany
 	friend class graf;
+	friend class droga_komi;
 
 	wierzcholek()///konstruktor
 	:zajety(NULL), numer(0)
@@ -110,5 +113,5 @@ struct element_a
 	:wierzcholek(0), waga(0), stan(0), poprzedni(-1){};
 };
 bool porownanie(polaczenie aaa ,polaczenie bbb);
-
+bool porownanie2(polaczenie aaa ,polaczenie bbb);
 #endif /* WIERZCHOLEK_HH_ */

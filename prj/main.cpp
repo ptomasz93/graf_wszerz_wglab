@@ -4,7 +4,7 @@
  *  Created on: 05-05-2014
  *      Author: tomek
  */
-#define ROZMIAR 10000
+#define ROZMIAR 11
 
 #include <iostream>
 //#include <cstdio>
@@ -17,6 +17,7 @@
 #include "generator.hh"
 #include "menu.hh"
 #include "stoper.hh"
+#include "komiwojazer.hh"
 
 using namespace std;
 
@@ -31,21 +32,29 @@ ofstream wynik;
 czas stoper;
 wierzcholek pomocniczy;
 graf graf1(rozmiar);
+
 //generuj_wierzcholki(rozmiar);
-generuj_polaczenia(rozmiar);
-polaczenia.open("polaczenia");
-wierzcholki.open("wierzcholki");
+//generuj_polaczenia(rozmiar);
+polaczenia.open("drogi.txt");
+wierzcholki.open("miasta.txt");
 for(int i=0;i<rozmiar;i++)
 {
 	wierzcholki>>pomocniczy;
 	graf1.dodaj_wierzcholek(pomocniczy);
 }
+
+
+
 while(1)
 {
 	polaczenia>>v1;
 	polaczenia>>v2;
 	polaczenia>>waga;
-	if(v1==rozmiar+999||v2==rozmiar+999||waga==rozmiar+999)break;
+//	if(v1==rozmiar+999||v2==rozmiar+999||waga==rozmiar+999)break;
+	if(v1==999||v2==999||waga==999)
+	{
+		break;
+	}
 	graf1.dodaj_polaczenie(v1,v2,waga);
 }
 polaczenia.close();
@@ -96,6 +105,8 @@ wierzcholki.close();
 //}
 
 //wynik.close();
+droga_komi komi(&graf1);
+komi.trasa_najblizsze(5);
 menu(graf1);
 
 }

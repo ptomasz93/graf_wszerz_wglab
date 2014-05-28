@@ -1,0 +1,200 @@
+\hypertarget{classdroga__komi}{\section{droga\-\_\-komi \-Class \-Reference}
+\label{classdroga__komi}\index{droga\-\_\-komi@{droga\-\_\-komi}}
+}
+
+
+klasa modeluje pojecie drogi komiwojazera.  
+
+
+
+
+{\ttfamily \#include $<$komiwojazer.\-hh$>$}
+
+
+
+\-Collaboration diagram for droga\-\_\-komi\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{classdroga__komi__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classdroga__komi_a4ac601fcf068b22d5cb6a4f0e9ae8386}{droga\-\_\-komi} (\hyperlink{classgraf}{graf} $\ast$obslugiwany)
+\item 
+\hyperlink{structpolaczenie}{polaczenie} \hyperlink{classdroga__komi_a1acfde1a8989daab4b6a03cbc660ea7e}{najblizszy} (int v, int start)
+\begin{DoxyCompactList}\small\item\em funkcja wyznacza wierzcholek najblizej polozony \end{DoxyCompactList}\item 
+void \hyperlink{classdroga__komi_a7d6a3684fd92f231b31597a24e3e6914}{trasa\-\_\-najblizsze} (int start)
+\begin{DoxyCompactList}\small\item\em funckja tworzy petle hamiltona w zadanym grafie \end{DoxyCompactList}\item 
+void \hyperlink{classdroga__komi_accef23783e2fc22179eee5aea746e0f4}{czytaj\-\_\-droge} (int v1)
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classgraf}{graf} $\ast$ \hyperlink{classdroga__komi_a3bdab6c27afa54acc53a4a9f37b5745e}{graf1}
+\item 
+\hyperlink{structelement__komi}{element\-\_\-komi} $\ast$ \hyperlink{classdroga__komi_a4d4d9bdaaf335bb3ec6617acc60754ce}{droga}
+\item 
+int \hyperlink{classdroga__komi_a7f2bb9dfb6fdbdcdd67fa8e6bd53b0a6}{dlugosc}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 28 of file komiwojazer.\-hh.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classdroga__komi_a4ac601fcf068b22d5cb6a4f0e9ae8386}{\index{droga\-\_\-komi@{droga\-\_\-komi}!droga\-\_\-komi@{droga\-\_\-komi}}
+\index{droga\-\_\-komi@{droga\-\_\-komi}!droga_komi@{droga\-\_\-komi}}
+\subsubsection[{droga\-\_\-komi}]{\setlength{\rightskip}{0pt plus 5cm}{\bf droga\-\_\-komi\-::droga\-\_\-komi} (
+\begin{DoxyParamCaption}
+\item[{{\bf graf} $\ast$}]{obslugiwany}
+\end{DoxyParamCaption}
+)}}\label{classdroga__komi_a4ac601fcf068b22d5cb6a4f0e9ae8386}
+
+
+\-Definition at line 9 of file komiwojazer.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classdroga__komi_accef23783e2fc22179eee5aea746e0f4}{\index{droga\-\_\-komi@{droga\-\_\-komi}!czytaj\-\_\-droge@{czytaj\-\_\-droge}}
+\index{czytaj\-\_\-droge@{czytaj\-\_\-droge}!droga_komi@{droga\-\_\-komi}}
+\subsubsection[{czytaj\-\_\-droge}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf droga\-\_\-komi\-::czytaj\-\_\-droge} (
+\begin{DoxyParamCaption}
+\item[{int}]{v1}
+\end{DoxyParamCaption}
+)}}\label{classdroga__komi_accef23783e2fc22179eee5aea746e0f4}
+
+
+\-Definition at line 64 of file komiwojazer.\-cpp.
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdroga__komi_accef23783e2fc22179eee5aea746e0f4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classdroga__komi_a1acfde1a8989daab4b6a03cbc660ea7e}{\index{droga\-\_\-komi@{droga\-\_\-komi}!najblizszy@{najblizszy}}
+\index{najblizszy@{najblizszy}!droga_komi@{droga\-\_\-komi}}
+\subsubsection[{najblizszy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf polaczenie} {\bf droga\-\_\-komi\-::najblizszy} (
+\begin{DoxyParamCaption}
+\item[{int}]{v, }
+\item[{int}]{start}
+\end{DoxyParamCaption}
+)}}\label{classdroga__komi_a1acfde1a8989daab4b6a03cbc660ea7e}
+
+\begin{DoxyParams}{\-Parameters}
+{\em start} & \\
+\hline
+\end{DoxyParams}
+lista polaczen wierzcholka 
+
+\-Definition at line 43 of file komiwojazer.\-cpp.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{classdroga__komi_a1acfde1a8989daab4b6a03cbc660ea7e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdroga__komi_a1acfde1a8989daab4b6a03cbc660ea7e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classdroga__komi_a7d6a3684fd92f231b31597a24e3e6914}{\index{droga\-\_\-komi@{droga\-\_\-komi}!trasa\-\_\-najblizsze@{trasa\-\_\-najblizsze}}
+\index{trasa\-\_\-najblizsze@{trasa\-\_\-najblizsze}!droga_komi@{droga\-\_\-komi}}
+\subsubsection[{trasa\-\_\-najblizsze}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf droga\-\_\-komi\-::trasa\-\_\-najblizsze} (
+\begin{DoxyParamCaption}
+\item[{int}]{start}
+\end{DoxyParamCaption}
+)}}\label{classdroga__komi_a7d6a3684fd92f231b31597a24e3e6914}
+alfgorytm laczy wierzcholek z nastepnym najblizej polaczonym az wszystkie wierzcholki zostana polaczone w petle. 
+\begin{DoxyParams}{\-Parameters}
+{\em obslugiwany} & \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 22 of file komiwojazer.\-cpp.
+
+
+
+\-Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdroga__komi_a7d6a3684fd92f231b31597a24e3e6914_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\-Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{classdroga__komi_a7d6a3684fd92f231b31597a24e3e6914_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classdroga__komi_a7f2bb9dfb6fdbdcdd67fa8e6bd53b0a6}{\index{droga\-\_\-komi@{droga\-\_\-komi}!dlugosc@{dlugosc}}
+\index{dlugosc@{dlugosc}!droga_komi@{droga\-\_\-komi}}
+\subsubsection[{dlugosc}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf droga\-\_\-komi\-::dlugosc}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classdroga__komi_a7f2bb9dfb6fdbdcdd67fa8e6bd53b0a6}
+
+
+\-Definition at line 32 of file komiwojazer.\-hh.
+
+\hypertarget{classdroga__komi_a4d4d9bdaaf335bb3ec6617acc60754ce}{\index{droga\-\_\-komi@{droga\-\_\-komi}!droga@{droga}}
+\index{droga@{droga}!droga_komi@{droga\-\_\-komi}}
+\subsubsection[{droga}]{\setlength{\rightskip}{0pt plus 5cm}{\bf element\-\_\-komi}$\ast$ {\bf droga\-\_\-komi\-::droga}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classdroga__komi_a4d4d9bdaaf335bb3ec6617acc60754ce}
+
+
+\-Definition at line 31 of file komiwojazer.\-hh.
+
+\hypertarget{classdroga__komi_a3bdab6c27afa54acc53a4a9f37b5745e}{\index{droga\-\_\-komi@{droga\-\_\-komi}!graf1@{graf1}}
+\index{graf1@{graf1}!droga_komi@{droga\-\_\-komi}}
+\subsubsection[{graf1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf graf}$\ast$ {\bf droga\-\_\-komi\-::graf1}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classdroga__komi_a3bdab6c27afa54acc53a4a9f37b5745e}
+
+
+\-Definition at line 30 of file komiwojazer.\-hh.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+prj/\hyperlink{komiwojazer_8hh}{komiwojazer.\-hh}\item 
+prj/\hyperlink{komiwojazer_8cpp}{komiwojazer.\-cpp}\end{DoxyCompactItemize}

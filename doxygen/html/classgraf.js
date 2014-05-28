@@ -21,6 +21,7 @@ var classgraf =
     [ "znajdz_droge_bfs", "classgraf.html#a420367f5ce066bd467c2621e3c69bdc3", null ],
     [ "znajdz_droge_dfs", "classgraf.html#a687140bdc84e60aa5f8342496bc2c06f", null ],
     [ "bfs", "classgraf.html#af2b2242aa53a3230ae67c7b57d7d9d11", null ],
+    [ "droga_komi", "classgraf.html#a944f466fbe474d4c25869b2ca1ebce33", null ],
     [ "operator<<", "classgraf.html#aaf525f8cdadbe40d9ad7c39f79fd8a2c", null ],
     [ "ilosc", "classgraf.html#ad9204c0bbc75a2bef4a43200672f9694", null ],
     [ "rozmiar", "classgraf.html#a596da8a77b680d7ec408b1253c2c43c3", null ],

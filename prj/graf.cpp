@@ -181,7 +181,13 @@ bool graf::sprawdz_polaczenie(int v1, int v2)
 		return false;
 
 }
-
+polaczenie graf::zwroc_polaczenie(int v1, int v2)
+{
+	for(int i=0;i<tablica[v1].polaczenia.size();i++)
+		{
+			if(tablica[v1].polaczenia[i].wierzcholek==v2)return tablica[v1].polaczenia[i];
+		}
+}
 /**
  * \brief implementacja algorytmu przechodzenie wszerz grafu
  * \details funkcja uzywa kolejki dostarczonej w STL. wynikiem dzialania jest drzewo przejscia grafu

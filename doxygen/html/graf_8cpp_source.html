@@ -97,7 +97,7 @@
 <a name="l00030"></a><a class="code" href="classgraf.html#a66fe29b772c7e3085b161a31682ef093">00030</a> <a class="code" href="classgraf.html#a66fe29b772c7e3085b161a31682ef093" title="konstruktor klasy graf">graf::graf</a>(<span class="keywordtype">int</span> il)
 <a name="l00031"></a>00031 {
 <a name="l00032"></a>00032 <a class="code" href="classgraf.html#a596da8a77b680d7ec408b1253c2c43c3">rozmiar</a>=il;
-<a name="l00033"></a>00033 <a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a> = <span class="keyword">new</span> <a class="code" href="classwierzcholek.html">wierzcholek</a>[<a class="code" href="classgraf.html#a596da8a77b680d7ec408b1253c2c43c3">rozmiar</a>];
+<a name="l00033"></a>00033 <a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a> = <span class="keyword">new</span> <a class="code" href="classwierzcholek.html" title="clasa modeluje pojecie poedynczego wierzcholka grafu">wierzcholek</a>[<a class="code" href="classgraf.html#a596da8a77b680d7ec408b1253c2c43c3">rozmiar</a>];
 <a name="l00034"></a>00034 <a class="code" href="classgraf.html#ad9204c0bbc75a2bef4a43200672f9694">ilosc</a>=0;
 <a name="l00035"></a>00035 <a class="code" href="classgraf.html#a9202cb6ab351f5bbdbb79de440ab1fb5">time</a>=0;
 <a name="l00036"></a>00036 }
@@ -108,7 +108,7 @@
 <a name="l00044"></a>00044 
 <a name="l00045"></a>00045 }
 <a name="l00046"></a>00046 
-<a name="l00051"></a><a class="code" href="classgraf.html#a6a50b0bfb5fc3cfc7a443014170b9565">00051</a> <span class="keywordtype">void</span> <a class="code" href="classgraf.html#afaa55f5a9aef1f30a2b3be97b59a476b" title="funkcja dodaje wierzcholek">graf::dodaj_wierzcholek</a>(<a class="code" href="classwierzcholek.html">wierzcholek</a> nowy)
+<a name="l00051"></a><a class="code" href="classgraf.html#a6a50b0bfb5fc3cfc7a443014170b9565">00051</a> <span class="keywordtype">void</span> <a class="code" href="classgraf.html#afaa55f5a9aef1f30a2b3be97b59a476b" title="funkcja dodaje wierzcholek">graf::dodaj_wierzcholek</a>(<a class="code" href="classwierzcholek.html" title="clasa modeluje pojecie poedynczego wierzcholka grafu">wierzcholek</a> nowy)
 <a name="l00052"></a>00052 {
 <a name="l00053"></a>00053 <span class="keywordflow">if</span>(nowy.<a class="code" href="classwierzcholek.html#a66aaea6b1187250f7100542adc1617d2">numer</a>&gt;<a class="code" href="classgraf.html#a596da8a77b680d7ec408b1253c2c43c3">rozmiar</a>-1)
 <a name="l00054"></a>00054 {
@@ -122,7 +122,7 @@
 <a name="l00062"></a>00062 
 <a name="l00067"></a><a class="code" href="classgraf.html#afaa55f5a9aef1f30a2b3be97b59a476b">00067</a> <span class="keywordtype">void</span> <a class="code" href="classgraf.html#afaa55f5a9aef1f30a2b3be97b59a476b" title="funkcja dodaje wierzcholek">graf::dodaj_wierzcholek</a>()
 <a name="l00068"></a>00068 {
-<a name="l00069"></a>00069         <a class="code" href="classwierzcholek.html">wierzcholek</a> nowy;
+<a name="l00069"></a>00069         <a class="code" href="classwierzcholek.html" title="clasa modeluje pojecie poedynczego wierzcholka grafu">wierzcholek</a> nowy;
 <a name="l00070"></a>00070         cout&lt;&lt;<span class="stringliteral">&quot;podaj numer wierzcholka&quot;</span>&lt;&lt;endl;
 <a name="l00071"></a>00071         cin&gt;&gt;nowy.<a class="code" href="classwierzcholek.html#a66aaea6b1187250f7100542adc1617d2">numer</a>;
 <a name="l00072"></a>00072         cout&lt;&lt;<span class="stringliteral">&quot;podaj wartosc wiercholka&quot;</span>&lt;&lt;endl;
@@ -140,7 +140,7 @@
 <a name="l00088"></a><a class="code" href="classgraf.html#a369202eb63332e9faad779591c862ece">00088</a> <span class="keywordtype">void</span> <a class="code" href="classgraf.html#a369202eb63332e9faad779591c862ece" title="funkcja usuwa wierzcholek o zadanym kluczu">graf::usun_wierzcholek</a>(<span class="keywordtype">int</span> numer)
 <a name="l00089"></a>00089 {
 <a name="l00090"></a>00090         <span class="keywordflow">while</span>(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[numer].polaczenia.size())
-<a name="l00091"></a>00091                 <a class="code" href="classgraf.html#ac7e01e940f136f4020e4da816c2fb1b4" title="funkcja usuwa polaczenie miedzy zadanymi wierzcholkami">usun_polaczenie</a>(numer,<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[numer].polaczenia[0].<a class="code" href="classwierzcholek.html">wierzcholek</a>);
+<a name="l00091"></a>00091                 <a class="code" href="classgraf.html#ac7e01e940f136f4020e4da816c2fb1b4" title="funkcja usuwa polaczenie miedzy zadanymi wierzcholkami">usun_polaczenie</a>(numer,<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[numer].polaczenia[0].<a class="code" href="classwierzcholek.html" title="clasa modeluje pojecie poedynczego wierzcholka grafu">wierzcholek</a>);
 <a name="l00092"></a>00092 
 <a name="l00093"></a>00093         <a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[numer].<a class="code" href="classwierzcholek.html#ad67644b5f408397f28d7150d3bac76d2">zajety</a>=NULL;
 <a name="l00094"></a>00094         <a class="code" href="classgraf.html#ad9204c0bbc75a2bef4a43200672f9694">ilosc</a>--;
@@ -156,17 +156,17 @@
 <a name="l00113"></a>00113 {
 <a name="l00114"></a>00114         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v2].<a class="code" href="classwierzcholek.html#ad6442177753c61769b0fa1822e75f551" title="wartosc przechowywana w wierzcholku">polaczenia</a>.size();i++)
 <a name="l00115"></a>00115         {
-<a name="l00116"></a>00116                 <span class="keywordflow">if</span>(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v2].polaczenia[i].<a class="code" href="classwierzcholek.html">wierzcholek</a>==v1)<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v2].<a class="code" href="classwierzcholek.html#ad6442177753c61769b0fa1822e75f551" title="wartosc przechowywana w wierzcholku">polaczenia</a>.erase(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v2].polaczenia.begin()+i);
+<a name="l00116"></a>00116                 <span class="keywordflow">if</span>(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v2].polaczenia[i].<a class="code" href="classwierzcholek.html" title="clasa modeluje pojecie poedynczego wierzcholka grafu">wierzcholek</a>==v1)<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v2].<a class="code" href="classwierzcholek.html#ad6442177753c61769b0fa1822e75f551" title="wartosc przechowywana w wierzcholku">polaczenia</a>.erase(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v2].polaczenia.begin()+i);
 <a name="l00117"></a>00117         }
 <a name="l00118"></a>00118         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v1].<a class="code" href="classwierzcholek.html#ad6442177753c61769b0fa1822e75f551" title="wartosc przechowywana w wierzcholku">polaczenia</a>.size();i++)
 <a name="l00119"></a>00119         {
-<a name="l00120"></a>00120                 <span class="keywordflow">if</span>(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v1].polaczenia[i].<a class="code" href="classwierzcholek.html">wierzcholek</a>==v2)<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v1].<a class="code" href="classwierzcholek.html#ad6442177753c61769b0fa1822e75f551" title="wartosc przechowywana w wierzcholku">polaczenia</a>.erase(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v1].polaczenia.begin()+i);
+<a name="l00120"></a>00120                 <span class="keywordflow">if</span>(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v1].polaczenia[i].<a class="code" href="classwierzcholek.html" title="clasa modeluje pojecie poedynczego wierzcholka grafu">wierzcholek</a>==v2)<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v1].<a class="code" href="classwierzcholek.html#ad6442177753c61769b0fa1822e75f551" title="wartosc przechowywana w wierzcholku">polaczenia</a>.erase(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v1].polaczenia.begin()+i);
 <a name="l00121"></a>00121         }
 <a name="l00122"></a>00122 }
 <a name="l00123"></a>00123 
 <a name="l00131"></a><a class="code" href="classgraf.html#a4db0ebc4302facfc027dd7790542fb94">00131</a> <span class="keywordtype">void</span> <a class="code" href="classgraf.html#a4db0ebc4302facfc027dd7790542fb94" title="funkcja dodaje polaczenie miedzy zadanymi wierzcholkami">graf::dodaj_polaczenie</a>(<span class="keywordtype">int</span> v1, <span class="keywordtype">int</span> v2,<span class="keywordtype">int</span> waga)
 <a name="l00132"></a>00132 {
-<a name="l00133"></a>00133         <a class="code" href="structpolaczenie.html" title="clasa modeluje pojecie pojecie poedynczego wierzcholka grafu">polaczenie</a> nowev1, nowev2;
+<a name="l00133"></a>00133         <a class="code" href="structpolaczenie.html" title="struktura modeluje pojecie polaczenia wierzcholkow grafu">polaczenie</a> nowev1, nowev2;
 <a name="l00134"></a>00134         nowev1.<a class="code" href="structpolaczenie.html#a3cf76ce70d5eea1c5d96abd57f737ff2">waga</a>=nowev2.<a class="code" href="structpolaczenie.html#a3cf76ce70d5eea1c5d96abd57f737ff2">waga</a>=waga;
 <a name="l00135"></a>00135         nowev1.<a class="code" href="structpolaczenie.html#a9faa3298bef8b4c35a1897caad57f2b0">wierzcholek</a>=v2;
 <a name="l00136"></a>00136         nowev2.<a class="code" href="structpolaczenie.html#a9faa3298bef8b4c35a1897caad57f2b0">wierzcholek</a>=v1;
@@ -189,12 +189,12 @@
 <a name="l00165"></a>00165         <span class="keywordtype">bool</span> v1_2=<span class="keyword">false</span>, v2_1=<span class="keyword">false</span>;
 <a name="l00166"></a>00166         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v1].<a class="code" href="classwierzcholek.html#ad6442177753c61769b0fa1822e75f551" title="wartosc przechowywana w wierzcholku">polaczenia</a>.size();i++)
 <a name="l00167"></a>00167         {
-<a name="l00168"></a>00168                 <span class="keywordflow">if</span>(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v1].polaczenia[i].<a class="code" href="classwierzcholek.html">wierzcholek</a>==v2)v1_2=<span class="keyword">true</span>;
+<a name="l00168"></a>00168                 <span class="keywordflow">if</span>(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v1].polaczenia[i].<a class="code" href="classwierzcholek.html" title="clasa modeluje pojecie poedynczego wierzcholka grafu">wierzcholek</a>==v2)v1_2=<span class="keyword">true</span>;
 <a name="l00169"></a>00169                 <span class="keywordflow">else</span> v1_2=<span class="keyword">false</span>;
 <a name="l00170"></a>00170         }
 <a name="l00171"></a>00171         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v2].<a class="code" href="classwierzcholek.html#ad6442177753c61769b0fa1822e75f551" title="wartosc przechowywana w wierzcholku">polaczenia</a>.size();i++)
 <a name="l00172"></a>00172         {
-<a name="l00173"></a>00173                 <span class="keywordflow">if</span>(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v2].polaczenia[i].<a class="code" href="classwierzcholek.html">wierzcholek</a>==v1)v2_1=<span class="keyword">true</span>;
+<a name="l00173"></a>00173                 <span class="keywordflow">if</span>(<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[v2].polaczenia[i].<a class="code" href="classwierzcholek.html" title="clasa modeluje pojecie poedynczego wierzcholka grafu">wierzcholek</a>==v1)v2_1=<span class="keyword">true</span>;
 <a name="l00174"></a>00174                 <span class="keywordflow">else</span> v2_1=<span class="keyword">false</span>;
 <a name="l00175"></a>00175         }
 <a name="l00176"></a>00176                 <span class="keywordflow">if</span>(v2_1&amp;v1_2)
@@ -419,7 +419,7 @@
 <a name="l00449"></a>00449         vector &lt;int&gt; zamkniete;
 <a name="l00450"></a>00450         <a class="code" href="structelement__a.html">element_a</a> * tablica_a;
 <a name="l00451"></a>00451         tablica_a=<span class="keyword">new</span> <a class="code" href="structelement__a.html">element_a</a>[<a class="code" href="classgraf.html#a596da8a77b680d7ec408b1253c2c43c3">rozmiar</a>];
-<a name="l00452"></a>00452         <a class="code" href="structpolaczenie.html" title="clasa modeluje pojecie pojecie poedynczego wierzcholka grafu">polaczenie</a> pomocniczy, root;
+<a name="l00452"></a>00452         <a class="code" href="structpolaczenie.html" title="struktura modeluje pojecie polaczenia wierzcholkow grafu">polaczenie</a> pomocniczy, root;
 <a name="l00453"></a>00453         pomocniczy.<a class="code" href="structpolaczenie.html#a3cf76ce70d5eea1c5d96abd57f737ff2">waga</a>=0;
 <a name="l00454"></a>00454         root.<a class="code" href="structpolaczenie.html#a9faa3298bef8b4c35a1897caad57f2b0">wierzcholek</a>=korzen;
 <a name="l00455"></a>00455         otwarte.push_back(root);
@@ -435,7 +435,7 @@
 <a name="l00465"></a>00465                 {
 <a name="l00466"></a>00466 
 <a name="l00467"></a>00467                                 pomocniczy=(root+<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[a].<a class="code" href="classwierzcholek.html#ad6442177753c61769b0fa1822e75f551" title="wartosc przechowywana w wierzcholku">polaczenia</a>[i]);
-<a name="l00468"></a>00468                         <span class="keywordflow">if</span>(tablica_a[<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[a].polaczenia[i].<a class="code" href="classwierzcholek.html">wierzcholek</a>].stan!=2)
+<a name="l00468"></a>00468                         <span class="keywordflow">if</span>(tablica_a[<a class="code" href="classgraf.html#a028d547c797438718da6241a28b32db5">tablica</a>[a].polaczenia[i].<a class="code" href="classwierzcholek.html" title="clasa modeluje pojecie poedynczego wierzcholka grafu">wierzcholek</a>].stan!=2)
 <a name="l00469"></a>00469                         {
 <a name="l00470"></a>00470                                 x=abs(v/10-pomocniczy.<a class="code" href="structpolaczenie.html#a9faa3298bef8b4c35a1897caad57f2b0">wierzcholek</a>/100);<span class="comment">//trzeba dobrac dzielniki do rozmiaru</span>
 <a name="l00471"></a>00471                                 y=abs(v%10-pomocniczy.<a class="code" href="structpolaczenie.html#a9faa3298bef8b4c35a1897caad57f2b0">wierzcholek</a>%100);
@@ -478,7 +478,7 @@
     <ul>
       <li class="navelem"><a class="el" href="graf_8cpp.html">graf.cpp</a>      </li>
 
-    <li class="footer">Generated on Wed May 21 2014 22:35:01 for Graf by
+    <li class="footer">Generated on Wed May 28 2014 17:14:08 for Graf by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

@@ -13,7 +13,13 @@ bool porownanie(polaczenie aaa ,polaczenie bbb)
      if(aaa.waga<bbb.waga)
         return false;
 }
-
+bool porownanie2(polaczenie aaa ,polaczenie bbb)
+{
+     if(aaa.waga<bbb.waga)
+        return true;
+     if(aaa.waga>bbb.waga)
+        return false;
+}
 ostream & operator << (ostream &wyjscie, wierzcholek  &wej)
 	{
 		cout<<"wierzcholek numer: "<<wej.numer<<"\n";

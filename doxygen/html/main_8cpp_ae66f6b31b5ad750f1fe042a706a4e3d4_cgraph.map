@@ -1,10 +1,13 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$generator_8cpp.html#a242a9701c409c59f651874736f8cef01" title="generuje plik *.txt o zadanej ilosci polaczen." alt="" coords="104,5,237,35"/>
-<area shape="rect" id="node5" href="$classgraf.html#a6a50b0bfb5fc3cfc7a443014170b9565" title="funkcja sluzy do dodawania wierzcholkow" alt="" coords="289,55,447,84"/>
-<area shape="rect" id="node7" href="$classgraf.html#a4db0ebc4302facfc027dd7790542fb94" title="funkcja dodaje polaczenie miedzy zadanymi wierzcholkami" alt="" coords="292,108,444,137"/>
-<area shape="rect" id="node11" href="$menu_8cpp.html#aacc433e415d518c27882997e60a20fe8" title="menu" alt="" coords="144,160,197,189"/>
-<area shape="rect" id="node9" href="$classgraf.html#ae1ebd85c7cb288174a5dccc5fd90634e" title="funkcja sprawdza czy mieszy podanymi wierzchokami istnieje polaczenie" alt="" coords="499,135,669,164"/>
-<area shape="rect" id="node14" href="$classgraf.html#a369202eb63332e9faad779591c862ece" title="funkcja usuwa wierzcholek o zadanym kluczu" alt="" coords="291,316,445,345"/>
-<area shape="rect" id="node16" href="$classgraf.html#ac7e01e940f136f4020e4da816c2fb1b4" title="funkcja usuwa polaczenie miedzy zadanymi wierzcholkami" alt="" coords="509,291,659,320"/>
-<area shape="rect" id="node21" href="$classgraf.html#a8dd83fa1722d917a143b2da9245b5db9" title="funkcja wyswietla sasiadow wierzcholka" alt="" coords="285,212,451,241"/>
+<area shape="rect" id="node3" href="$classgraf.html#a6a50b0bfb5fc3cfc7a443014170b9565" title="funkcja sluzy do dodawania wierzcholkow" alt="" coords="351,5,508,35"/>
+<area shape="rect" id="node5" href="$classgraf.html#a4db0ebc4302facfc027dd7790542fb94" title="funkcja dodaje polaczenie miedzy zadanymi wierzcholkami" alt="" coords="353,59,505,88"/>
+<area shape="rect" id="node9" href="$classdroga__komi.html#a7d6a3684fd92f231b31597a24e3e6914" title="funckja tworzy petle hamiltona w zadanym grafie" alt="" coords="105,320,295,349"/>
+<area shape="rect" id="node17" href="$menu_8cpp.html#aacc433e415d518c27882997e60a20fe8" title="menu" alt="" coords="173,111,227,140"/>
+<area shape="rect" id="node7" href="$classgraf.html#ae1ebd85c7cb288174a5dccc5fd90634e" title="funkcja sprawdza czy mieszy podanymi wierzchokami istnieje polaczenie" alt="" coords="563,85,733,115"/>
+<area shape="rect" id="node11" href="$classdroga__komi.html#a1acfde1a8989daab4b6a03cbc660ea7e" title="funkcja wyznacza wierzcholek najblizej polozony" alt="" coords="352,320,507,349"/>
+<area shape="rect" id="node15" href="$classdroga__komi.html#accef23783e2fc22179eee5aea746e0f4" title="droga_komi::czytaj_droge" alt="" coords="344,373,515,403"/>
+<area shape="rect" id="node13" href="$wierzcholek_8cpp.html#a0b7a1f69efe292898e8aa9e44e0ed658" title="porownanie2" alt="" coords="601,320,695,349"/>
+<area shape="rect" id="node20" href="$classgraf.html#a369202eb63332e9faad779591c862ece" title="funkcja usuwa wierzcholek o zadanym kluczu" alt="" coords="352,213,507,243"/>
+<area shape="rect" id="node22" href="$classgraf.html#ac7e01e940f136f4020e4da816c2fb1b4" title="funkcja usuwa polaczenie miedzy zadanymi wierzcholkami" alt="" coords="573,188,723,217"/>
+<area shape="rect" id="node27" href="$classgraf.html#a8dd83fa1722d917a143b2da9245b5db9" title="funkcja wyswietla sasiadow wierzcholka" alt="" coords="347,267,512,296"/>
 </map>
